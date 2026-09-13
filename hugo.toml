@@ -1,0 +1,18 @@
+baseURL = "https://achrafhasnaoui31.github.io/portfolio/"
+title = "Achraf Hasnaoui"
+
+languageCode = "en-us"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+enableRobotsTXT = false
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+
+[outputs]
+  home = ["HTML"]
+
+[params]
+  env = "production"

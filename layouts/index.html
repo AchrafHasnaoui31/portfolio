@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ $d := .Site.Data.portfolio }}
+  <meta name="description" content="{{ $d.meta.description }}" />
+  <meta name="theme-color" content="{{ $d.meta.themeColor }}" />
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon.png" | relURL }}" />
+  <title>{{ $d.meta.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+</head>
+<body>
+
+  {{/* helper: turn **bold** into <strong>bold</strong> for inline text fields */}}
+  {{ $bold := "\\*\\*(.*?)\\*\\*" }}
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-badge" aria-hidden="true">{{ $d.logo.badge }}</span>
+        <span class="logo-text">{{ $d.logo.text | replaceRE `\.([a-z]+)$` `<span class="logo-dot">.</span>$1` | safeHTML }}</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        {{ range $d.navLinks }}
+        <li><a href="{{ .href }}" class="nav-link"><span class="nav-num">{{ .num }}</span> {{ .label }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-greeting reveal"><span class="wave" aria-hidden="true">👋</span> {{ $d.hero.greeting }}</p>
+          <h1 class="hero-name reveal">{{ $d.hero.name }}<span class="dot-pink" aria-hidden="true">.</span></h1>
+          <h2 class="hero-role reveal">I'm a <span class="type-sticker" id="typewriter"></span><span class="type-cursor" aria-hidden="true"></span></h2>
+          <p class="hero-tagline reveal">{{ replaceRE $bold "<strong>$1</strong>" $d.hero.tagline | safeHTML }}</p>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary">See my work <span aria-hidden="true">↓</span></a>
+            <a href="#contact" class="btn btn-outline">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Sticker profile card -->
+        <div class="reveal">
+          <aside class="hero-card card" aria-label="Quick profile">
+            <div class="hero-card-head">
+              <span class="hero-avatar" aria-hidden="true">{{ $d.logo.badge }}</span>
+              <span class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>{{ $d.hero.statusPill }}</span>
+            </div>
+            <h3 class="hero-card-name">{{ $d.hero.cardName }}</h3>
+            <p class="hero-card-role">{{ $d.hero.cardRole }}</p>
+            <ul class="hero-card-info">
+              {{ range $d.hero.cardInfo }}
+              {{ $parts := split . " " }}
+              <li><span class="info-icon" aria-hidden="true">{{ index $parts 0 }}</span>{{ delimit (after 1 $parts) " " }}</li>
+              {{ end }}
+            </ul>
+            <div class="hero-card-stats">
+              {{ range $d.hero.stats }}
+              <div class="stat"><strong>{{ .num }}</strong><span>{{ .label }}</span></div>
+              {{ end }}
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <div class="marquee-group">
+          {{ range $i, $t := $d.marquee }}{{ if $i }}<b>★</b>{{ end }}<span>{{ $t }}</span>{{ end }}
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section section--paper" id="about">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">01</span> about</h2>
+        <p class="section-sub reveal">{{ $d.about.sub | default "The short version of who I am" }}</p>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            {{ range $d.about.paragraphs }}
+            <p>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</p>
+            {{ end }}
+            <ul class="tech-list">
+              {{ range $d.about.tech }}
+              <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <!-- Sticker quick-facts card -->
+          <div class="reveal">
+            <aside class="about-card card card--cyan" aria-label="Profile details">
+              <div class="about-card-title">
+                <span class="about-card-icon" aria-hidden="true">🧑‍💻</span>
+                <div>
+                  <h3>{{ $d.about.facts.title }}</h3>
+                  <p>{{ $d.about.facts.sub }}</p>
+                </div>
+              </div>
+              <ul class="about-card-list">
+                {{ range $d.about.facts.items }}
+                <li><span>{{ .k }}</span><strong>{{ .v }}</strong></li>
+                {{ end }}
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section section--pink" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="section-num section-num--ink" aria-hidden="true">02</span> skills</h2>
+        <p class="section-sub reveal">{{ $d.skills.sub }}</p>
+
+        <div class="skills-grid">
+          {{ $colors := slice "lime" "cyan" "yellow" "pink" "orange" }}
+          {{ range $d.skills.groups }}
+          <div class="skill-group card reveal">
+            <h3 class="skill-group-title"><span class="skill-emoji" aria-hidden="true">{{ .emoji }}</span> {{ .title }}</h3>
+            {{ range $i, $s := .items }}
+            {{ $c := index $colors (mod $i (len $colors)) }}
+            <div class="skill">
+              <div class="skill-head"><span>{{ $s.name }}</span><span>{{ $s.level }}%</span></div>
+              <div class="skill-track"><div class="skill-fill skill-fill--{{ $c }}" data-width="{{ $s.level }}"></div></div>
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section section--ink" id="projects">
+      <div class="container">
+        <h2 class="section-title section-title--light reveal"><span class="section-num section-num--yellow" aria-hidden="true">03</span> projects</h2>
+        <p class="section-sub section-sub--light reveal">{{ $d.projects.sub }}</p>
+
+        <div class="projects-grid">
+          {{ $pcolors := slice "yellow" "pink" "cyan" }}
+          {{ range $i, $p := $d.projects.items }}
+          {{ $c := index $pcolors (mod $i (len $pcolors)) }}
+          <article class="project-card card project-card--{{ $c }} reveal">
+            <div class="project-top">
+              <span class="project-folder" aria-hidden="true">📁</span>
+              <div class="project-links">
+                <a href="{{ $p.repo }}" title="GitHub repository" aria-label="GitHub repository">&#128279;</a>
+                <a href="{{ $p.demo }}" title="Live demo" aria-label="Live demo">&#8599;</a>
+              </div>
+            </div>
+            <h3 class="project-title">{{ $p.title }}</h3>
+            <p class="project-desc">{{ $p.desc }}</p>
+            <ul class="project-tags">
+              {{ range $p.tags }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          </article>
+          {{ end }}
+        </div>
+
+        {{ with $d.projects.more }}
+        <div class="projects-more reveal">
+          <a href="{{ .href }}" class="btn btn-yellow">{{ .label }}</a>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section section--yellow" id="education">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">04</span> education</h2>
+        <p class="section-sub reveal">{{ $d.education.sub }}</p>
+
+        <div class="timeline">
+          {{ range $d.education.items }}
+          <div class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content card">
+              <span class="timeline-date">{{ .date }}</span>
+              <h3>{{ .title }}</h3>
+              <p class="timeline-org">{{ .org }}</p>
+              <p>{{ .desc }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <p class="contact-eyebrow">{{ $d.contact.eyebrow }}</p>
+          <h2 class="contact-title">{{ replaceRE $bold `<span class="marker-yellow">$1</span>` $d.contact.title | safeHTML }}</h2>
+          <p class="contact-text">{{ $d.contact.text }}</p>
+          <div class="contact-actions">
+            <a href="{{ $d.contact.email.href }}" class="btn btn-yellow">{{ $d.contact.email.label }}</a>
+            <a href="{{ $d.contact.github.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.github.label }}</a>
+            <a href="{{ $d.contact.linkedin.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.linkedin.label }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer-text">{{ replaceRE $bold "<strong>$1</strong>" $d.footer.text | safeHTML }}</p>
+    <p class="footer-status">STATUS: <strong>{{ $d.footer.status }}</strong></p>
+  </footer>
+
+  <script id="hero-roles" type="application/json">{{ $d.hero.roles | jsonify | safeJS }}</script>
+  <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

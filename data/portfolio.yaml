@@ -1,0 +1,185 @@
+# =============================================================================
+# PORTFOLIO CONTENT — edit everything here, then commit + push.
+# No code, no JS, no admin panel: change a value below, GitHub Actions
+# rebuilds the site automatically. Inline **bold** works in text fields.
+# =============================================================================
+
+meta:
+  title: "Achraf Hasnaoui"
+  description: "Portfolio of Achraf Hasnaoui — 2nd Year Computer Science Engineering Student"
+  themeColor: "#FBF7EF"
+
+logo:
+  badge: "AH"
+  text: "achraf.dev"
+
+navLinks:
+  - num: "01."
+    label: "about"
+    href: "#about"
+  - num: "02."
+    label: "skills"
+    href: "#skills"
+  - num: "03."
+    label: "projects"
+    href: "#projects"
+  - num: "04."
+    label: "education"
+    href: "#education"
+  - num: "05."
+    label: "contact"
+    href: "#contact"
+
+hero:
+  greeting: "Hi there, my name is"
+  name: "Achraf Hasnaoui"
+  roles:
+    - "software engineer."
+    - "problem solver."
+    - "CS engineering student."
+    - "open source fan."
+    - "coffee-powered coder."
+  tagline: "A 2nd year **Computer Science Engineering** student passionate about algorithms, software development and open source — turning ideas into clean, elegant code."
+  statusPill: "open to work"
+  cardName: "achraf hasnaoui"
+  cardRole: "2nd year CS engineering student"
+  cardInfo:
+    - "📍 [Your City], [Your Country]"
+    - "🎓 BSc Computer Science Engineering"
+    - "💻 Python · Java · JavaScript · C/C++"
+    - "🚀 Currently learning React & Docker"
+  stats:
+    - num: "2+"
+      label: "years coding"
+    - num: "8+"
+      label: "technologies"
+    - num: "3"
+      label: "featured projects"
+
+marquee:
+  - "HTML & CSS"
+  - "JavaScript"
+  - "Python"
+  - "Java"
+  - "Git & GitHub"
+  - "MySQL"
+  - "Linux"
+  - "React"
+  - "C / C++"
+
+about:
+  paragraphs:
+    - "I'm a 2nd year **Computer Science Engineering** student with a strong interest in **software engineering**, **algorithms** and **web technologies**."
+    - "I enjoy turning complex problems into simple, elegant solutions and I'm always learning new technologies. Currently exploring data structures, databases and building projects to sharpen my skills."
+    - "Here are a few technologies I've been working with recently:"
+  tech:
+    - "Python"
+    - "Java"
+    - "JavaScript"
+    - "C / C++"
+    - "HTML & CSS"
+    - "Git & GitHub"
+    - "MySQL"
+    - "Linux"
+  facts:
+    title: "Quick facts"
+    sub: "the fun stuff"
+    items:
+      - k: "name"
+        v: "Achraf Hasnaoui"
+      - k: "status"
+        v: "2nd year CS Engineering"
+      - k: "location"
+        v: "[Your City], [Your Country]"
+      - k: "interests"
+        v: "algorithms, web dev, OSS"
+      - k: "learning"
+        v: "React, Docker, DSA"
+      - k: "motto"
+        v: '"code. learn. ship. repeat."'
+
+skills:
+  sub: "Things I'm good at (and still leveling up)"
+  groups:
+    - emoji: "💬"
+      title: "languages"
+      items:
+        - name: "Python"
+          level: 90
+        - name: "Java"
+          level: 80
+        - name: "JavaScript"
+          level: 75
+        - name: "C / C++"
+          level: 70
+    - emoji: "🛠️"
+      title: "web & tools"
+      items:
+        - name: "HTML & CSS"
+          level: 85
+        - name: "Git & GitHub"
+          level: 80
+        - name: "MySQL"
+          level: 70
+        - name: "Linux / CLI"
+          level: 75
+        - name: "VS Code"
+          level: 90
+        - name: "Agile / Scrum"
+          level: 60
+
+projects:
+  sub: "Things I've built"
+  more:
+    label: "View all on GitHub ↗"
+    href: "https://github.com/AchrafHasnaoui31"
+  items:
+    - title: "Project One"
+      desc: "Short description of your project. What problem does it solve? What did you learn building it? Replace this with your real projects."
+      tags: ["Python", "Flask", "MySQL"]
+      repo: "#"
+      demo: "#"
+    - title: "Project Two"
+      desc: "Short description of your project. What problem does it solve? What did you learn building it? Replace this with your real projects."
+      tags: ["Java", "Swing", "OOP"]
+      repo: "#"
+      demo: "#"
+    - title: "Project Three"
+      desc: "Short description of your project. What problem does it solve? What did you learn building it? Replace this with your real projects."
+      tags: ["HTML", "CSS", "JavaScript"]
+      repo: "#"
+      demo: "#"
+
+education:
+  sub: "My journey so far"
+  items:
+    - date: "2024 — present"
+      title: "BSc Computer Science Engineering"
+      org: "[Your University / School]"
+      desc: "Currently in my 2nd year. Coursework: Data Structures & Algorithms, Object-Oriented Programming, Databases, Computer Architecture, Operating Systems."
+    - date: "2024 — present"
+      title: "Self-taught / Side Projects"
+      org: "Open source & personal learning"
+      desc: "Building personal projects to practice Git workflows, version control, and full-stack basics. Continuously learning through docs, courses and community."
+    - date: "2022 — 2024"
+      title: "High School Diploma — [Major]"
+      org: "[Your High School]"
+      desc: "Graduated with honors. Focus on mathematics and computer science."
+
+contact:
+  eyebrow: "got a project in mind?"
+  title: "Let's build something **awesome** together ✦"
+  text: "I'm always open to new opportunities, collaborations and interesting conversations. My inbox is always open — whether you have a question or just want to say hi, I'll try my best to get back to you!"
+  email:
+    label: "Say hello ✉"
+    href: "mailto:achrafhs12@gmail.com"
+  github:
+    label: "GitHub ↗"
+    href: "https://github.com/AchrafHasnaoui31"
+  linkedin:
+    label: "LinkedIn ↗"
+    href: "https://linkedin.com/in/achraf-hasnaoui"
+
+footer:
+  text: "© 2026 Achraf Hasnaoui — designed & built with 🧡 and too much coffee ☕"
+  status: "available for opportunities"
