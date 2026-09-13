@@ -1,0 +1,18 @@
+{{ $d := .d }}
+{{ $prefix := .prefix }}
+<header class="navbar" id="navbar">
+  <nav class="nav-container">
+    <a href="{{ $prefix }}#hero" class="logo">
+      <span class="logo-badge" aria-hidden="true">{{ $d.logo.badge }}</span>
+      <span class="logo-text">{{ $d.logo.text | replaceRE `\.([a-z]+)$` `<span class="logo-dot">.</span>$1` | safeHTML }}</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      {{ range $d.navLinks }}
+      <li><a href="{{ $prefix }}{{ .href }}" class="nav-link"><span class="nav-num">{{ .num }}</span> {{ .label }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

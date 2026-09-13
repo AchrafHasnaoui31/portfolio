@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ $d := .Site.Data.portfolio }}
+  <meta name="description" content="{{ .Params.summary | default .Summary | plainify }}" />
+  <meta name="theme-color" content="{{ $d.meta.themeColor }}" />
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon.png" | relURL }}" />
+  <title>{{ .Title }} · {{ $d.meta.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+</head>
+<body>
+
+  {{ $home := .Site.Home.RelPermalink }}
+
+  <!-- ===== NAVBAR ===== -->
+  {{ partial "navbar.html" (dict "d" $d "prefix" $home) }}
+
+  <main>
+    <!-- ===== PROJECT HEADER ===== -->
+    <section class="section section--ink project-hero">
+      <div class="container">
+        <a href="{{ $home }}#projects" class="project-back reveal">&larr; back to projects</a>
+
+        <h1 class="project-hero-title reveal">{{ .Title }}</h1>
+
+        <ul class="project-tags project-tags--hero reveal">
+          {{ range .Params.tags }}<li>{{ . }}</li>{{ end }}
+        </ul>
+
+        <div class="project-hero-actions reveal">
+          {{ with .Params.repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-yellow">GitHub repo ↗</a>{{ end }}
+          {{ with .Params.demo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">Live demo ↗</a>{{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ with .Params.cover }}
+    <div class="project-cover-full reveal">
+      <img src="{{ . | relURL }}" alt="{{ $.Title }} cover" />
+    </div>
+    {{ end }}
+
+    <!-- ===== PROJECT BODY ===== -->
+    <section class="section section--paper">
+      <div class="container container--narrow">
+        <article class="project-body reveal">
+          {{ .Content }}
+        </article>
+
+        <div class="project-footer-nav reveal">
+          <a href="{{ $home }}#projects" class="btn btn-outline">&larr; All projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  {{ partial "footer.html" $d }}
+
+  <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

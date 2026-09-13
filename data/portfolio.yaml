@@ -31,6 +31,10 @@ navLinks:
     href: "#contact"
 
 hero:
+  # Your photo, shown in the round sticker card on the right. Leave "" to
+  # keep the plain "AH" letter badge instead. Drop the image file in
+  # static/images/profile/ and point to it, e.g. "images/profile/me.jpg".
+  photo: ""
   greeting: "Hi there, my name is"
   name: "Achraf Hasnaoui"
   roles:
@@ -68,6 +72,9 @@ marquee:
   - "C / C++"
 
 about:
+  # Optional second photo for the "quick facts" sticker card in the About
+  # section. Leave "" to keep the plain emoji icon instead.
+  photo: ""
   paragraphs:
     - "I'm a 2nd year **Computer Science Engineering** student with a strong interest in **software engineering**, **algorithms** and **web technologies**."
     - "I enjoy turning complex problems into simple, elegant solutions and I'm always learning new technologies. Currently exploring data structures, databases and building projects to sharpen my skills."
@@ -128,27 +135,16 @@ skills:
         - name: "Agile / Scrum"
           level: 60
 
+# Projects are NOT edited here anymore — each one lives as its own file in
+# content/projects/ (exactly like blog posts do in the blog repo). This
+# section only controls the text around the project grid on the homepage.
+# See content/projects/README.md (and the main README) for how to add,
+# edit, or remove a project.
 projects:
   sub: "Things I've built"
   more:
-    label: "View all on GitHub ↗"
-    href: "https://github.com/AchrafHasnaoui31"
-  items:
-    - title: "Project One"
-      desc: "Short description of your project. What problem does it solve? What did you learn building it? Replace this with your real projects."
-      tags: ["Python", "Flask", "MySQL"]
-      repo: "#"
-      demo: "#"
-    - title: "Project Two"
-      desc: "Short description of your project. What problem does it solve? What did you learn building it? Replace this with your real projects."
-      tags: ["Java", "Swing", "OOP"]
-      repo: "#"
-      demo: "#"
-    - title: "Project Three"
-      desc: "Short description of your project. What problem does it solve? What did you learn building it? Replace this with your real projects."
-      tags: ["HTML", "CSS", "JavaScript"]
-      repo: "#"
-      demo: "#"
+    label: "View all projects →"
+    href: "projects/"
 
 education:
   sub: "My journey so far"

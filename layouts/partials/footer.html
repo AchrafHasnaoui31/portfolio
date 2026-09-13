@@ -1,0 +1,6 @@
+{{ $d := . }}
+{{ $bold := "\\*\\*(.*?)\\*\\*" }}
+<footer class="footer">
+  <p class="footer-text">{{ replaceRE $bold "<strong>$1</strong>" $d.footer.text | safeHTML }}</p>
+  <p class="footer-status">STATUS: <strong>{{ $d.footer.status }}</strong></p>
+</footer>

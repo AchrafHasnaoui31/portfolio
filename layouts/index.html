@@ -23,22 +23,7 @@
   {{ $bold := "\\*\\*(.*?)\\*\\*" }}
 
   <!-- ===== NAVBAR ===== -->
-  <header class="navbar" id="navbar">
-    <nav class="nav-container">
-      <a href="#hero" class="logo">
-        <span class="logo-badge" aria-hidden="true">{{ $d.logo.badge }}</span>
-        <span class="logo-text">{{ $d.logo.text | replaceRE `\.([a-z]+)$` `<span class="logo-dot">.</span>$1` | safeHTML }}</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        {{ range $d.navLinks }}
-        <li><a href="{{ .href }}" class="nav-link"><span class="nav-num">{{ .num }}</span> {{ .label }}</a></li>
-        {{ end }}
-      </ul>
-    </nav>
-  </header>
+  {{ partial "navbar.html" (dict "d" $d "prefix" "") }}
 
   <main>
     <!-- ===== HERO ===== -->
@@ -59,7 +44,11 @@
         <div class="reveal">
           <aside class="hero-card card" aria-label="Quick profile">
             <div class="hero-card-head">
+              {{ if $d.hero.photo }}
+              <img class="hero-avatar hero-avatar--photo" src="{{ $d.hero.photo | relURL }}" alt="{{ $d.hero.name }}" />
+              {{ else }}
               <span class="hero-avatar" aria-hidden="true">{{ $d.logo.badge }}</span>
+              {{ end }}
               <span class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>{{ $d.hero.statusPill }}</span>
             </div>
             <h3 class="hero-card-name">{{ $d.hero.cardName }}</h3>
@@ -111,7 +100,11 @@
           <div class="reveal">
             <aside class="about-card card card--cyan" aria-label="Profile details">
               <div class="about-card-title">
+                {{ if $d.about.photo }}
+                <img class="about-card-icon about-card-icon--photo" src="{{ $d.about.photo | relURL }}" alt="{{ $d.hero.name }}" />
+                {{ else }}
                 <span class="about-card-icon" aria-hidden="true">🧑‍💻</span>
+                {{ end }}
                 <div>
                   <h3>{{ $d.about.facts.title }}</h3>
                   <p>{{ $d.about.facts.sub }}</p>
@@ -160,28 +153,40 @@
 
         <div class="projects-grid">
           {{ $pcolors := slice "yellow" "pink" "cyan" }}
-          {{ range $i, $p := $d.projects.items }}
+          {{ $projects := where site.RegularPages "Section" "projects" }}
+          {{ $projects = $projects.ByWeight }}
+          {{ range $i, $p := $projects }}
           {{ $c := index $pcolors (mod $i (len $pcolors)) }}
           <article class="project-card card project-card--{{ $c }} reveal">
+            {{ with $p.Params.cover }}
+            <a href="{{ $p.RelPermalink }}" class="project-cover-link">
+              <img class="project-cover" src="{{ . | relURL }}" alt="{{ $p.Title }} cover" />
+            </a>
+            {{ end }}
             <div class="project-top">
               <span class="project-folder" aria-hidden="true">📁</span>
               <div class="project-links">
-                <a href="{{ $p.repo }}" title="GitHub repository" aria-label="GitHub repository">&#128279;</a>
-                <a href="{{ $p.demo }}" title="Live demo" aria-label="Live demo">&#8599;</a>
+                {{ with $p.Params.repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="GitHub repository" aria-label="GitHub repository">&#128279;</a>{{ end }}
+                {{ with $p.Params.demo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="Live demo" aria-label="Live demo">&#8599;</a>{{ end }}
               </div>
             </div>
-            <h3 class="project-title">{{ $p.title }}</h3>
-            <p class="project-desc">{{ $p.desc }}</p>
+            <h3 class="project-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+            <p class="project-desc">{{ $p.Params.summary | default $p.Summary }}</p>
             <ul class="project-tags">
-              {{ range $p.tags }}<li>{{ . }}</li>{{ end }}
+              {{ range $p.Params.tags }}<li>{{ . }}</li>{{ end }}
             </ul>
+            <a href="{{ $p.RelPermalink }}" class="project-more">Read more →</a>
           </article>
           {{ end }}
         </div>
 
+        {{ if not $projects }}
+        <p class="section-sub section-sub--light reveal">No projects yet — add one in <code>content/projects/</code>.</p>
+        {{ end }}
+
         {{ with $d.projects.more }}
         <div class="projects-more reveal">
-          <a href="{{ .href }}" class="btn btn-yellow">{{ .label }}</a>
+          <a href="{{ if hasPrefix .href "http" }}{{ .href }}{{ else }}{{ .href | relURL }}{{ end }}" class="btn btn-yellow">{{ .label }}</a>
         </div>
         {{ end }}
       </div>
@@ -227,10 +232,7 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <p class="footer-text">{{ replaceRE $bold "<strong>$1</strong>" $d.footer.text | safeHTML }}</p>
-    <p class="footer-status">STATUS: <strong>{{ $d.footer.status }}</strong></p>
-  </footer>
+  {{ partial "footer.html" $d }}
 
   <script id="hero-roles" type="application/json">{{ $d.hero.roles | jsonify | safeJS }}</script>
   <script src="{{ "js/main.js" | relURL }}"></script>
