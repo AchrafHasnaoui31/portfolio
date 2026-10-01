@@ -142,19 +142,58 @@
           </div>
           {{ end }}
         </div>
+
+        {{ range $d.skills.extra }}
+        <div class="skills-extra reveal">
+          <h3 class="skills-extra-title">{{ .title }}</h3>
+          <ul class="chip-list">
+            {{ range .items }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section section--paper" id="experience">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">03</span> experience</h2>
+        <p class="section-sub reveal">{{ $d.experience.sub }}</p>
+
+        <div class="timeline">
+          {{ range $d.experience.items }}
+          <div class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content card">
+              <span class="timeline-date">{{ .date }}</span>
+              <h3>{{ .title }}</h3>
+              <p class="timeline-org">{{ .org }}</p>
+              <ul class="timeline-bullets">
+                {{ range .bullets }}<li>{{ . }}</li>{{ end }}
+              </ul>
+              {{ with .tags }}
+              <ul class="project-tags">
+                {{ range . }}<li>{{ . }}</li>{{ end }}
+              </ul>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
       </div>
     </section>
 
     <!-- ===== PROJECTS ===== -->
     <section class="section section--ink" id="projects">
       <div class="container">
-        <h2 class="section-title section-title--light reveal"><span class="section-num section-num--yellow" aria-hidden="true">03</span> projects</h2>
+        <h2 class="section-title section-title--light reveal"><span class="section-num section-num--yellow" aria-hidden="true">04</span> projects</h2>
         <p class="section-sub section-sub--light reveal">{{ $d.projects.sub }}</p>
 
         <div class="projects-grid">
           {{ $pcolors := slice "yellow" "pink" "cyan" }}
           {{ $projects := where site.RegularPages "Section" "projects" }}
           {{ $projects = $projects.ByWeight }}
+          {{ $projects = first 6 $projects }}
           {{ range $i, $p := $projects }}
           {{ $c := index $pcolors (mod $i (len $pcolors)) }}
           <article class="project-card card project-card--{{ $c }} reveal">
@@ -195,7 +234,7 @@
     <!-- ===== EDUCATION ===== -->
     <section class="section section--yellow" id="education">
       <div class="container">
-        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">04</span> education</h2>
+        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">05</span> education</h2>
         <p class="section-sub reveal">{{ $d.education.sub }}</p>
 
         <div class="timeline">
@@ -209,6 +248,57 @@
               <p>{{ .desc }}</p>
             </div>
           </div>
+          {{ end }}
+        </div>
+
+        <div class="edu-extras">
+          {{ with $d.education.certs }}
+          <div class="edu-extra card reveal">
+            <h3>{{ .title }}</h3>
+            <ul class="timeline-bullets">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+          </div>
+          {{ end }}
+          {{ with $d.education.languages }}
+          <div class="edu-extra card reveal">
+            <h3>{{ .title }}</h3>
+            <ul class="timeline-bullets">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACTIVITIES (hors école) ===== -->
+    <section class="section section--pink" id="activities">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="section-num section-num--ink" aria-hidden="true">06</span> {{ $d.activities.title | default "activities" }}</h2>
+        <p class="section-sub reveal">{{ $d.activities.sub }}</p>
+
+        <div class="activities-grid">
+          {{ range $d.activities.groups }}
+          <article class="activity-card card activity-card--{{ .color | default "yellow" }} reveal">
+            <div class="activity-head">
+              <span class="activity-emoji" aria-hidden="true">{{ .emoji }}</span>
+              <div>
+                <h3 class="activity-title">{{ .title }}</h3>
+                {{ with .role }}<p class="activity-role">{{ . }}</p>{{ end }}
+              </div>
+            </div>
+            {{ with .intro }}<p class="activity-intro">{{ . }}</p>{{ end }}
+            {{ with .items }}
+            <ul class="activity-list">
+              {{ range . }}<li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>{{ end }}
+            </ul>
+            {{ end }}
+            {{ with .tags }}
+            <ul class="project-tags">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+            {{ end }}
+            {{ with .link }}
+            <a href="{{ .href }}" target="_blank" rel="noopener noreferrer" class="activity-link">{{ .label }}</a>
+            {{ end }}
+          </article>
           {{ end }}
         </div>
       </div>
@@ -225,6 +315,7 @@
             <a href="{{ $d.contact.email.href }}" class="btn btn-yellow">{{ $d.contact.email.label }}</a>
             <a href="{{ $d.contact.github.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.github.label }}</a>
             <a href="{{ $d.contact.linkedin.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.linkedin.label }}</a>
+            {{ with $d.contact.blog }}<a href="{{ .href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ .label }}</a>{{ end }}
           </div>
         </div>
       </div>

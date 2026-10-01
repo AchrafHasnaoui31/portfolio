@@ -5,8 +5,8 @@
 # =============================================================================
 
 meta:
-  title: "Achraf Hasnaoui"
-  description: "Portfolio of Achraf Hasnaoui — 2nd Year Computer Science Engineering Student"
+  title: "Achraf Hasnaoui — Software Engineering Student"
+  description: "Portfolio of Achraf Hasnaoui — 3rd-year software engineering student at ENSIT, full-stack / backend developer, looking for a final-year (PFE) internship in France."
   themeColor: "#FBF7EF"
 
 logo:
@@ -21,73 +21,80 @@ navLinks:
     label: "skills"
     href: "#skills"
   - num: "03."
+    label: "experience"
+    href: "#experience"
+  - num: "04."
     label: "projects"
     href: "#projects"
-  - num: "04."
+  - num: "05."
     label: "education"
     href: "#education"
-  - num: "05."
+  - num: "06."
+    label: "activities"
+    href: "#activities"
+  - num: "07."
     label: "contact"
     href: "#contact"
 
 hero:
-  # Your photo, shown in the round sticker card on the right. Leave "" to
-  # keep the plain "AH" letter badge instead. Drop the image file in
-  # static/images/profile/ and point to it, e.g. "images/profile/me.jpg".
+  # Photo ronde dans la carte de droite. Laisser "" pour garder le badge "AH".
+  # Mets l'image dans static/images/profile/ puis : "images/profile/me.jpg"
   photo: ""
   greeting: "Hi there, my name is"
   name: "Achraf Hasnaoui"
   roles:
     - "software engineer."
+    - "full-stack / backend developer."
     - "problem solver."
-    - "CS engineering student."
-    - "open source fan."
-    - "coffee-powered coder."
-  tagline: "A 2nd year **Computer Science Engineering** student passionate about algorithms, software development and open source — turning ideas into clean, elegant code."
-  statusPill: "open to work"
+    - "CTF player."
+    - "IoT & AI enthusiast."
+  tagline: "A 3rd-year **Software Engineering** student at ENSIT with hands-on experience in **full-stack, backend, web and mobile** development — Java/Spring, Python, React, Flutter. Looking for a **final-year internship (PFE) in France**."
+  statusPill: "seeking PFE · France"
   cardName: "achraf hasnaoui"
-  cardRole: "2nd year CS engineering student"
+  cardRole: "3rd year software engineering student"
   cardInfo:
-    - "📍 [Your City], [Your Country]"
-    - "🎓 BSc Computer Science Engineering"
-    - "💻 Python · Java · JavaScript · C/C++"
-    - "🚀 Currently learning React & Docker"
+    - "📍 Gabès, Tunisia"
+    - "🎓 Software Engineering @ ENSIT"
+    - "💻 Java/Spring · Python · React · Flutter"
+    - "🚀 Seeking a PFE internship in France"
   stats:
-    - num: "2+"
+    - num: "4+"
       label: "years coding"
-    - num: "8+"
-      label: "technologies"
     - num: "3"
-      label: "featured projects"
+      label: "work experiences"
+    - num: "8"
+      label: "projects built"
 
 marquee:
-  - "HTML & CSS"
-  - "JavaScript"
-  - "Python"
   - "Java"
-  - "Git & GitHub"
-  - "MySQL"
-  - "Linux"
+  - "Spring"
+  - "Python"
+  - "Flask"
   - "React"
-  - "C / C++"
+  - "Flutter"
+  - "PostgreSQL"
+  - "MongoDB"
+  - "Linux"
+  - "IoT"
+  - "Cybersecurity"
+  - "Git & GitHub"
 
 about:
-  # Optional second photo for the "quick facts" sticker card in the About
-  # section. Leave "" to keep the plain emoji icon instead.
   photo: ""
+  sub: "The short version of who I am"
   paragraphs:
-    - "I'm a 2nd year **Computer Science Engineering** student with a strong interest in **software engineering**, **algorithms** and **web technologies**."
-    - "I enjoy turning complex problems into simple, elegant solutions and I'm always learning new technologies. Currently exploring data structures, databases and building projects to sharpen my skills."
-    - "Here are a few technologies I've been working with recently:"
+    - "I'm a 3rd-year **Software Engineering** student at **ENSIT** (Tunis) with practical experience in **full-stack, backend, web and mobile** development. I'm comfortable across the whole development cycle — from requirements analysis and design to implementation, testing and validation."
+    - "I've interned at **Airstruct Consulting** (a Spring-based CRM and KPI dashboards for an air & sea freight company) and at **Bako Motors** (a vehicle tracking platform), and I've freelanced on Fiverr since 2022. Outside of code, I'm drawn to **IoT, AI, cybersecurity** and low-level systems."
+    - "Technologies I work with the most:"
   tech:
-    - "Python"
-    - "Java"
-    - "JavaScript"
+    - "Java / Spring / JEE"
+    - "Python / Flask / Django"
+    - "JavaScript / React"
+    - "Flutter / Ionic"
+    - "PostgreSQL / MySQL"
+    - "MongoDB / Firebase"
     - "C / C++"
-    - "HTML & CSS"
-    - "Git & GitHub"
-    - "MySQL"
-    - "Linux"
+    - "Linux & Bash"
   facts:
     title: "Quick facts"
     sub: "the fun stuff"
@@ -95,51 +102,144 @@ about:
       - k: "name"
         v: "Achraf Hasnaoui"
       - k: "status"
-        v: "2nd year CS Engineering"
+        v: "3rd year · ENSIT"
       - k: "location"
-        v: "[Your City], [Your Country]"
+        v: "Gabès, Tunisia"
+      - k: "looking for"
+        v: "PFE internship · France"
       - k: "interests"
-        v: "algorithms, web dev, OSS"
-      - k: "learning"
-        v: "React, Docker, DSA"
-      - k: "motto"
-        v: '"code. learn. ship. repeat."'
+        v: "full-stack, IoT, AI, security"
+      - k: "languages"
+        v: "AR · FR · EN · DE (A1)"
 
 skills:
   sub: "Things I'm good at (and still leveling up)"
+  # NB: les pourcentages sont indicatifs — ajuste-les à ton ressenti.
   groups:
     - emoji: "💬"
       title: "languages"
       items:
-        - name: "Python"
-          level: 90
         - name: "Java"
-          level: 80
+          level: 85
+        - name: "Python"
+          level: 85
         - name: "JavaScript"
-          level: 75
+          level: 80
+        - name: "SQL"
+          level: 80
         - name: "C / C++"
           level: 70
-    - emoji: "🛠️"
-      title: "web & tools"
+        - name: "PHP"
+          level: 65
+    - emoji: "⚙️"
+      title: "backend"
       items:
+        - name: "Spring / Spring Boot"
+          level: 80
+        - name: "JEE"
+          level: 70
+        - name: "Flask"
+          level: 80
+        - name: "Django"
+          level: 65
+    - emoji: "📱"
+      title: "frontend & mobile"
+      items:
+        - name: "React"
+          level: 80
+        - name: "Flutter"
+          level: 70
+        - name: "Ionic"
+          level: 70
         - name: "HTML & CSS"
           level: 85
-        - name: "Git & GitHub"
-          level: 80
-        - name: "MySQL"
-          level: 70
-        - name: "Linux / CLI"
+    - emoji: "🗄️"
+      title: "databases"
+      items:
+        - name: "PostgreSQL"
           level: 75
-        - name: "VS Code"
-          level: 90
-        - name: "Agile / Scrum"
+        - name: "MySQL / MariaDB"
+          level: 80
+        - name: "MongoDB"
+          level: 75
+        - name: "Firebase"
+          level: 70
+    - emoji: "🛠️"
+      title: "tools & systems"
+      items:
+        - name: "Git & GitHub"
+          level: 85
+        - name: "Linux / Unix"
+          level: 80
+        - name: "Bash scripting"
+          level: 75
+    - emoji: "🔐"
+      title: "networks & security"
+      items:
+        - name: "OSI / TCP-IP / routing"
+          level: 75
+        - name: "Wireshark"
+          level: 70
+        - name: "Ghidra"
           level: 60
+        - name: "Metasploit"
+          level: 60
+  extra:
+    - title: "Also familiar with"
+      items:
+        - "Algorithms & data structures"
+        - "Complexity analysis"
+        - "Competitive programming"
+        - "Object-oriented programming"
+        - "System modelling"
+        - "Authentication & data management"
+        - "Access control (RBAC, MAC, DAC, SBAC, Chinese Wall)"
+        - "IoT"
+        - "Artificial intelligence"
+        - "Embedded systems"
+        - "SolidWorks"
+    - title: "Soft skills"
+      items:
+        - "Rigor"
+        - "Autonomy"
+        - "Analytical mindset"
+        - "Scientific curiosity"
+        - "Adaptability"
+        - "Teamwork"
+        - "Communication"
+        - "Leadership"
+        - "Organisation"
+        - "Eager to learn"
 
-# Projects are NOT edited here anymore — each one lives as its own file in
-# content/projects/ (exactly like blog posts do in the blog repo). This
-# section only controls the text around the project grid on the homepage.
-# See content/projects/README.md (and the main README) for how to add,
-# edit, or remove a project.
+experience:
+  sub: "Where I've worked and what I shipped"
+  items:
+    - date: "06/2026 — 07/2026"
+      title: "Software Development / Full Stack Intern"
+      org: "Airstruct Consulting · Tunisia"
+      bullets:
+        - "Designed and built a full-stack web application (Spring backend) for an air & sea freight import-export company."
+        - "Developed a CRM covering staff, client appointments, meeting reports, scheduled trips and sales activity."
+        - "Built dashboards and KPIs to follow individual and overall performance."
+        - "Took part in the whole development cycle: requirements, design, implementation and validation."
+      tags: ["Spring", "Full Stack", "CRM", "KPI dashboards"]
+    - date: "06/2025 — 07/2025"
+      title: "Software Development Intern"
+      org: "Bako Motors (automotive) · Tunisia"
+      bullets:
+        - "Contributed to a software platform tracking vehicles and production operations, to improve traceability."
+        - "Worked on features for vehicle management, test tracking, anomalies and maintenance operations."
+        - "Developed and validated features within a project team, from design to integration."
+      tags: ["Software development", "Traceability", "Teamwork"]
+    - date: "01/2022 — 06/2024"
+      title: "Freelance Developer"
+      org: "Fiverr / Freelancer · Remote"
+      bullets:
+        - "Built e-commerce, showcase and e-learning websites to client requirements."
+        - "Wrote small Python tools for data encryption and compression."
+      tags: ["Web", "E-commerce", "Python"]
+
+# Projects live in content/projects/*.md (one file each).
 projects:
   sub: "Things I've built"
   more:
@@ -149,33 +249,105 @@ projects:
 education:
   sub: "My journey so far"
   items:
-    - date: "2024 — present"
-      title: "BSc Computer Science Engineering"
-      org: "[Your University / School]"
-      desc: "Currently in my 2nd year. Coursework: Data Structures & Algorithms, Object-Oriented Programming, Databases, Computer Architecture, Operating Systems."
-    - date: "2024 — present"
-      title: "Self-taught / Side Projects"
-      org: "Open source & personal learning"
-      desc: "Building personal projects to practice Git workflows, version control, and full-stack basics. Continuously learning through docs, courses and community."
+    - date: "2024 — 2027"
+      title: "Engineering Degree — Computer Engineering"
+      org: "ENSIT, Tunis (in progress · 3rd year)"
+      desc: "Solid training in software engineering, security and computer systems, with a focus on IoT and AI-driven solutions."
     - date: "2022 — 2024"
-      title: "High School Diploma — [Major]"
-      org: "[Your High School]"
-      desc: "Graduated with honors. Focus on mathematics and computer science."
+      title: "Technological Preparatory Cycle"
+      org: "IPEIM, Monastir"
+      desc: "Two-year preparatory cycle — graduated with honors (Mention Bien)."
+    - date: "2021 — 2022"
+      title: "Technological Baccalaureate"
+      org: "Lycée Dkhilet Toujane, Gabès"
+      desc: "Graduated with honors (Mention Bien)."
+  certs:
+    title: "Certifications"
+    items:
+      - "Cisco CCNA 1 (2025)"
+      - "Cisco CCNA 2"
+      - "DataCamp — AI Fundamentals"
+      - "SolidWorks"
+  languages:
+    title: "Languages"
+    items:
+      - "Arabic — native"
+      - "French — advanced"
+      - "English — advanced"
+      - "German — beginner"
+
+activities:
+  title: "beyond school"
+  sub: "What I do outside the classroom"
+  groups:
+    - emoji: "🛡️"
+      title: "Securinets ENSIT"
+      role: "Technical team member · since 2024"
+      color: "pink"
+      intro: "Cybersecurity club of ENSIT, where I take part in the technical side of the club."
+      items:
+        - "Co-organised and designed CTF challenges for the Darknets competition"
+        - "Ran workshops on forensics and cryptography"
+        - "Regular practice in offensive security and digital investigation"
+      tags: ["CTF", "Forensics", "Cryptography"]
+    - emoji: "🏆"
+      title: "Competitions"
+      role: "CTF & competitive programming"
+      color: "yellow"
+      items:
+        - "**1st place** — Cat The Flag (ENIT)"
+        - "CTF: Darknets (Securinets), The Darkest Hour (INSAT)"
+        - "Programming: Recursia, ENSTABYTE 3.0, Geeks Hack 4.0 / 5.0, IEEEXtreme"
+        - "Regular training on LeetCode and Codeforces"
+        - "Student marathons and MTB races"
+      tags: ["CTF", "Algorithms", "Problem solving"]
+    - emoji: "✍️"
+      title: "Technical writing"
+      role: "Personal blog"
+      color: "teal"
+      intro: "I write regularly about AI, security, IoT, mechanics and engineering at large — sharing ideas and opinions, and keeping up with the field."
+      link:
+        label: "Read the blog ↗"
+        href: "https://achrafhasnaoui31.github.io/blog/"
+    - emoji: "❤️"
+      title: "Volunteering"
+      role: "Former member · Red Crescent"
+      color: "coral"
+      intro: "Helped people in difficulty and took part in solidarity actions."
+    - emoji: "🥋"
+      title: "Sports & outdoors"
+      role: "Martial arts, MTB, climbing"
+      color: "mint"
+      items:
+        - "Regular practice of taekwondo, kickboxing, wing chun and boxing"
+        - "Long-distance mountain biking and climbing"
+        - "Camping and survival techniques — I train others (survival trainer)"
+    - emoji: "♟️"
+      title: "Mind & making"
+      role: "Chess, reading, tinkering"
+      color: "yellow"
+      items:
+        - "Chess: concentration and strategic thinking"
+        - "Reading on physics, technology, engineering and personal development"
+        - "Robotics, IoT, mechanics, electronics, prototyping and fabrication"
 
 contact:
-  eyebrow: "got a project in mind?"
+  eyebrow: "looking for a PFE internship?"
   title: "Let's build something **awesome** together ✦"
-  text: "I'm always open to new opportunities, collaborations and interesting conversations. My inbox is always open — whether you have a question or just want to say hi, I'll try my best to get back to you!"
+  text: "I'm looking for a final-year internship (PFE) in software engineering in France, and I'm always open to collaborations and interesting conversations. My inbox is open — whether you have a question or just want to say hi, I'll get back to you!"
   email:
     label: "Say hello ✉"
-    href: "mailto:achrafhs12@gmail.com"
+    href: "mailto:achrafhas2003@gmail.com"
   github:
     label: "GitHub ↗"
     href: "https://github.com/AchrafHasnaoui31"
   linkedin:
     label: "LinkedIn ↗"
-    href: "https://linkedin.com/in/achraf-hasnaoui"
+    href: "https://linkedin.com/in/achraf-hasnaoui-679866250"
+  blog:
+    label: "Blog ↗"
+    href: "https://achrafhasnaoui31.github.io/blog/"
 
 footer:
   text: "© 2026 Achraf Hasnaoui — designed & built with 🧡 and too much coffee ☕"
-  status: "available for opportunities"
+  status: "seeking a PFE internship · France"

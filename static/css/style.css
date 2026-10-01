@@ -1021,4 +1021,120 @@ main { display: block; }
   }
 
   .skill-fill { transition: none; }
+}/* EXT-BEGIN — experience, activities, chips (généré par update_portfolio.sh) */
+.timeline-item:nth-child(4) .timeline-marker { background: var(--mint); }
+.timeline-item:nth-child(5) .timeline-marker { background: var(--coral); }
+
+.timeline-bullets { display: grid; gap: 0.4rem; margin-top: 0.6rem; }
+.timeline-bullets li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--ink-soft);
+  font-size: 0.93rem;
+}
+.timeline-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--coral);
+  font-weight: 700;
+}
+
+/* skills — extra chips */
+.skills-extra { margin-top: 2.6rem; }
+.skills-extra-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.chip-list { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.chip-list li {
+  padding: 0.3rem 0.85rem;
+  background: #fff;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* education — certifications & languages */
+.edu-extras {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+  max-width: 820px;
+  margin: 3rem auto 0;
+}
+.edu-extra { padding: 1.5rem 1.6rem; }
+.edu-extra h3 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+/* activities (hors école) */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  border-top-width: 10px;
+}
+.activity-card--yellow { border-top-color: var(--yellow); }
+.activity-card--pink   { border-top-color: var(--pink); }
+.activity-card--teal   { border-top-color: var(--teal); }
+.activity-card--mint   { border-top-color: var(--mint); }
+.activity-card--coral  { border-top-color: var(--coral); }
+.activity-card:hover { transform: translateY(-4px); box-shadow: 9px 9px 0 var(--shadow-soft); }
+
+.activity-head { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }
+.activity-emoji { font-size: 1.8rem; line-height: 1; }
+.activity-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+.activity-role { color: var(--ink-soft); font-weight: 700; font-size: 0.85rem; }
+.activity-intro { color: var(--ink-soft); font-size: 0.93rem; }
+.activity-list { display: grid; gap: 0.5rem; margin-top: 0.3rem; flex: 1; }
+.activity-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--ink-soft);
+  font-size: 0.93rem;
+}
+.activity-list li strong { color: var(--ink); }
+.activity-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--coral);
+  font-weight: 700;
+}
+.activity-card .project-tags { margin-top: 1rem; }
+.activity-link {
+  margin-top: 1rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 920px) {
+  .activities-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .activities-grid { grid-template-columns: 1fr; }
+  .edu-extras { grid-template-columns: 1fr; }
 }
