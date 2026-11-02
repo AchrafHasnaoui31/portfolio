@@ -1,0 +1,27 @@
+{{ $d := .d }}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ $d.meta.description }}" />
+<meta name="author" content="{{ $d.meta.author }}" />
+<meta name="keywords" content="{{ $d.meta.keywords }}" />
+<meta name="theme-color" content="#03050c" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ $d.meta.title }}" />
+<meta property="og:description" content="{{ $d.meta.description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ "images/achraf.jpg" | relURL }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $d.meta.title }}" />
+<meta name="twitter:description" content="{{ $d.meta.description }}" />
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon.png" | relURL }}" />
+<title>{{ $d.meta.title }}</title>
+
+<!-- High-Impact Typography: Plus Jakarta Sans for Latin, Cairo for Arabic, JetBrains Mono for Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />

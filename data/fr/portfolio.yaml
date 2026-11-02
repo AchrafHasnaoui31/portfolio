@@ -40,7 +40,8 @@ navLinks:
   label: contact
   href: '#contact'
 hero:
-  statusPill: En recherche active de Stage PFE (6 mois) · Dès Fév/Mars 2027 · France
+  statusPill: 🟢 En recherche active de Stage PFE (6 mois) · Dès Fév/Mars 2027 · Tunisie
+    🇹🇳 · France 🇫🇷 · International 🌍
   greeting: Bonjour, je suis
   name: Achraf Hasnaoui
   roles:
@@ -50,20 +51,22 @@ hero:
   - Passionné Cloud, DevOps & Automatisation CI/CD (AWS, Docker)
   - Concepteur IA, MLOps & Audio DSP (PyTorch, QLoRA, MLflow)
   - Maker Systèmes Embarqués, IoT & Robotique (ESP32, C/C++)
-  tagline: Élève-ingénieur en **3e année à l'ENSIT**, je conçois des systèmes informatiques
-    fiables de l'embarqué jusqu'au Cloud. Passionné par l'ingénierie concrète, j'ai
-    optimisé les cycles de maintenance industrielle (**-47% de retards** chez Bako
-    Motors), remporté la **1ère place au concours Cat The Flag**, et développé des
-    architectures microservices IA complètes. **À la recherche d'un stage de fin d'études
-    (PFE) de 6 mois en France dès Février/Mars 2027.**
+  tagline: Élève-ingénieur en **3e année à l'ENSIT**, je conçois et sécurise des systèmes
+    informatiques performants du matériel jusqu'au Cloud. Issu d'une formation d'élite
+    (**Mention Bien au concours préparatoire de l'IPEIM**), j'ai prouvé ma valeur
+    en entreprise en réduisant de **47% les retards de maintenance** chez Bako Motors
+    et en remportant la **1ère place au concours Cat The Flag**. Polyvalent et curieux,
+    je suis **en recherche active d'un stage de fin d'études (PFE) de 6 mois dès Février/Mars
+    2027 — ouvert et mobile pour des opportunités stimulantes en Tunisie 🇹🇳, en France
+    🇫🇷 ou à l'International 🌍 (sur site, hybride ou remote).**
   photo: images/achraf.jpg
   cardName: Achraf Hasnaoui
   cardRole: Élève-Ingénieur Informatique (3e Année)
   cardInfo:
-  - 📍 Gabès / Tunis, Tunisie · Mobilité totale France
-  - 🎓 École Nationale Supérieure d'Ingénieurs de Tunis (ENSIT)
-  - '⚡ 5 Spécialisations : Software, Cloud/DevOps, Cyber, IA, IoT'
-  - 🚀 Stage PFE 6 mois conventionné dès Février/Mars 2027
+  - 📍 Gabès / Tunis, Tunisie · Mobilité totale (Tunisie, France, International)
+  - 🎓 École Nationale Supérieure d'Ingénieurs de Tunis (ENSIT 3A)
+  - '⚡ Profil hybride complet : Du silicium/embarqué jusqu''au Cloud et à l''IA'
+  - 🚀 Recherche Stage PFE 6 mois conventionné dès Février/Mars 2027
   stats:
   - num: ENSIT 3A
     label: Cycle Ingénieur
@@ -77,7 +80,7 @@ hero:
     cvHub: Télécharger mes CV (PDF)
     projects: Voir mes Réalisations
     contact: Me Contacter
-  subtitle: I CODE. I ENGINEER. I SECURE.
+  subtitle: INGÉNIEUR SYSTÈMES COMPLEXES · SOFTWARE, CLOUD, CYBER & IA
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -102,10 +105,13 @@ recruiterSnapshot:
     items:
     - '**Type de contrat** : Stage de Fin d''Études (PFE) de 6 mois conventionné par
       l''ENSIT'
-    - '**Période cible** : Démarrage dès Février / Mars 2027 (durée 5 à 6 mois)'
-    - '**Localisation** : France entière (mobilité géographique totale) ou International'
-    - '**Domaines cibles** : Software Engineering, DevOps/Cloud, Cybersécurité, IA/MLOps,
-      IoT/Embarqué'
+    - '**Période cible** : Démarrage dès Février / Mars 2027 (durée flexible 5 à 6
+      mois)'
+    - '**Destinations acceptées** : Tunisie 🇹🇳 (Tunis, grands comptes & startups),
+      France 🇫🇷 (mobilité nationale totale) ou International 🌍 (Europe, Suisse, Canada,
+      Golfe, Remote)'
+    - '**Pôles visés** : Software Engineering / Backend, Cloud & DevOps, Cybersécurité
+      / DevSecOps, IA & MLOps, Systèmes Embarqués & IoT'
   - title: Impact Chiffré & Preuves Concrètes
     icon: 📊
     items:
@@ -830,9 +836,10 @@ contact:
   eyebrow: Vous cherchez votre futur stagiaire PFE pour 2027 ?
   title: Construisons ensemble vos prochains **succès technologiques** ✦
   text: Je recherche activement un **Stage de Fin d'Études (PFE) de 6 mois dès Février
-    / Mars 2027 en France** en Génie Logiciel, Cloud/DevOps, Cybersécurité, IA ou
-    Systèmes Embarqués. Convention d'école ENSIT fournie, mobilité géographique totale.
-    Échangeons dès aujourd'hui sur vos projets et besoins techniques !
+    / Mars 2027**. Je suis totalement ouvert et disponible pour rejoindre des équipes
+    d'ingénierie en **Tunisie 🇹🇳, en France 🇫🇷 ou à l'International 🌍** (sur site
+    ou en télétravail). Convention d'école ENSIT fournie. Échangeons dès aujourd'hui
+    sur vos projets et besoins techniques !
   email:
     label: M'envoyer un email ✉
     href: mailto:achrafhas2003@gmail.com

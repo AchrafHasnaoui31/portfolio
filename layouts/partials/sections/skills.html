@@ -1,0 +1,67 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+
+<section class="section section--skills" id="skills">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill">04 MY SKILLS</span>
+    </div>
+    <div class="section-head reveal">
+      <h2 class="section-title">{{ $d.skills.title }}</h2>
+      <p class="section-sub">{{ $d.skills.sub }}</p>
+    </div>
+
+    <div class="skills-showcase-grid">
+      <!-- Left: Progress Bars -->
+      <div class="skills-bars-col reveal">
+        {{ range $d.skills.groups }}
+        <div class="skill-category-box">
+          <h3 class="cat-box-title">
+            <span aria-hidden="true">{{ .emoji }}</span> {{ .title }}
+          </h3>
+          <div class="cat-box-bars">
+            {{ range .items }}
+            <div class="skill-bar-row">
+              <div class="skill-info">
+                <span class="skill-name">{{ .name }}</span>
+                <span class="skill-pct">{{ .level }}%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-width="{{ .level }}" style="width: 0%;"></div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- Right: Futuristic Glowing Honeycomb Tech Cluster (matching website development.jpeg) -->
+      <div class="skills-honeycomb-col reveal">
+        <div class="honeycomb-header">
+          <h3 class="honeycomb-title">{{ if eq $lang "ar" }}مجموعة التقنيات الأساسية{{ else if eq $lang "fr" }}Cluster Technologique{{ else }}Core Tech Stack{{ end }}</h3>
+          <p class="honeycomb-sub">{{ if eq $lang "ar" }}أدوات وبيئات الإنتاج اليومية{{ else if eq $lang "fr" }}Outils maîtrisés en production et laboratoire{{ else }}Production tools & environments{{ end }}</p>
+        </div>
+
+        <div class="honeycomb-grid">
+          {{ range $d.techCluster }}
+          <div class="honeycomb-cell" style="--cell-color: {{ .color }};">
+            <span class="cell-symbol" aria-hidden="true">{{ .symbol }}</span>
+            <span class="cell-name">{{ .name }}</span>
+          </div>
+          {{ end }}
+        </div>
+
+        <!-- Engineering Methodologies Chip Box -->
+        <div class="methodologies-box">
+          <h4 class="method-title">{{ if eq $lang "ar" }}الممارسات والمنهجيات الهندسية{{ else if eq $lang "fr" }}Pratiques & Méthodologies{{ else }}Engineering Practices{{ end }}</h4>
+          <ul class="method-chips">
+            {{ range (index $d.skills.extra 0).items }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

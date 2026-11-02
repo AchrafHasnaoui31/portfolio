@@ -1,0 +1,57 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+{{ $bold := .bold }}
+
+<section class="section section--about" id="about">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill">01 ABOUT ME</span>
+    </div>
+
+    <div class="about-hero-block reveal">
+      <h2 class="about-headline">
+        {{ if eq $lang "ar" }}شغوف بهندسة أنظمة برمجية وعتايدية متطورة ذات أثر واقعي.{{ else if eq $lang "fr" }}Passionné par l'ingénierie de systèmes informatiques fiables, distribués et à fort impact.{{ else }}Passionate about engineering reliable, distributed & high-impact systems.{{ end }}
+      </h2>
+      <p class="about-lead">
+        {{ index $d.about.paragraphs 0 | replaceRE $bold "<strong>$1</strong>" | safeHTML }}
+      </p>
+    </div>
+
+    <!-- 4 Large Glowing Counters (matching website development.jpeg) -->
+    <div class="stats-counter-grid reveal">
+      <div class="stat-counter-card">
+        <span class="stat-counter-num">03+</span>
+        <span class="stat-counter-label">{{ if eq $lang "ar" }}سنوات تكوين هندسي (ENSIT){{ else if eq $lang "fr" }}Années Cycle Ingénieur (ENSIT){{ else }}Years Engineering (ENSIT){{ end }}</span>
+      </div>
+      <div class="stat-counter-card">
+        <span class="stat-counter-num">-47%</span>
+        <span class="stat-counter-label">{{ if eq $lang "ar" }}تخفيض تأخيرات الصيانة (Bako){{ else if eq $lang "fr" }}Délais Maintenance Réduits (Bako){{ else }}Maintenance Delays Cut (Bako){{ end }}</span>
+      </div>
+      <div class="stat-counter-card">
+        <span class="stat-counter-num">01st</span>
+        <span class="stat-counter-label">{{ if eq $lang "ar" }}المرتبة الأولى Cat The Flag CTF{{ else if eq $lang "fr" }}1ère Place Cat The Flag CTF{{ else }}1st Place Cat The Flag CTF{{ end }}</span>
+      </div>
+      <div class="stat-counter-card">
+        <span class="stat-counter-num">05</span>
+        <span class="stat-counter-label">{{ if eq $lang "ar" }}سير ذاتية متخصصة جاهزة (PDF){{ else if eq $lang "fr" }}CVs Spécialisés PFE Prêts (PDF){{ else }}Specialized PFE Resumes (PDF){{ end }}</span>
+      </div>
+    </div>
+
+    <!-- About Additional Narrative & Tech Badges -->
+    <div class="about-details-grid reveal">
+      <div class="about-body-text">
+        {{ range (after 1 $d.about.paragraphs) }}
+        <p>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</p>
+        {{ end }}
+      </div>
+      <div class="about-quick-panel">
+        <h4 class="panel-heading">{{ $d.about.facts.title }}</h4>
+        <ul class="facts-list">
+          {{ range $d.about.facts.items }}
+          <li><span class="fact-k">{{ .k }}</span><strong class="fact-v">{{ .v }}</strong></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

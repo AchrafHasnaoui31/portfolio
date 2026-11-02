@@ -1,0 +1,45 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+
+<section class="section section--cv-hub" id="cv-hub">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill cyber-section-pill--accent">03 RESUME HUB</span>
+    </div>
+    <div class="section-head reveal">
+      <h2 class="section-title">{{ $d.cvHub.title }}</h2>
+      <p class="section-sub">{{ $d.cvHub.sub }}</p>
+    </div>
+
+    <div class="cv-grid">
+      {{ range $d.cvHub.items }}
+      <article class="cv-card card cv-card--{{ .accent }} reveal">
+        <div class="cv-card-top">
+          <span class="cv-card-icon" aria-hidden="true">{{ .icon }}</span>
+          <span class="cv-card-badge">{{ .badge }}</span>
+        </div>
+        <h3 class="cv-card-title">{{ .title }}</h3>
+        <p class="cv-card-target">
+          <span class="target-label">{{ if eq $lang "ar" }}المناصب : {{ else if eq $lang "fr" }}Postes cibles : {{ else }}Roles: {{ end }}</span>
+          <strong>{{ .targetRole }}</strong>
+        </p>
+        <p class="cv-card-desc">{{ .summary }}</p>
+        <ul class="cv-tags">
+          {{ range .tags }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        <div class="cv-card-actions">
+          <a href="{{ .fileUrl | relURL }}" download="{{ .fileName }}" class="btn btn-cv-download">
+            <span aria-hidden="true">⬇</span>
+            <span>{{ if eq $lang "ar" }}تحميل PDF{{ else if eq $lang "fr" }}Télécharger PDF{{ else }}Download PDF{{ end }}</span>
+          </a>
+          <a href="{{ .fileUrl | relURL }}" target="_blank" rel="noopener noreferrer" class="btn btn-cv-view">
+            <span>{{ if eq $lang "ar" }}معاينة ↗{{ else if eq $lang "fr" }}Aperçu ↗{{ else }}Preview ↗{{ end }}</span>
+          </a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

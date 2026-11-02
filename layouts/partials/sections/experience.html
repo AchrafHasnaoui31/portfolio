@@ -1,0 +1,41 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+{{ $bold := .bold }}
+
+<section class="section section--experience" id="experience">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill">07 TRACK RECORD</span>
+    </div>
+    <div class="section-head reveal">
+      <h2 class="section-title">{{ $d.experience.title }}</h2>
+      <p class="section-sub">{{ $d.experience.sub }}</p>
+    </div>
+
+    <div class="timeline">
+      {{ range $d.experience.items }}
+      <div class="timeline-item reveal">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <article class="timeline-card card">
+          <div class="timeline-head">
+            <span class="timeline-date">{{ .date }}</span>
+            <h3 class="timeline-role">{{ .role }}</h3>
+            <h4 class="timeline-org">{{ .org }} · <span class="timeline-loc">{{ .location }}</span></h4>
+          </div>
+          <p class="timeline-context">{{ .context }}</p>
+          <ul class="timeline-bullets">
+            {{ range .bullets }}
+            <li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>
+            {{ end }}
+          </ul>
+          <ul class="project-tags">
+            {{ range .tags }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </article>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

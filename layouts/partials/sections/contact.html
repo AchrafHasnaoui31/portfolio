@@ -1,0 +1,81 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+{{ $bold := .bold }}
+
+<section class="section section--contact" id="contact">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill cyber-section-pill--accent">09 CONTACT & RECRUITMENT</span>
+    </div>
+
+    <div class="contact-cyber-card card reveal">
+      <div class="contact-cyber-grid">
+        <!-- Left Info -->
+        <div class="contact-info-col">
+          <h2 class="contact-title">
+            {{ replaceRE $bold `<span class="gradient-text">$1</span>` $d.contact.title | safeHTML }}
+          </h2>
+          <p class="contact-text">{{ $d.contact.text }}</p>
+
+          <div class="contact-coords">
+            <div class="coord-item">
+              <span class="coord-icon" aria-hidden="true">✉</span>
+              <div class="coord-detail">
+                <span class="coord-label">Email</span>
+                <a href="{{ $d.contact.email.href }}" class="coord-value">achrafhas2003@gmail.com</a>
+              </div>
+            </div>
+            <div class="coord-item">
+              <span class="coord-icon" aria-hidden="true">📞</span>
+              <div class="coord-detail">
+                <span class="coord-label">{{ if eq $lang "ar" }}الهاتف{{ else if eq $lang "fr" }}Téléphone{{ else }}Phone{{ end }}</span>
+                <a href="{{ $d.contact.phone.href }}" class="coord-value">+216 23 318 506</a>
+              </div>
+            </div>
+            <div class="coord-item">
+              <span class="coord-icon" aria-hidden="true">📍</span>
+              <div class="coord-detail">
+                <span class="coord-label">{{ if eq $lang "ar" }}الموقع والتنقل{{ else if eq $lang "fr" }}Localisation & Mobilité{{ else }}Location & Mobility{{ end }}</span>
+                <span class="coord-value">Gabès / Tunis, Tunisie · Ouvert Tunisie 🇹🇳, France 🇫🇷 & International 🌍</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive Actions & Status -->
+        <div class="contact-action-col">
+          <div class="status-box">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <div>
+              <h4 class="status-title">{{ if eq $lang "ar" }}متاح فوراً لتربص ختم الدروس (PFE){{ else if eq $lang "fr" }}RECHERCHE ACTIVE STAGE PFE (6 MOIS){{ else }}AVAILABLE FOR FINAL-YEAR INTERNSHIP{{ end }}</h4>
+              <p class="status-sub">{{ if eq $lang "ar" }}بداية من فيفري/مارس 2027 · تونس 🇹🇳 · فرنسا 🇫🇷 · دولياً 🌍{{ else if eq $lang "fr" }}Dès Février/Mars 2027 · Tunisie 🇹🇳 · France 🇫🇷 · International 🌍{{ else }}Starting Feb/Mar 2027 · Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍{{ end }}</p>
+            </div>
+          </div>
+
+          <div class="contact-buttons-stack">
+            <a href="{{ $d.contact.email.href }}" class="btn btn-cyber-primary btn-full">
+              <span aria-hidden="true">✉</span>
+              <span>{{ $d.contact.email.label }}</span>
+            </a>
+
+            <button
+              type="button"
+              class="btn btn-cyber-outline btn-full"
+              id="copyEmailBtn"
+              data-email="achrafhas2003@gmail.com"
+              data-copied="{{ if eq $lang "ar" }}تم النسخ! ✓{{ else if eq $lang "fr" }}Email copié ! ✓{{ else }}Email copied! ✓{{ end }}"
+            >
+              <span aria-hidden="true">📋</span>
+              <span class="btn-copy-label">{{ if eq $lang "ar" }}نسخ البريد الإلكتروني{{ else if eq $lang "fr" }}Copier l'adresse email{{ else }}Copy email address{{ end }}</span>
+            </button>
+
+            <a href="#cv-hub" class="btn btn-cyber-subtle btn-full">
+              <span aria-hidden="true">📄</span>
+              <span>{{ if eq $lang "ar" }}تحميل أحد السير الذاتية (5 PDF){{ else if eq $lang "fr" }}Accéder aux 5 CVs Spécialisés (PDF){{ else }}Access 5 Tailored Resumes (PDF){{ end }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+
+<section class="section section--education" id="education">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill">08 EDUCATION & HONORS</span>
+    </div>
+    <div class="section-head reveal">
+      <h2 class="section-title">{{ $d.education.title }}</h2>
+      <p class="section-sub">{{ $d.education.sub }}</p>
+    </div>
+
+    <div class="edu-grid">
+      <div class="timeline timeline--edu">
+        {{ range $d.education.items }}
+        <div class="timeline-item reveal">
+          <div class="timeline-node timeline-node--gold" aria-hidden="true"></div>
+          <article class="timeline-card card">
+            <span class="timeline-date">{{ .date }}</span>
+            <h3 class="timeline-role">{{ .title }}</h3>
+            <h4 class="timeline-org">{{ .org }}</h4>
+            <p class="timeline-desc">{{ .desc }}</p>
+            {{ with .honors }}
+            <div class="edu-honors-pill">
+              <span aria-hidden="true">🎖️</span> {{ . }}
+            </div>
+            {{ end }}
+          </article>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="edu-side-col reveal">
+        <!-- Certifications -->
+        <div class="card edu-side-card">
+          <h3 class="side-card-title">
+            <span aria-hidden="true">📜</span> {{ $d.education.certs.title }}
+          </h3>
+          <ul class="edu-cert-list">
+            {{ range $d.education.certs.items }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <!-- Languages -->
+        <div class="card edu-side-card">
+          <h3 class="side-card-title">
+            <span aria-hidden="true">🌐</span> {{ $d.education.languages.title }}
+          </h3>
+          <ul class="edu-lang-list">
+            {{ range $d.education.languages.items }}
+            <li>
+              <span class="lang-flag" aria-hidden="true">{{ .flag }}</span>
+              <div class="lang-detail">
+                <strong>{{ .name }}</strong>
+                <span>{{ .level }}</span>
+              </div>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

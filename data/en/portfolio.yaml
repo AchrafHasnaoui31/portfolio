@@ -41,8 +41,8 @@ navLinks:
   label: contact
   href: '#contact'
 hero:
-  statusPill: Actively seeking a 6-month Final-Year Internship (PFE) · Feb/Mar 2027
-    · France & Abroad
+  statusPill: 🟢 Actively seeking a 6-month Final-Year Internship (PFE) · Feb/Mar 2027
+    · Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍
   greeting: Hi there, I am
   name: Achraf Hasnaoui
   roles:
@@ -52,20 +52,22 @@ hero:
   - Cloud, DevOps & CI/CD Automation Enthusiast (AWS, Docker)
   - AI, MLOps & Audio DSP Engineer (PyTorch, QLoRA, MLflow)
   - Embedded Systems, IoT & Robotics Maker (ESP32, C/C++)
-  tagline: A 3rd-year **Computer Engineering** student at **ENSIT**, I design reliable
-    software and hardware systems from microcontrollers to the Cloud. Driven by tangible
-    results, I cut industrial maintenance delays (**-47% delays** at Bako Motors),
-    took **1st place in the Cat The Flag CTF**, and engineered end-to-end AI microservices
-    platforms. **Actively seeking a 6-month final-year internship (PFE) in France
-    starting Feb/Mar 2027.**
+  tagline: A 3rd-year **Computer Engineering** student at **ENSIT**, I design, optimize,
+    and secure resilient computing systems from hardware microcontrollers to Cloud
+    infrastructures. Backed by rigorous academic honors (**Mention Bien in preparatory
+    engineering cycle at IPEIM**), I delivered measurable industrial results by cutting
+    **preventive maintenance delays by 47%** at Bako Motors and won **1st place in
+    the Cat The Flag cybersecurity contest**. **Actively seeking a 6-month final-year
+    internship (PFE) starting Feb/Mar 2027 — open to high-impact opportunities across
+    Tunisia 🇹🇳, France 🇫🇷, and Worldwide 🌍 (on-site, hybrid, or remote).**
   photo: images/achraf.jpg
   cardName: Achraf Hasnaoui
   cardRole: Computer Engineering Student (3rd Year)
   cardInfo:
-  - 📍 Gabès / Tunis, Tunisia · Full mobility across France
-  - 🎓 National Engineering School of Tunis (ENSIT)
-  - '⚡ 5 Focus Tracks: Software, Cloud/DevOps, Cyber, AI, IoT'
-  - 🚀 6-month PFE Internship starting Feb/Mar 2027
+  - 📍 Gabès / Tunis, Tunisia · Full mobility (Tunisia, France, Worldwide)
+  - 🎓 National Engineering School of Tunis (ENSIT 3rd Year)
+  - '⚡ Comprehensive hybrid profile: From silicon/embedded to Cloud & AI'
+  - 🚀 Seeking 6-month PFE internship starting Feb/Mar 2027
   stats:
   - num: ENSIT 3Y
     label: Engineering Degree
@@ -79,7 +81,7 @@ hero:
     cvHub: Download Resumes (PDF)
     projects: Explore Projects
     contact: Get in Touch
-  subtitle: I CODE. I ENGINEER. I SECURE.
+  subtitle: COMPLEX SYSTEMS ENGINEER · SOFTWARE, CLOUD, CYBER & AI
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -102,11 +104,14 @@ recruiterSnapshot:
   - title: Internship Terms & Availability
     icon: 🎯
     items:
-    - '**Contract**: 6-month Final-Year Internship (PFE) backed by ENSIT agreement'
-    - '**Start Window**: February / March 2027 (5 to 6 months duration)'
-    - '**Location**: France nationwide (full relocation willingness) or International'
-    - '**Target Roles**: Software Engineer, DevOps/Cloud, Cybersecurity, AI/MLOps,
-      Embedded/IoT'
+    - '**Contract Type**: 6-month Final-Year Internship (PFE) backed by ENSIT university
+      agreement'
+    - '**Start Window**: Starting February / March 2027 (flexible 5 to 6 months duration)'
+    - '**Locations Accepted**: Tunisia 🇹🇳 (Tunis tech hubs, tech leaders & startups),
+      France 🇫🇷 (full nationwide relocation) or Worldwide 🌍 (Europe, Switzerland,
+      Canada, Gulf, Remote)'
+    - '**Target Roles**: Software Engineering / Backend, Cloud & DevOps, Cybersecurity
+      / DevSecOps, AI & MLOps, Embedded Systems & IoT'
   - title: Quantified Impact & Proven Track Record
     icon: 📊
     items:
@@ -829,9 +834,9 @@ contact:
   eyebrow: Looking for your next PFE engineering intern in 2027?
   title: Let's build something **impactful** together ✦
   text: I am actively seeking a **6-month final-year engineering internship (PFE)
-    starting Feb / March 2027 in France** in Software Engineering, Cloud/DevOps, Cybersecurity,
-    AI, or Embedded Systems. ENSIT internship convention provided, full geographical
-    mobility across France. Let's discuss your technical challenges!
+    starting Feb / March 2027**. I am fully open and ready to join engineering teams
+    in **Tunisia 🇹🇳, France 🇫🇷, or Internationally 🌍** (on-site or remote). ENSIT
+    university internship convention provided. Let's discuss your technical challenges!
   email:
     label: Send an email ✉
     href: mailto:achrafhas2003@gmail.com

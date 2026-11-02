@@ -1,0 +1,11 @@
+{{ $d := .d }}
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-group">
+      {{ range $i, $t := $d.marquee }}
+        {{ if $i }}<span class="marquee-separator">✦</span>{{ end }}
+        <span class="marquee-item">{{ $t }}</span>
+      {{ end }}
+    </div>
+  </div>
+</div>

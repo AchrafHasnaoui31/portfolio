@@ -1,0 +1,30 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+
+<section class="section section--process" id="process">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill">06 PROCESS</span>
+    </div>
+    <div class="section-head reveal">
+      <h2 class="section-title">{{ $d.process.title }}</h2>
+      <p class="section-sub">{{ $d.process.sub }}</p>
+    </div>
+
+    <div class="process-pipeline reveal">
+      <div class="pipeline-track" aria-hidden="true"></div>
+      <div class="pipeline-steps-grid">
+        {{ range $d.process.steps }}
+        <div class="pipeline-step-card">
+          <div class="step-node">
+            <span class="step-num">{{ .num }}</span>
+            <span class="step-icon" aria-hidden="true">{{ .icon }}</span>
+          </div>
+          <h3 class="step-title">{{ .title }}</h3>
+          <p class="step-desc">{{ .desc }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

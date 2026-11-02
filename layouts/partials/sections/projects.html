@@ -1,0 +1,62 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+{{ $bold := .bold }}
+
+<section class="section section--projects" id="projects">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill cyber-section-pill--accent">05 PORTFOLIO</span>
+    </div>
+    <div class="section-head reveal">
+      <h2 class="section-title">{{ $d.projects.title }}</h2>
+      <p class="section-sub">{{ $d.projects.sub }}</p>
+    </div>
+
+    <!-- Filter tabs by Engineering Track -->
+    <div class="projects-filter-bar reveal">
+      {{ range $d.projects.categories }}
+      <button
+        type="button"
+        class="filter-btn {{ if eq .id "all" }}active{{ end }}"
+        data-filter="{{ .id }}"
+      >
+        {{ .label }}
+      </button>
+      {{ end }}
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      {{ range $d.projects.featured }}
+      <article class="project-cyber-card card reveal" data-category="{{ .category }}">
+        <div class="project-top-hud">
+          <span class="hud-tag">{{ .categoryLabel }}</span>
+          <span class="hud-date">{{ .date }}</span>
+        </div>
+
+        <h3 class="project-title">{{ .title }}</h3>
+        <p class="project-summary">{{ .summary }}</p>
+
+        <ul class="project-bullets">
+          {{ range .bullets }}
+          <li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>
+          {{ end }}
+        </ul>
+
+        <ul class="project-tags">
+          {{ range .tags }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+
+        <div class="project-bottom-actions">
+          {{ with .repo }}
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-cyber-sm">
+            <span>GitHub ↗</span>
+          </a>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

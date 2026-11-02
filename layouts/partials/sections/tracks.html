@@ -1,0 +1,39 @@
+{{ $d := .d }}
+{{ $lang := .lang }}
+
+<section class="section section--tracks" id="tracks">
+  <div class="container">
+    <div class="section-badge-wrap reveal">
+      <span class="cyber-section-pill">02 SERVICES & TRACKS</span>
+    </div>
+    <div class="section-head reveal">
+      <h2 class="section-title">{{ if eq $lang "ar" }}ما أقدمه لفريقكم التقني{{ else if eq $lang "fr" }}Ce que je peux apporter à votre équipe{{ else }}What I Can Do For You{{ end }}</h2>
+      <p class="section-sub">{{ if eq $lang "ar" }}5 اختصاصات متقدمة مبنية على مشاريع حقيقية وخبرات عملية :{{ else if eq $lang "fr" }}5 pôles d'ingénierie validés par des réalisations concrètes et de la recherche appliquée :{{ else }}5 specialized engineering tracks backed by real-world projects and lab research:{{ end }}</p>
+    </div>
+
+    <div class="services-grid">
+      {{ range $d.cvHub.items }}
+      <article class="service-card card service-card--{{ .accent }} reveal">
+        <div class="service-card-glow" aria-hidden="true"></div>
+        <div class="service-top">
+          <span class="service-icon" aria-hidden="true">{{ .icon }}</span>
+          <span class="service-badge">{{ .badge }}</span>
+        </div>
+        <h3 class="service-title">{{ .title }}</h3>
+        <p class="service-desc">{{ .summary }}</p>
+        <ul class="service-tags">
+          {{ range .tags }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        <div class="service-action">
+          <a href="{{ .fileUrl | relURL }}" download="{{ .fileName }}" class="service-link">
+            <span>{{ if eq $lang "ar" }}تحميل CV الاختصاص{{ else if eq $lang "fr" }}Télécharger CV du Pôle (PDF){{ else }}Download Track CV{{ end }}</span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
