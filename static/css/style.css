@@ -62,7 +62,23 @@ main { display: block; }
 .section--paper { background: var(--bg); }
 .section--pink { background: #FDF1F5; }
 .section--yellow { background: #FDF6E0; }
+.section--teal { background: #EAF8F5; }
 .section--ink { background: var(--dark); }
+
+.skip-link {
+  position: fixed;
+  top: -5rem;
+  left: 1rem;
+  z-index: 1100;
+  padding: 0.7rem 1rem;
+  background: var(--yellow);
+  color: var(--ink);
+  border: var(--border);
+  border-radius: 0 0 10px 10px;
+  font-weight: 700;
+}
+
+.skip-link:focus { top: 0; }
 
 .section-title {
   font-family: var(--font-head);
@@ -431,6 +447,31 @@ main { display: block; }
 }
 
 .marquee-group b { color: var(--yellow); }
+
+/* ---------- Recruiter snapshot ---------- */
+.recruiter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.recruiter-card {
+  padding: 1.5rem;
+  border-top: 10px solid var(--teal);
+}
+
+.recruiter-card:nth-child(2) { border-top-color: var(--yellow); }
+.recruiter-card:nth-child(3) { border-top-color: var(--pink); }
+
+.recruiter-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+}
 
 /* ---------- About ---------- */
 .about-grid {
@@ -963,6 +1004,7 @@ main { display: block; }
   .hero { padding-top: calc(var(--nav-h) + 3rem); }
   .about-grid { grid-template-columns: 1fr; gap: 2.6rem; }
   .skills-grid { grid-template-columns: 1fr; }
+  .recruiter-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
 }
 
