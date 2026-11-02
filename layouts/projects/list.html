@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 {{ $lang := .Site.Language.Lang }}
 {{ $dir := .Site.Language.Params.dir | default "ltr" }}
-{{ $d := index site.Data $lang "portfolio" }}
-{{ if not $d }}{{ $d = site.Data.portfolio }}{{ end }}
+{{ $d := index hugo.Data $lang "portfolio" }}
+{{ if not $d }}{{ $d = hugo.Data.portfolio }}{{ end }}
 {{ $home := .Site.Home.RelPermalink }}
 
 <html lang="{{ $lang }}" dir="{{ $dir }}">

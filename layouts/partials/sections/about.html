@@ -5,13 +5,18 @@
 <section class="section section--about" id="about">
   <div class="container">
     <div class="section-badge-wrap reveal">
-      <span class="cyber-section-pill">01 ABOUT ME</span>
+      <span class="cyber-section-pill">{{ $d.about.badge | default "01 ABOUT ME" }}</span>
     </div>
 
     <div class="about-hero-block reveal">
       <h2 class="about-headline">
-        {{ if eq $lang "ar" }}شغوف بهندسة أنظمة برمجية وعتايدية متطورة ذات أثر واقعي.{{ else if eq $lang "fr" }}Passionné par l'ingénierie de systèmes informatiques fiables, distribués et à fort impact.{{ else }}Passionate about engineering reliable, distributed & high-impact systems.{{ end }}
+        {{ $d.about.title | default "Passionné par l'ingénierie intégrale : du métal au code, du capteur à l'intelligence artificielle." }}
       </h2>
+      {{ with $d.about.sub }}
+      <p class="about-subhead" style="color: var(--neon-cyan); font-size: 1.15rem; font-weight: 500; margin-top: -0.5rem; margin-bottom: 1.5rem;">
+        {{ . }}
+      </p>
+      {{ end }}
       <p class="about-lead">
         {{ index $d.about.paragraphs 0 | replaceRE $bold "<strong>$1</strong>" | safeHTML }}
       </p>
@@ -20,8 +25,8 @@
     <!-- 4 Large Glowing Counters (matching website development.jpeg) -->
     <div class="stats-counter-grid reveal">
       <div class="stat-counter-card">
-        <span class="stat-counter-num">03+</span>
-        <span class="stat-counter-label">{{ if eq $lang "ar" }}سنوات تكوين هندسي (ENSIT){{ else if eq $lang "fr" }}Années Cycle Ingénieur (ENSIT){{ else }}Years Engineering (ENSIT){{ end }}</span>
+        <span class="stat-counter-num">100%</span>
+        <span class="stat-counter-label">{{ if eq $lang "ar" }}تطبيق عملي وابتكار ميداني (Hands-On){{ else if eq $lang "fr" }}Maker & Hands-On (Mécanique, Élec & Code){{ else }}Hands-On Maker (Hardware, Firmware & Code){{ end }}</span>
       </div>
       <div class="stat-counter-card">
         <span class="stat-counter-num">-47%</span>

@@ -1,9 +1,9 @@
 meta:
-  title: Achraf Hasnaoui · Computer Engineering Student | Seeking 2027 PFE Internship
-  description: Portfolio of Achraf Hasnaoui — 3rd-year computer engineering student
-    at ENSIT. Actively seeking a 6-month final-year internship (PFE) starting Feb/Mar
-    2027 in France & abroad (Software Engineering, Cloud/DevOps, Cybersecurity, AI,
-    IoT).
+  title: Achraf Hasnaoui · Cyber-Physical Systems, Robotics & Software Engineer |
+    PFE 2027
+  description: 'Portfolio of Achraf Hasnaoui — ENSIT engineering student with a rare
+    hybrid profile: Precision Mechanics (Prep PT), Electronics, Embedded Firmware,
+    Cloud & AI. Actively seeking a 6-month PFE internship (Tunisia, France, Worldwide).'
   themeColor: '#070a12'
   author: Achraf Hasnaoui
   keywords: Achraf Hasnaoui, software engineer, ENSIT, PFE internship France 2027,
@@ -41,32 +41,34 @@ navLinks:
   label: contact
   href: '#contact'
 hero:
-  statusPill: 🟢 Actively seeking a 6-month Final-Year Internship (PFE) · Feb/Mar 2027
-    · Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍
+  statusPill: 🟢 Seeking 6-Month PFE Internship · Feb/Mar 2027 · Robotics, Cyber-Physical,
+    Software & Cloud · Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍
   greeting: Hi there, I am
   name: Achraf Hasnaoui
   roles:
-  - Computer Engineering Student (ENSIT 3rd Year)
-  - Full-Stack & Backend Developer (Spring Boot, Python, React)
-  - Cybersecurity Practitioner & Securinets Technical Team
-  - Cloud, DevOps & CI/CD Automation Enthusiast (AWS, Docker)
-  - AI, MLOps & Audio DSP Engineer (PyTorch, QLoRA, MLflow)
-  - Embedded Systems, IoT & Robotics Maker (ESP32, C/C++)
-  tagline: A 3rd-year **Computer Engineering** student at **ENSIT**, I design, optimize,
-    and secure resilient computing systems from hardware microcontrollers to Cloud
-    infrastructures. Backed by rigorous academic honors (**Mention Bien in preparatory
-    engineering cycle at IPEIM**), I delivered measurable industrial results by cutting
-    **preventive maintenance delays by 47%** at Bako Motors and won **1st place in
-    the Cat The Flag cybersecurity contest**. **Actively seeking a 6-month final-year
-    internship (PFE) starting Feb/Mar 2027 — open to high-impact opportunities across
-    Tunisia 🇹🇳, France 🇫🇷, and Worldwide 🌍 (on-site, hybrid, or remote).**
+  - Cyber-Physical Systems & Robotics Architect.
+  - 'Hybrid Engineer: From Silicon & Metal to the Cloud.'
+  - Hands-On Maker & Prototyper (SolidWorks CAD, Machining, 3D).
+  - Low-Level Firmware, FreeRTOS & Embedded Linux Developer.
+  - Backend & Microservices Architect (Java/Spring Boot, Python).
+  - Hardware Security Researcher & CTF Champion.
+  tagline: 'Lifelong maker and hands-on tinkerer. Following a **Technical Baccalaureate**
+    and two years of **Preparatory Engineering Cycle in Physics & Technology (IPEIM
+    - Graduated with Honors)** where I mastered solid mechanics, precision machining,
+    physics, and power electronics, I made a deliberate strategic pivot: entering
+    **Computer Engineering at ENSIT** to master software architectures, operating
+    systems, and Cloud computing with the same depth as hardware. My ultimate goal:
+    converging mechanical reality with digital intelligence to engineer **autonomous
+    robots, smart automation, super bots, and cyber-physical systems**. **Seeking
+    a 6-month Final-Year Internship (PFE) starting Feb/Mar 2027 — open to Tunisia
+    🇹🇳, France 🇫🇷, and Worldwide 🌍**.'
   photo: images/achraf.jpg
   cardName: Achraf Hasnaoui
-  cardRole: Computer Engineering Student (3rd Year)
+  cardRole: Computer & Cyber-Physical Systems Engineer (3rd Year)
   cardInfo:
   - 📍 Gabès / Tunis, Tunisia · Full mobility (Tunisia, France, Worldwide)
-  - 🎓 National Engineering School of Tunis (ENSIT 3rd Year)
-  - '⚡ Comprehensive hybrid profile: From silicon/embedded to Cloud & AI'
+  - 🎓 ENSIT (3rd Year Computer Eng.) + IPEIM (Prep PT with Honors)
+  - '⚙️ Rare Hybrid Profile: Mechanics, Electronics, Embedded, Cloud & AI'
   - 🚀 Seeking 6-month PFE internship starting Feb/Mar 2027
   stats:
   - num: ENSIT 3Y
@@ -81,7 +83,7 @@ hero:
     cvHub: Download Resumes (PDF)
     projects: Explore Projects
     contact: Get in Touch
-  subtitle: COMPLEX SYSTEMS ENGINEER · SOFTWARE, CLOUD, CYBER & AI
+  subtitle: PRECISION MECHANICS · ELECTRONICS · EMBEDDED SYSTEMS · SOFTWARE & AI
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -226,24 +228,33 @@ cvHub:
     fileUrl: cv/Achraf_Hasnaoui_CV_Embedded_IoT.pdf
     targetRole: Embedded Systems Engineer / IoT Engineer / Robotics
 about:
-  badge: About Me
-  title: Curious, versatile, and product-focused engineer
-  sub: From mechanical and electronic prototyping to Cloud deployment and artificial
-    intelligence.
+  badge: 01 MY STORY & ENGINEERING DNA
+  title: 'End-to-end engineering: from raw metal to clean code, from sensor to artificial
+    intelligence'
+  sub: 'Why a passionate builder of mechanics and electronics chose to master computer
+    science at the deepest level:'
   paragraphs:
-  - Currently in my **3rd year of Computer Engineering at ENSIT** (Tunis), having
-    graduated with **Honors (Mention Bien)** from the selective preparatory engineering
-    cycle at **IPEIM**, I bring a rigorous engineering background uniting strong mathematical
-    foundations with applied software mastery.
-  - 'My industry experience gave me early exposure to production environments: delivering
-    a full-stack logistics CRM at **Airstruct Consulting** (Spring Boot), and optimizing
-    electric vehicle fleet telemetry at **Bako Motors**, where my modules reduced
-    **overdue maintenance by 47%** and prolonged **monitored component lifespan by
-    37%**.'
-  - Concurrently, I am an active technical team member of **Securinets ENSIT** (Tunisia's
-    premier cybersecurity club), winning national **CTF contests (1st place at Cat
-    The Flag)**, hosting forensics/cryptography workshops, and building hardware security
-    testbeds with ESP32.
+  - 'My journey began long before lecture halls, **with my hands deep in disassembled
+    engines, soldering irons, and workshop fabrication**. Fascinated by physical systems
+    and how matter obeys the laws of physics, I took the most demanding path for machine
+    builders: the **Technical Baccalaureate** followed by the intensive **Physics
+    & Technology (PT) Preparatory Engineering Cycle at IPEIM, graduating with Honors
+    (Mention Bien)**. There, I forged solid mathematical rigor and an indelible hands-on
+    fabrication culture: tensor calculus, solid mechanics, kinematics, materials science,
+    CNC machining, turning, milling, and industrial electrical wiring.'
+  - 'While traditional academic paths suggested pure mechanical engineering, **I made
+    a calculated and deliberate strategic choice: transitioning to Computer Engineering
+    at ENSIT**. Why? Because I knew exactly what I wanted to build: the future of
+    machinery lives at the convergence of the physical and digital worlds. I refused
+    to be a mechanical engineer blind to code, just as I refused to be a software
+    developer detached from the laws of physics and silicon constraints.'
+  - 'At ENSIT, I built deep software mastery: **distributed architectures (Spring
+    Boot), low-level C/C++ development, real-time deterministic firmware (FreeRTOS,
+    ESP-IDF), operating systems, Cloud/DevOps pipelines (Docker, CI/CD), and generative
+    AI / audio DSP models**. My focus: uniting precision mechanics, power electronics,
+    low-level firmware, and scalable cloud computing to build **next-generation cyber-physical
+    systems, autonomous robotics, intelligent automation machines, and push the frontiers
+    of smart bots.**'
   techBadgesTitle: 'Technologies I work with most:'
   tech:
   - Java / Spring Boot / JPA
@@ -262,16 +273,16 @@ about:
     items:
     - k: Name
       v: Achraf Hasnaoui
+    - k: Profile
+      v: Cyber-Physical Systems & Software Engineer
     - k: Education
-      v: Computer Engineering (3rd Year) · ENSIT
-    - k: Location & Mobility
-      v: Gabès / Tunis · Full mobility to France
-    - k: Goal
-      v: 6-month PFE internship starting Feb/Mar 2027
-    - k: Focus
-      v: Full-Stack, Cloud/DevOps, Cyber, AI, IoT
-    - k: Languages
-      v: French (fluent) · English (advanced) · Arabic (native)
+      v: ENSIT (Computer Eng.) · IPEIM (Prep PT with Honors)
+    - k: Core DNA
+      v: Mechanics, Electronics, Embedded, Software & AI
+    - k: PFE Goal
+      v: 6-month Final-Year Internship starting Feb/Mar 2027
+    - k: Mobility
+      v: Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍
 skills:
   badge: Compétences Techniques
   title: Savoir-faire éprouvé en production et en laboratoires
