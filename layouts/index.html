@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+{{ $lang := .Site.Language.Lang }}
+{{ $dir := .Site.Language.Params.dir | default "ltr" }}
+{{ $d := index site.Data $lang "portfolio" }}
+{{ if not $d }}{{ $d = site.Data.portfolio }}{{ end }}
+{{ $bold := "\\*\\*(.*?)\\*\\*" }}
+
+<html lang="{{ $lang }}" dir="{{ $dir }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {{ $d := .Site.Data.portfolio }}
   <meta name="description" content="{{ $d.meta.description }}" />
   <meta name="author" content="{{ $d.meta.author }}" />
   <meta name="keywords" content="{{ $d.meta.keywords }}" />
@@ -12,66 +17,98 @@
   <meta property="og:title" content="{{ $d.meta.title }}" />
   <meta property="og:description" content="{{ $d.meta.description }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="{{ "images/achraf.jpg" | relURL }}" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ $d.meta.title }}" />
   <meta name="twitter:description" content="{{ $d.meta.description }}" />
-  <link rel="icon" type="image/svg+xml" href="{{ "favicon.png" | relURL }}" />
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon.png" | relURL }}" />
   <title>{{ $d.meta.title }}</title>
+
+  <!-- Modern typography: Plus Jakarta Sans for Latin, Cairo for Arabic, JetBrains Mono for code -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
 </head>
-<body>
+<body class="lang-{{ $lang }}">
 
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  {{/* helper: turn **bold** into <strong>bold</strong> for inline text fields */}}
-  {{ $bold := "\\*\\*(.*?)\\*\\*" }}
+  <a class="skip-link" href="#main-content">
+    {{ if eq $lang "fr" }}Aller au contenu principal{{ else if eq $lang "ar" }}الانتقال إلى المحتوى الأساسي{{ else }}Skip to content{{ end }}
+  </a>
 
   <!-- ===== NAVBAR ===== -->
-  {{ partial "navbar.html" (dict "d" $d "prefix" "") }}
+  {{ partial "navbar.html" (dict "d" $d "Site" .Site "prefix" "") }}
 
   <main id="main-content">
-    <!-- ===== HERO ===== -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="hero-greeting reveal"><span class="wave" aria-hidden="true">👋</span> {{ $d.hero.greeting }}</p>
-          <h1 class="hero-name reveal">{{ $d.hero.name }}<span class="dot-pink" aria-hidden="true">.</span></h1>
-          <h2 class="hero-role reveal">I'm a <span class="type-sticker" id="typewriter"></span><span class="type-cursor" aria-hidden="true"></span></h2>
-          <p class="hero-tagline reveal">{{ replaceRE $bold "<strong>$1</strong>" $d.hero.tagline | safeHTML }}</p>
+          <div class="hero-status-pill reveal">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>{{ $d.hero.statusPill }}</span>
+          </div>
+
+          <p class="hero-greeting reveal">
+            <span class="wave" aria-hidden="true">👋</span> {{ $d.hero.greeting }}
+          </p>
+
+          <h1 class="hero-name reveal">
+            {{ $d.hero.name }}<span class="dot-accent" aria-hidden="true">.</span>
+          </h1>
+
+          <h2 class="hero-role reveal">
+            <span class="hero-role-prefix">{{ if eq $lang "ar" }}أنا {{ else if eq $lang "fr" }}Je suis {{ else }}I am a {{ end }}</span>
+            <span class="type-sticker" id="typewriter"></span><span class="type-cursor" aria-hidden="true"></span>
+          </h2>
+
+          <p class="hero-tagline reveal">
+            {{ replaceRE $bold "<strong>$1</strong>" $d.hero.tagline | safeHTML }}
+          </p>
+
           <div class="hero-actions reveal">
-            <a href="#projects" class="btn btn-primary">See my work <span aria-hidden="true">↓</span></a>
-            <a href="#contact" class="btn btn-outline">Get in touch</a>
+            <a href="#cv-hub" class="btn btn-primary">
+              <span aria-hidden="true">📄</span> {{ $d.hero.actions.cvHub }}
+            </a>
+            <a href="#projects" class="btn btn-outline">
+              <span aria-hidden="true">⚡</span> {{ $d.hero.actions.projects }}
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              {{ $d.hero.actions.contact }}
+            </a>
           </div>
         </div>
 
-        <!-- Sticker profile card -->
-        <div class="reveal">
-          <aside class="hero-card card" aria-label="Quick profile">
+        <!-- Hero Profile Sticker Card -->
+        <div class="hero-card-col reveal">
+          <aside class="hero-card card" aria-label="Profile Card">
             <div class="hero-card-head">
-              {{ if $d.hero.photo }}
-              <img class="hero-avatar hero-avatar--photo" src="{{ $d.hero.photo | relURL }}" alt="{{ $d.hero.name }}" />
-              {{ else }}
-              <span class="hero-avatar" aria-hidden="true">{{ $d.logo.badge }}</span>
-              {{ end }}
-              <span class="status-pill"><span class="pulse-dot" aria-hidden="true"></span>{{ $d.hero.statusPill }}</span>
+              <div class="hero-avatar-wrap">
+                <img class="hero-avatar" src="{{ $d.hero.photo | relURL }}" alt="{{ $d.hero.name }}" width="96" height="96" loading="eager" />
+                <span class="avatar-online-dot" title="Available for PFE"></span>
+              </div>
+              <div class="hero-card-titles">
+                <h3 class="hero-card-name">{{ $d.hero.cardName }}</h3>
+                <p class="hero-card-role">{{ $d.hero.cardRole }}</p>
+              </div>
             </div>
-            <h3 class="hero-card-name">{{ $d.hero.cardName }}</h3>
-            <p class="hero-card-role">{{ $d.hero.cardRole }}</p>
+
             <ul class="hero-card-info">
               {{ range $d.hero.cardInfo }}
-              {{ $parts := split . " " }}
-              <li><span class="info-icon" aria-hidden="true">{{ index $parts 0 }}</span>{{ delimit (after 1 $parts) " " }}</li>
+              <li>{{ . }}</li>
               {{ end }}
             </ul>
+
             <div class="hero-card-stats">
               {{ range $d.hero.stats }}
-              <div class="stat"><strong>{{ .num }}</strong><span>{{ .label }}</span></div>
+              <div class="stat-box">
+                <strong class="stat-num">{{ .num }}</strong>
+                <span class="stat-label">{{ .label }}</span>
+              </div>
               {{ end }}
             </div>
           </aside>
@@ -79,26 +116,38 @@
       </div>
     </section>
 
-    <!-- ===== MARQUEE ===== -->
+    <!-- ===== MARQUEE TICKER ===== -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track" id="marqueeTrack">
         <div class="marquee-group">
-          {{ range $i, $t := $d.marquee }}{{ if $i }}<b>★</b>{{ end }}<span>{{ $t }}</span>{{ end }}
+          {{ range $i, $t := $d.marquee }}
+            {{ if $i }}<span class="marquee-separator">✦</span>{{ end }}
+            <span class="marquee-item">{{ $t }}</span>
+          {{ end }}
         </div>
       </div>
     </div>
 
     <!-- ===== RECRUITER SNAPSHOT ===== -->
-    <section class="section section--teal" id="recruiter-snapshot">
+    <section class="section section--recruiter" id="recruiter-hub">
       <div class="container">
-        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">02</span> recruiter snapshot</h2>
-        <p class="section-sub reveal">{{ $d.recruiterSnapshot.sub }}</p>
+        <div class="section-head reveal">
+          <span class="section-badge">{{ $d.recruiterSnapshot.badge }}</span>
+          <h2 class="section-title">{{ $d.recruiterSnapshot.title }}</h2>
+          <p class="section-sub">{{ $d.recruiterSnapshot.sub }}</p>
+        </div>
+
         <div class="recruiter-grid">
           {{ range $d.recruiterSnapshot.cards }}
           <article class="recruiter-card card reveal">
-            <h3><span aria-hidden="true">{{ .icon }}</span> {{ .title }}</h3>
-            <ul class="timeline-bullets">
-              {{ range .items }}<li>{{ . }}</li>{{ end }}
+            <div class="recruiter-card-head">
+              <span class="recruiter-card-icon" aria-hidden="true">{{ .icon }}</span>
+              <h3 class="recruiter-card-title">{{ .title }}</h3>
+            </div>
+            <ul class="recruiter-card-list">
+              {{ range .items }}
+              <li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>
+              {{ end }}
             </ul>
           </article>
           {{ end }}
@@ -106,105 +155,184 @@
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="section section--paper" id="about">
+    <!-- ===== CV DOWNLOAD HUB (5 TAILORED CVS) ===== -->
+    <section class="section section--cv-hub" id="cv-hub">
       <div class="container">
-        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">01</span> about</h2>
-        <p class="section-sub reveal">{{ $d.about.sub | default "The short version of who I am" }}</p>
+        <div class="section-head reveal">
+          <span class="section-badge section-badge--accent">{{ $d.cvHub.badge }}</span>
+          <h2 class="section-title">{{ $d.cvHub.title }}</h2>
+          <p class="section-sub">{{ $d.cvHub.sub }}</p>
+        </div>
 
-        <div class="about-grid">
-          <div class="about-text reveal">
-            {{ range $d.about.paragraphs }}
-            <p>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</p>
-            {{ end }}
-            <ul class="tech-list">
-              {{ range $d.about.tech }}
+        <div class="cv-grid">
+          {{ range $d.cvHub.items }}
+          <article class="cv-card card cv-card--{{ .accent }} reveal">
+            <div class="cv-card-top">
+              <span class="cv-card-icon" aria-hidden="true">{{ .icon }}</span>
+              <span class="cv-card-badge">{{ .badge }}</span>
+            </div>
+
+            <h3 class="cv-card-title">{{ .title }}</h3>
+            <p class="cv-card-target">
+              <span class="target-label">{{ if eq $lang "ar" }}المناصب المستهدفة: {{ else if eq $lang "fr" }}Postes cibles : {{ else }}Target roles: {{ end }}</span>
+              <strong>{{ .targetRole }}</strong>
+            </p>
+
+            <p class="cv-card-desc">{{ .summary }}</p>
+
+            <ul class="cv-tags">
+              {{ range .tags }}
               <li>{{ . }}</li>
               {{ end }}
             </ul>
-          </div>
 
-          <!-- Sticker quick-facts card -->
-          <div class="reveal">
-            <aside class="about-card card card--cyan" aria-label="Profile details">
-              <div class="about-card-title">
-                {{ if $d.about.photo }}
-                <img class="about-card-icon about-card-icon--photo" src="{{ $d.about.photo | relURL }}" alt="{{ $d.hero.name }}" />
-                {{ else }}
-                <span class="about-card-icon" aria-hidden="true">🧑‍💻</span>
-                {{ end }}
-                <div>
-                  <h3>{{ $d.about.facts.title }}</h3>
-                  <p>{{ $d.about.facts.sub }}</p>
-                </div>
-              </div>
-              <ul class="about-card-list">
-                {{ range $d.about.facts.items }}
-                <li><span>{{ .k }}</span><strong>{{ .v }}</strong></li>
+            <div class="cv-card-actions">
+              <a href="{{ .fileUrl | relURL }}" download="{{ .fileName }}" class="btn btn-cv-download">
+                <span aria-hidden="true">⬇</span>
+                <span>{{ if eq $lang "ar" }}تحميل PDF{{ else if eq $lang "fr" }}Télécharger CV (PDF){{ else }}Download PDF{{ end }}</span>
+              </a>
+              <a href="{{ .fileUrl | relURL }}" target="_blank" rel="noopener noreferrer" class="btn btn-cv-view">
+                <span>{{ if eq $lang "ar" }}معاينة ↗{{ else if eq $lang "fr" }}Aperçu ↗{{ else }}Preview ↗{{ end }}</span>
+              </a>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section section--about" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-badge">{{ $d.about.badge }}</span>
+          <h2 class="section-title">{{ $d.about.title }}</h2>
+          <p class="section-sub">{{ $d.about.sub }}</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-col reveal">
+            {{ range $d.about.paragraphs }}
+            <p class="about-paragraph">{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</p>
+            {{ end }}
+
+            <div class="about-tech-wrap">
+              <h4 class="about-tech-heading">{{ $d.about.techBadgesTitle }}</h4>
+              <ul class="tech-chip-list">
+                {{ range $d.about.tech }}
+                <li>{{ . }}</li>
                 {{ end }}
               </ul>
+            </div>
+          </div>
+
+          <div class="about-facts-col reveal">
+            <aside class="facts-card card" aria-label="Quick profile details">
+              <div class="facts-head">
+                <img class="facts-avatar" src="{{ $d.hero.photo | relURL }}" alt="{{ $d.hero.name }}" width="64" height="64" />
+                <div>
+                  <h3 class="facts-title">{{ $d.about.facts.title }}</h3>
+                  <p class="facts-sub">{{ $d.about.facts.sub }}</p>
+                </div>
+              </div>
+              <ul class="facts-list">
+                {{ range $d.about.facts.items }}
+                <li>
+                  <span class="fact-k">{{ .k }}</span>
+                  <span class="fact-v">{{ .v }}</span>
+                </li>
+                {{ end }}
+              </ul>
+              <div class="facts-action">
+                <a href="#contact" class="btn btn-outline btn-sm btn-full">{{ $d.hero.actions.contact }}</a>
+              </div>
             </aside>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== SKILLS ===== -->
-    <section class="section section--pink" id="skills">
+    <!-- ===== SKILLS MATRIX ===== -->
+    <section class="section section--skills" id="skills">
       <div class="container">
-        <h2 class="section-title reveal"><span class="section-num section-num--ink" aria-hidden="true">02</span> skills</h2>
-        <p class="section-sub reveal">{{ $d.skills.sub }}</p>
+        <div class="section-head reveal">
+          <span class="section-badge">{{ $d.skills.badge }}</span>
+          <h2 class="section-title">{{ $d.skills.title }}</h2>
+          <p class="section-sub">{{ $d.skills.sub }}</p>
+        </div>
 
         <div class="skills-grid">
-          {{ $colors := slice "lime" "cyan" "yellow" "pink" "orange" }}
           {{ range $d.skills.groups }}
-          <div class="skill-group card reveal">
-            <h3 class="skill-group-title"><span class="skill-emoji" aria-hidden="true">{{ .emoji }}</span> {{ .title }}</h3>
-            {{ range $i, $s := .items }}
-            {{ $c := index $colors (mod $i (len $colors)) }}
-            <div class="skill">
-              <div class="skill-head"><span>{{ $s.name }}</span><span>{{ $s.level }}%</span></div>
-              <div class="skill-track"><div class="skill-fill skill-fill--{{ $c }}" data-width="{{ $s.level }}"></div></div>
+          <div class="skill-category card reveal">
+            <div class="skill-cat-head">
+              <span class="skill-emoji" aria-hidden="true">{{ .emoji }}</span>
+              <h3 class="skill-cat-title">{{ .title }}</h3>
             </div>
-            {{ end }}
+            <div class="skill-items">
+              {{ range .items }}
+              <div class="skill-bar-row">
+                <div class="skill-info">
+                  <span class="skill-name">{{ .name }}</span>
+                  <span class="skill-pct">{{ .level }}%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-width="{{ .level }}" style="width: 0%;"></div>
+                </div>
+              </div>
+              {{ end }}
+            </div>
           </div>
           {{ end }}
         </div>
 
-        {{ range $d.skills.extra }}
-        <div class="skills-extra reveal">
-          <h3 class="skills-extra-title">{{ .title }}</h3>
-          <ul class="chip-list">
-            {{ range .items }}<li>{{ . }}</li>{{ end }}
-          </ul>
+        <div class="skills-extra-grid">
+          {{ range $d.skills.extra }}
+          <div class="skills-extra-card card reveal">
+            <h3 class="skills-extra-title">{{ .title }}</h3>
+            <ul class="chip-list">
+              {{ range .items }}
+              <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
         </div>
-        {{ end }}
       </div>
     </section>
 
     <!-- ===== EXPERIENCE ===== -->
-    <section class="section section--paper" id="experience">
+    <section class="section section--experience" id="experience">
       <div class="container">
-        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">03</span> experience</h2>
-        <p class="section-sub reveal">{{ $d.experience.sub }}</p>
+        <div class="section-head reveal">
+          <span class="section-badge">{{ $d.experience.badge }}</span>
+          <h2 class="section-title">{{ $d.experience.title }}</h2>
+          <p class="section-sub">{{ $d.experience.sub }}</p>
+        </div>
 
         <div class="timeline">
           {{ range $d.experience.items }}
           <div class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content card">
-              <span class="timeline-date">{{ .date }}</span>
-              <h3>{{ .title }}</h3>
-              <p class="timeline-org">{{ .org }}</p>
+            <div class="timeline-node" aria-hidden="true"></div>
+            <article class="timeline-card card">
+              <div class="timeline-head">
+                <div>
+                  <span class="timeline-date">{{ .date }}</span>
+                  <h3 class="timeline-role">{{ .role }}</h3>
+                  <h4 class="timeline-org">{{ .org }} · <span class="timeline-loc">{{ .location }}</span></h4>
+                </div>
+              </div>
+              <p class="timeline-context">{{ .context }}</p>
               <ul class="timeline-bullets">
-                {{ range .bullets }}<li>{{ . }}</li>{{ end }}
+                {{ range .bullets }}
+                <li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>
+                {{ end }}
               </ul>
-              {{ with .tags }}
               <ul class="project-tags">
-                {{ range . }}<li>{{ . }}</li>{{ end }}
+                {{ range .tags }}
+                <li>{{ . }}</li>
+                {{ end }}
               </ul>
-              {{ end }}
-            </div>
+            </article>
           </div>
           {{ end }}
         </div>
@@ -212,99 +340,139 @@
     </section>
 
     <!-- ===== PROJECTS ===== -->
-    <section class="section section--ink" id="projects">
+    <section class="section section--projects" id="projects">
       <div class="container">
-        <h2 class="section-title section-title--light reveal"><span class="section-num section-num--yellow" aria-hidden="true">04</span> projects</h2>
-        <p class="section-sub section-sub--light reveal">{{ $d.projects.sub }}</p>
+        <div class="section-head reveal">
+          <span class="section-badge section-badge--accent">{{ $d.projects.badge }}</span>
+          <h2 class="section-title">{{ $d.projects.title }}</h2>
+          <p class="section-sub">{{ $d.projects.sub }}</p>
+        </div>
 
-        <div class="projects-grid">
-          {{ $pcolors := slice "yellow" "pink" "cyan" }}
-          {{ $projects := where site.RegularPages "Section" "projects" }}
-          {{ $projects = $projects.ByWeight }}
-          {{ $projects = first 6 $projects }}
-          {{ range $i, $p := $projects }}
-          {{ $c := index $pcolors (mod $i (len $pcolors)) }}
-          <article class="project-card card project-card--{{ $c }} reveal">
-            {{ with $p.Params.cover }}
-            <a href="{{ $p.RelPermalink }}" class="project-cover-link">
-              <img class="project-cover" src="{{ . | relURL }}" alt="{{ $p.Title }} cover" />
-            </a>
-            {{ end }}
-            <div class="project-top">
-              <span class="project-folder" aria-hidden="true">📁</span>
-              <div class="project-links">
-                {{ with $p.Params.repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="GitHub repository" aria-label="GitHub repository">&#128279;</a>{{ end }}
-                {{ with $p.Params.demo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="Live demo" aria-label="Live demo">&#8599;</a>{{ end }}
-              </div>
-            </div>
-            <h3 class="project-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
-            <p class="project-desc">{{ $p.Params.summary | default $p.Summary }}</p>
-            <ul class="project-tags">
-              {{ range $p.Params.tags }}<li>{{ . }}</li>{{ end }}
-            </ul>
-            <a href="{{ $p.RelPermalink }}" class="project-more">Read more →</a>
-          </article>
+        <!-- Filter tabs by Engineering Track -->
+        <div class="projects-filter-bar reveal">
+          {{ range $d.projects.categories }}
+          <button
+            type="button"
+            class="filter-btn {{ if eq .id "all" }}active{{ end }}"
+            data-filter="{{ .id }}"
+          >
+            {{ .label }}
+          </button>
           {{ end }}
         </div>
 
-        {{ if not $projects }}
-        <p class="section-sub section-sub--light reveal">No projects yet — add one in <code>content/projects/</code>.</p>
-        {{ end }}
+        <div class="projects-grid" id="projectsGrid">
+          {{ range $d.projects.featured }}
+          <article class="project-card card reveal" data-category="{{ .category }}">
+            <div class="project-top">
+              <span class="project-badge">{{ .badge }}</span>
+              <span class="project-date">{{ .date }}</span>
+            </div>
 
-        {{ with $d.projects.more }}
-        <div class="projects-more reveal">
-          <a href="{{ if hasPrefix .href "http" }}{{ .href }}{{ else }}{{ .href | relURL }}{{ end }}" class="btn btn-yellow">{{ .label }}</a>
+            <h3 class="project-title">{{ .title }}</h3>
+            <p class="project-summary">{{ .summary }}</p>
+
+            <ul class="project-bullets">
+              {{ range .bullets }}
+              <li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>
+              {{ end }}
+            </ul>
+
+            <ul class="project-tags">
+              {{ range .tags }}
+              <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+
+            <div class="project-bottom">
+              {{ with .repo }}
+              <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <span>GitHub ↗</span>
+              </a>
+              {{ end }}
+            </div>
+          </article>
+          {{ end }}
         </div>
-        {{ end }}
       </div>
     </section>
 
     <!-- ===== EDUCATION ===== -->
-    <section class="section section--yellow" id="education">
+    <section class="section section--education" id="education">
       <div class="container">
-        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">05</span> education</h2>
-        <p class="section-sub reveal">{{ $d.education.sub }}</p>
-
-        <div class="timeline">
-          {{ range $d.education.items }}
-          <div class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content card">
-              <span class="timeline-date">{{ .date }}</span>
-              <h3>{{ .title }}</h3>
-              <p class="timeline-org">{{ .org }}</p>
-              <p>{{ .desc }}</p>
-            </div>
-          </div>
-          {{ end }}
+        <div class="section-head reveal">
+          <span class="section-badge">{{ $d.education.badge }}</span>
+          <h2 class="section-title">{{ $d.education.title }}</h2>
+          <p class="section-sub">{{ $d.education.sub }}</p>
         </div>
 
-        <div class="edu-extras">
-          {{ with $d.education.certs }}
-          <div class="edu-extra card reveal">
-            <h3>{{ .title }}</h3>
-            <ul class="timeline-bullets">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+        <div class="edu-grid">
+          <div class="timeline timeline--edu">
+            {{ range $d.education.items }}
+            <div class="timeline-item reveal">
+              <div class="timeline-node timeline-node--gold" aria-hidden="true"></div>
+              <article class="timeline-card card">
+                <span class="timeline-date">{{ .date }}</span>
+                <h3 class="timeline-role">{{ .title }}</h3>
+                <h4 class="timeline-org">{{ .org }}</h4>
+                <p class="timeline-desc">{{ .desc }}</p>
+                {{ with .honors }}
+                <div class="edu-honors-pill">
+                  <span aria-hidden="true">🎖️</span> {{ . }}
+                </div>
+                {{ end }}
+              </article>
+            </div>
+            {{ end }}
           </div>
-          {{ end }}
-          {{ with $d.education.languages }}
-          <div class="edu-extra card reveal">
-            <h3>{{ .title }}</h3>
-            <ul class="timeline-bullets">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+
+          <div class="edu-side-col reveal">
+            <!-- Certifications -->
+            <div class="card edu-side-card">
+              <h3 class="side-card-title">
+                <span aria-hidden="true">📜</span> {{ $d.education.certs.title }}
+              </h3>
+              <ul class="edu-cert-list">
+                {{ range $d.education.certs.items }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+
+            <!-- Languages -->
+            <div class="card edu-side-card">
+              <h3 class="side-card-title">
+                <span aria-hidden="true">🌐</span> {{ $d.education.languages.title }}
+              </h3>
+              <ul class="edu-lang-list">
+                {{ range $d.education.languages.items }}
+                <li>
+                  <span class="lang-flag" aria-hidden="true">{{ .flag }}</span>
+                  <div class="lang-detail">
+                    <strong>{{ .name }}</strong>
+                    <span>{{ .level }}</span>
+                  </div>
+                </li>
+                {{ end }}
+              </ul>
+            </div>
           </div>
-          {{ end }}
         </div>
       </div>
     </section>
 
-    <!-- ===== ACTIVITIES (hors école) ===== -->
-    <section class="section section--pink" id="activities">
+    <!-- ===== ACTIVITIES & CTF ===== -->
+    <section class="section section--activities" id="activities">
       <div class="container">
-        <h2 class="section-title reveal"><span class="section-num section-num--ink" aria-hidden="true">06</span> {{ $d.activities.title | default "activities" }}</h2>
-        <p class="section-sub reveal">{{ $d.activities.sub }}</p>
+        <div class="section-head reveal">
+          <span class="section-badge">{{ $d.activities.badge }}</span>
+          <h2 class="section-title">{{ $d.activities.title }}</h2>
+          <p class="section-sub">{{ $d.activities.sub }}</p>
+        </div>
 
         <div class="activities-grid">
           {{ range $d.activities.groups }}
-          <article class="activity-card card activity-card--{{ .color | default "yellow" }} reveal">
+          <article class="activity-card card activity-card--{{ .color | default "teal" }} reveal">
             <div class="activity-head">
               <span class="activity-emoji" aria-hidden="true">{{ .emoji }}</span>
               <div>
@@ -312,19 +480,29 @@
                 {{ with .role }}<p class="activity-role">{{ . }}</p>{{ end }}
               </div>
             </div>
+
             {{ with .intro }}<p class="activity-intro">{{ . }}</p>{{ end }}
+
             {{ with .items }}
-            <ul class="activity-list">
-              {{ range . }}<li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>{{ end }}
+            <ul class="activity-bullets">
+              {{ range . }}
+              <li>{{ replaceRE $bold "<strong>$1</strong>" . | safeHTML }}</li>
+              {{ end }}
             </ul>
             {{ end }}
+
             {{ with .tags }}
             <ul class="project-tags">
               {{ range . }}<li>{{ . }}</li>{{ end }}
             </ul>
             {{ end }}
+
             {{ with .link }}
-            <a href="{{ .href }}" target="_blank" rel="noopener noreferrer" class="activity-link">{{ .label }}</a>
+            <div class="activity-link-wrap">
+              <a href="{{ .href }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                {{ .label }}
+              </a>
+            </div>
             {{ end }}
           </article>
           {{ end }}
@@ -333,18 +511,58 @@
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section class="section" id="contact">
+    <section class="section section--contact" id="contact">
       <div class="container">
-        <div class="contact-panel reveal">
-          <p class="contact-eyebrow">{{ $d.contact.eyebrow }}</p>
-          <h2 class="contact-title">{{ replaceRE $bold `<span class="marker-yellow">$1</span>` $d.contact.title | safeHTML }}</h2>
-          <p class="contact-text">{{ $d.contact.text }}</p>
-          <div class="contact-actions">
-            <a href="{{ $d.contact.email.href }}" class="btn btn-yellow">{{ $d.contact.email.label }}</a>
-            <a href="{{ $d.contact.github.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.github.label }}</a>
-            <a href="{{ $d.contact.linkedin.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.linkedin.label }}</a>
-            {{ with $d.contact.blog }}<a href="{{ .href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ .label }}</a>{{ end }}
-            {{ with $d.contact.cv }}<a href="{{ .href }}" class="btn btn-outline-light">{{ .label }}</a>{{ end }}
+        <div class="contact-card card reveal">
+          <div class="contact-content">
+            <span class="section-badge section-badge--accent">{{ $d.contact.badge }}</span>
+            <p class="contact-eyebrow">{{ $d.contact.eyebrow }}</p>
+            <h2 class="contact-title">
+              {{ replaceRE $bold `<span class="glow-text">$1</span>` $d.contact.title | safeHTML }}
+            </h2>
+            <p class="contact-desc">{{ $d.contact.text }}</p>
+
+            <div class="contact-actions">
+              <!-- Primary Email CTA -->
+              <a href="{{ $d.contact.email.href }}" class="btn btn-primary btn-lg">
+                <span aria-hidden="true">✉</span>
+                <span>{{ $d.contact.email.label }}</span>
+              </a>
+
+              <!-- Copy Email Button -->
+              <button
+                type="button"
+                class="btn btn-outline btn-lg"
+                id="copyEmailBtn"
+                data-email="achrafhas2003@gmail.com"
+                data-copied="{{ if eq $lang "ar" }}تم النسخ! ✓{{ else if eq $lang "fr" }}Email copié ! ✓{{ else }}Email copied! ✓{{ end }}"
+              >
+                <span aria-hidden="true">📋</span>
+                <span class="btn-copy-label">{{ if eq $lang "ar" }}نسخ البريد{{ else if eq $lang "fr" }}Copier l'email{{ else }}Copy email{{ end }}</span>
+              </button>
+
+              <!-- Phone Call -->
+              <a href="{{ $d.contact.phone.href }}" class="btn btn-ghost btn-lg">
+                <span aria-hidden="true">📞</span>
+                <span>{{ $d.contact.phone.label }}</span>
+              </a>
+            </div>
+
+            <!-- Social Links Row -->
+            <div class="contact-social-row">
+              <a href="{{ $d.contact.linkedin.href }}" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <span>LinkedIn</span> ↗
+              </a>
+              <a href="{{ $d.contact.github.href }}" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <span>GitHub</span> ↗
+              </a>
+              <a href="{{ $d.contact.blog.href }}" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <span>Blog Technique</span> ↗
+              </a>
+              <a href="#cv-hub" class="social-pill social-pill--accent">
+                <span>5 CVs Spécialisés (PDF)</span> ↓
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -352,12 +570,16 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  {{ partial "footer.html" $d }}
+  {{ partial "footer.html" (dict "d" $d "Site" .Site) }}
 
+  <!-- Dynamic Roles for Typewriter -->
   <script id="hero-roles" type="application/json">{{ $d.hero.roles | jsonify | safeJS }}</script>
+
+  <!-- JSON-LD Structured Data for Search Engines & Recruiters -->
   <script type="application/ld+json">
-    {{ dict "@context" "https://schema.org" "@type" "Person" "name" $d.meta.author "url" .Permalink "jobTitle" "Software Engineering Student" "description" $d.meta.description "email" $d.contact.email.href "sameAs" (slice $d.contact.github.href $d.contact.linkedin.href $d.contact.blog.href) | jsonify | safeJS }}
+    {{ dict "@context" "https://schema.org" "@type" "Person" "name" $d.hero.name "url" .Permalink "jobTitle" "Computer Engineering Student" "alumniOf" "ENSIT" "description" $d.meta.description "email" $d.contact.email.href "telephone" $d.contact.phone.label "sameAs" (slice $d.contact.github.href $d.contact.linkedin.href $d.contact.blog.href) | jsonify | safeJS }}
   </script>
+
   <script src="{{ "js/main.js" | relURL }}"></script>
 </body>
 </html>

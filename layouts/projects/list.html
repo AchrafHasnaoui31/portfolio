@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+{{ $lang := .Site.Language.Lang }}
+{{ $dir := .Site.Language.Params.dir | default "ltr" }}
+{{ $d := index site.Data $lang "portfolio" }}
+{{ if not $d }}{{ $d = site.Data.portfolio }}{{ end }}
+{{ $home := .Site.Home.RelPermalink }}
+
+<html lang="{{ $lang }}" dir="{{ $dir }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {{ $d := .Site.Data.portfolio }}
   <meta name="description" content="{{ .Params.summary | default $d.meta.description }}" />
   <meta name="theme-color" content="{{ $d.meta.themeColor }}" />
   <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
@@ -12,53 +17,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
 </head>
-<body>
-
-  {{ $home := .Site.Home.RelPermalink }}
+<body class="lang-{{ $lang }}">
 
   <!-- ===== NAVBAR ===== -->
-  {{ partial "navbar.html" (dict "d" $d "prefix" $home) }}
+  {{ partial "navbar.html" (dict "d" $d "Site" .Site "prefix" $home) }}
 
-  <main>
-    <section class="section section--ink project-hero">
+  <main id="main-content">
+    <section class="section project-hero">
       <div class="container">
-        <a href="{{ $home }}#projects" class="project-back reveal">&larr; back to home</a>
+        <a href="{{ $home }}#projects" class="btn btn-sm btn-outline project-back">&larr; {{ if eq $lang "ar" }}العودة للرئيسية{{ else if eq $lang "fr" }}Retour à l'accueil{{ else }}Back to home{{ end }}</a>
         <h1 class="project-hero-title reveal">{{ .Title }}</h1>
-        <p class="section-sub section-sub--light reveal">{{ .Params.summary | default $d.projects.sub }}</p>
+        <p class="section-sub reveal">{{ .Params.summary | default $d.projects.sub }}</p>
       </div>
     </section>
 
-    <section class="section section--ink">
+    <section class="section">
       <div class="container">
         <div class="projects-grid">
-          {{ $pcolors := slice "yellow" "pink" "cyan" }}
-          {{ $projects := .Pages.ByWeight }}
-          {{ range $i, $p := $projects }}
-          {{ $c := index $pcolors (mod $i (len $pcolors)) }}
-          <article class="project-card card project-card--{{ $c }} reveal">
-            {{ with $p.Params.cover }}
-            <a href="{{ $p.RelPermalink }}" class="project-cover-link">
-              <img class="project-cover" src="{{ . | relURL }}" alt="{{ $p.Title }} cover" />
-            </a>
-            {{ end }}
-            <div class="project-top">
-              <span class="project-folder" aria-hidden="true">📁</span>
-              <div class="project-links">
-                {{ with $p.Params.repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="GitHub repository" aria-label="GitHub repository">&#128279;</a>{{ end }}
-                {{ with $p.Params.demo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="Live demo" aria-label="Live demo">&#8599;</a>{{ end }}
-              </div>
-            </div>
-            <h3 class="project-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
-            <p class="project-desc">{{ $p.Params.summary | default $p.Summary }}</p>
+          {{ range .Pages.ByWeight }}
+          <article class="project-card card reveal">
+            <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="project-summary">{{ .Params.summary | default .Summary }}</p>
             <ul class="project-tags">
-              {{ range $p.Params.tags }}<li>{{ . }}</li>{{ end }}
+              {{ range .Params.tags }}<li>{{ . }}</li>{{ end }}
             </ul>
-            <a href="{{ $p.RelPermalink }}" class="project-more">Read more →</a>
+            <a href="{{ .RelPermalink }}" class="project-more">{{ if eq $lang "ar" }}التفاصيل الكاملة &larr;{{ else if eq $lang "fr" }}Détails du projet &rarr;{{ else }}Read more &rarr;{{ end }}</a>
           </article>
           {{ end }}
         </div>
@@ -67,7 +55,7 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  {{ partial "footer.html" $d }}
+  {{ partial "footer.html" (dict "d" $d "Site" .Site) }}
 
   <script src="{{ "js/main.js" | relURL }}"></script>
 </body>

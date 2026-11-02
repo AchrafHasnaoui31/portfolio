@@ -1,18 +1,40 @@
 baseURL = "https://achrafhasnaoui31.github.io/portfolio/"
 title = "Achraf Hasnaoui"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
 
-languageCode = "en-us"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
-enableRobotsTXT = false
-buildDrafts = false
-buildFuture = false
-buildExpired = false
-
-[minify]
-  disableXML = true
+enableRobotsTXT = true
 
 [outputs]
   home = ["HTML"]
+  page = ["HTML"]
+  section = ["HTML"]
 
-[params]
-  env = "production"
+[languages]
+  [languages.fr]
+    locale = "fr-FR"
+    label = "Français"
+    weight = 1
+    title = "Achraf Hasnaoui · Élève-Ingénieur Informatique | Recherche PFE France 2027"
+    [languages.fr.params]
+      lang = "fr"
+      dir = "ltr"
+
+  [languages.en]
+    locale = "en-US"
+    label = "English"
+    weight = 2
+    title = "Achraf Hasnaoui · Computer Engineering Student | Seeking 2027 PFE Internship"
+    [languages.en.params]
+      lang = "en"
+      dir = "ltr"
+
+  [languages.ar]
+    locale = "ar"
+    label = "العربية"
+    weight = 3
+    title = "أشرف حسناوي · طالب مهندس إعلامية | في بحث عن تربص ختم الدروس 2027"
+    [languages.ar.params]
+      lang = "ar"
+      dir = "rtl"

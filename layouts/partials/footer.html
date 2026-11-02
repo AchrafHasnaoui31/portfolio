@@ -1,6 +1,44 @@
-{{ $d := . }}
+{{ $d := .d }}
+{{ $lang := .Site.Language.Lang }}
 {{ $bold := "\\*\\*(.*?)\\*\\*" }}
+
 <footer class="footer">
-  <p class="footer-text">{{ replaceRE $bold "<strong>$1</strong>" $d.footer.text | safeHTML }}</p>
-  <p class="footer-status">STATUS: <strong>{{ $d.footer.status }}</strong></p>
+  <div class="container footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-badge" aria-hidden="true">{{ $d.logo.badge }}</span>
+          <span class="logo-text">achraf<span class="logo-dot">.</span>dev</span>
+        </a>
+        <p class="footer-bio">{{ $d.footer.text }}</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul>
+          {{ range $d.navLinks }}
+          <li><a href="{{ .href }}">{{ .label }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4 class="footer-heading">Contact & Liens</h4>
+        <ul>
+          <li><a href="{{ $d.contact.email.href }}">{{ $d.contact.email.label }}</a></li>
+          <li><a href="{{ $d.contact.github.href }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><a href="{{ $d.contact.linkedin.href }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+          <li><a href="{{ $d.contact.blog.href }}" target="_blank" rel="noopener noreferrer">Blog Technique ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-status">
+        <span class="pulse-dot pulse-dot--sm" aria-hidden="true"></span>
+        {{ $d.footer.status }}
+      </p>
+      <p class="footer-copy">© 2026 Achraf Hasnaoui — École Nationale Supérieure d'Ingénieurs de Tunis (ENSIT)</p>
+    </div>
+  </div>
 </footer>

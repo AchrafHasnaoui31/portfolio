@@ -1,0 +1,853 @@
+meta:
+  title: أشرف حسناوي · طالب مهندس إعلامية | في بحث عن تربص ختم الدروس 2027
+  description: معرض أعمال أشرف حسناوي — طالب مهندس سنة ثالثة بالمدرسة الوطنية العليا
+    للمهندسين بتونس (ENSIT). في بحث نشط عن تربص ختم الدروس (PFE) لمدّة 6 أشهر انطلاقاً
+    من فيفري/مارس 2027 بفرنسا (هندسة البرمجيات، السحابة/DevOps، الأمن السيبراني، الذكاء
+    الاصطناعي، الأنظمة المدمجة).
+  themeColor: '#070a12'
+  author: Achraf Hasnaoui
+  keywords: أشرف حسناوي, طالب مهندس, المدرسة الوطنية العليا للمهندسين بتونس, تربص
+    ختم الدروس فرنسا 2027, هندسة البرمجيات, الأمن السيبراني, الحوسبة السحابية, الذكاء
+    الاصطناعي, الأنظمة المدمجة, ESP32
+logo:
+  badge: AH
+  text: achraf.dev
+navLinks:
+- num: '01.'
+  label: الملف التعريفي
+  href: '#about'
+- num: '02.'
+  label: ملخص التوظيف
+  href: '#recruiter-hub'
+- num: '03.'
+  label: السير الذاتية (PDF)
+  href: '#cv-hub'
+- num: '04.'
+  label: المشاريع
+  href: '#projects'
+- num: '05.'
+  label: الخبرات الميدانية
+  href: '#experience'
+- num: '06.'
+  label: المهارات التقنية
+  href: '#skills'
+- num: '07.'
+  label: المسار الأكاديمي
+  href: '#education'
+- num: '08.'
+  label: المسابقات والأنشطة
+  href: '#activities'
+- num: '09.'
+  label: التواصل
+  href: '#contact'
+hero:
+  statusPill: في بحث نشط عن تربص ختم الدروس (6 أشهر) · بداية من فيفري/مارس 2027 ·
+    فرنسا
+  greeting: مرحباً، أنا
+  name: أشرف حسناوي
+  roles:
+  - طالب مهندس في الهندسة الإعلامية (ENSIT سنة ثالثة)
+  - مطور برمجيات Full Stack & Backend (Spring Boot, Python, React)
+  - ممارس في الأمن السيبراني وعضو الفريق التقني Securinets ENSIT
+  - شغوف بالحوسبة السحابية وأتمتة CI/CD (AWS, Docker)
+  - مهندس ذكاء اصطناعي ومعالجة الإشارات الصوتية (PyTorch, QLoRA, MLflow)
+  - مطور ومبتكر أنظمة مدمجة وروبوتات (ESP32, C/C++)
+  tagline: 'طالب مهندس في **السنة الثالثة إعلامية بالمدرسة الوطنية العليا للمهندسين
+    بتونس (ENSIT)**. أصمم وأطور أنظمة معلوماتية متكاملة وموثوقة من العتاد المدمج إلى
+    الحوسبة السحابية. أسعى دائماً لتحقيق نتائج ملموسة: نجحت في خفض تأخيرات الصيانة
+    الصناعية بنسبة (**47%-**) لدى شركة Bako Motors، وفزت بـ **المرتبة الأولى الوطنية
+    في مسابقة Cat The Flag**، كما بنيت منصات ذكاء اصطناعي متطورة. **أبحث عن تربص لختم
+    الدروس (PFE) لمدة 6 أشهر بفرنسا بداية من فيفري/مارس 2027.**'
+  photo: images/achraf.jpg
+  cardName: أشرف حسناوي
+  cardRole: طالب مهندس إعلامية (السنة 3)
+  cardInfo:
+  - 📍 قابس / تونس العاصمة · استعداد تام للتنقل إلى فرنسا
+  - 🎓 المدرسة الوطنية العليا للمهندسين بتونس (ENSIT)
+  - '⚡ 5 اختصاصات متقدمة: برمجيات، سحابة، أمن سيبراني، ذكاء اصطناعي، إنترنت الأشياء'
+  - 🚀 تربص ختم الدروس (PFE) باتفاقية جامعية بداية من فيفري/مارس 2027
+  stats:
+  - num: ENSIT 3A
+    label: سنة التخرج
+  - num: 47%-
+    label: تأخيرات الصيانة (Bako)
+  - num: المرتبة 1
+    label: مسابقة Cat The Flag
+  - num: 5 سير
+    label: ذاتية متخصصة جاهزة
+  actions:
+    cvHub: تحميل السير الذاتية (PDF)
+    projects: استكشاف المشاريع
+    contact: تواصل معي
+marquee:
+- Java & Spring Boot
+- Python & PyTorch
+- Docker & AWS Cloud
+- GitHub Actions CI/CD
+- Securinets CTF & Pentest
+- ESP32, C/C++ & IoT
+- PostgreSQL & NoSQL
+- React & Flutter
+- Linux & Bash Scripting
+- MLflow & ONNX
+- Contrôle d'Accès IAM
+- SolidWorks & Prototypage
+recruiterSnapshot:
+  badge: ملخص للمسؤولين عن التوظيف
+  title: القيمة المضافة التي أقدمها مباشرة لفريقكم الهندسي
+  sub: 'نظرة شاملة مدعمة بالأرقام لمسؤولي التوظيف والمدراء التقنيين:'
+  cards:
+  - title: شروط وتوقيت التربص
+    icon: 🎯
+    items:
+    - '**نوع العقد**: تربص ختم الدروس (PFE) لمدة 6 أشهر باتفاقية من مدرسة المهندسين
+      ENSIT'
+    - '**فترة الانطلاق**: فيفري / مارس 2027 (مدة مرنة بين 5 و 6 أشهر)'
+    - '**الموقع الجغرافي**: فرنسا كاملة (استعداد تام للتنقل والاستقرار) أو دولياً'
+    - '**المجالات المستهدفة**: هندسة البرمجيات، DevOps/Cloud، الأمن السيبراني، الذكاء
+      الاصطناعي، إنترنت الأشياء'
+  - title: نتائج ملموسة وأرقام محققة
+    icon: 📊
+    items:
+    - '**Bako Motors**: تخفيض بنسبة **47%** في تجاوز آجال الصيانة الوقائية وإطالة
+      عمر القطع بنسبة **37%+**'
+    - '**Securinets ENSIT**: إحراز **المرتبة الأولى** في مسابقة الأمن السيبراني Cat
+      The Flag وتصميم تحديات أمنية'
+    - '**Airstruct Consulting**: إنجاز منصة CRM متكاملة بتقنية Spring Boot مع لوحات
+      مؤشرات الأداء اللوجستي الدولي'
+    - '**التميز الدراسي**: **ملاحظة حسن** في كل من المناظرة الوطنية للترشيح لمدارس
+      المهندسين والباكالوريا'
+  - title: المنهجية الهندسية والجاهزية
+    icon: 🧩
+    items:
+    - '**رؤية شاملة للمنتج**: من تحليل متطلبات المستخدم إلى النشر المؤتمت عبر خطوط
+      CI/CD'
+    - '**تعددية تخصصية نادرة**: القدرة على التعامل السلس مع العتاد الإلكتروني المدمج،
+      السحابة، ونماذج الذكاء الاصطناعي'
+    - '**دقة علمية واستقلالية**: خلفية رياضية وفيزيائية متينة تدعم حل المعضلات التقنية
+      المعقدة'
+    - '**لغات التواصل**: إتقان تام للفرنسية والإنجليزية التقنية إلى جانب اللغة الأم
+      العربية'
+cvHub:
+  badge: ملفات الترشح للتربص (PDF)
+  title: 5 سير ذاتية متخصصة جاهزة للتحميل المباشر
+  sub: 'لتسهيل مهمة الاختيار، يمكنك تحميل السيرة الذاتية المفصلة والمطابقة لاحتياجات
+    فريقكم التقني:'
+  items:
+  - id: software
+    badge: هندسة البرمجيات والتطوير الخلفي
+    title: تطوير البرمجيات Full Stack & Backend
+    icon: 💻
+    accent: emerald
+    summary: التصميم الموجه للكائنات، معمارية خلفية متينة باستخدام Spring Boot و Python،
+      واجهات برمجة تطبيقات RESTful آمنة وقواعد بيانات حديثة.
+    tags:
+    - Java
+    - Spring Boot
+    - Python
+    - React
+    - PostgreSQL
+    - Docker
+    - REST API
+    fileName: Achraf_Hasnaoui_CV_Software_Engineer.pdf
+    fileUrl: cv/Achraf_Hasnaoui_CV_Software_Engineer.pdf
+    targetRole: مهندس برمجيات / مطور Backend & Full Stack
+  - id: cybersecurity
+    badge: الأمن السيبراني الهجومي والدفاعي
+    title: الأمن السيبراني و DevSecOps
+    icon: 🛡️
+    accent: rose
+    summary: ممارسة مستمرة لمسابقات CTF (المرتبة الأولى Cat The Flag)، اختبارات الاختراق
+      في المختبرات، التحقيق الرقمي، نماذج التحكم بالوصول وأمن إنترنت الأشياء.
+    tags:
+    - اختبار الاختراق
+    - Nmap, Burp, Metasploit, Ghidra
+    - إدارة الصلاحيات IAM
+    - مختبرات ESP32
+    - DevSecOps
+    fileName: Achraf_Hasnaoui_CV_Cybersecurity_DevSecOps.pdf
+    fileUrl: cv/Achraf_Hasnaoui_CV_Cybersecurity_DevSecOps.pdf
+    targetRole: مهندس أمن سيبراني / مستشار اختبار اختراق / DevSecOps
+  - id: devops
+    badge: الحوسبة السحابية وموثوقية الأنظمة
+    title: الحوسبة السحابية، DevOps و SRE
+    icon: ☁️
+    accent: cyan
+    summary: أتمتة خطوط التكامل والنشر المستمر CI/CD عبر GitHub Actions، الحاويات
+      Docker، أساسيات AWS Cloud، إدارة أنظمة لينكس المتقدمة ومراقبة الشبكات.
+    tags:
+    - AWS Cloud
+    - GitHub Actions CI/CD
+    - Docker
+    - Linux & Bash
+    - أتمتة n8n
+    - الشبكات و Wireshark
+    fileName: Achraf_Hasnaoui_CV_DevOps_Cloud.pdf
+    fileUrl: cv/Achraf_Hasnaoui_CV_DevOps_Cloud.pdf
+    targetRole: مهندس سحابة / DevOps / موثوقية الأنظمة SRE
+  - id: ai
+    badge: الذكاء الاصطناعي وتعلم الآلة
+    title: الذكاء الاصطناعي، GenAI و MLOps
+    icon: 🧠
+    accent: violet
+    summary: منصة CardioAgent-Ops المصغرة، معالجة الإشارات الصوتية الطبية، مقارنة
+      نماذج التعلم العميق، ضبط النماذج اللغوية (QLoRA) وتتبع النماذج عبر MLflow/ONNX.
+    tags:
+    - PyTorch & Librosa
+    - ضبط النماذج QLoRA / PEFT
+    - البحث الشعاعي RAG
+    - MLflow & ONNX
+    - أنظمة الوكلاء المتعددين
+    - FastAPI
+    fileName: Achraf_Hasnaoui_CV_AI_GenAI_MLOps.pdf
+    fileUrl: cv/Achraf_Hasnaoui_CV_AI_GenAI_MLOps.pdf
+    targetRole: مهندس ذكاء اصطناعي / تعلم الآلة / MLOps / عالم بيانات
+  - id: embedded
+    badge: الأنظمة المدمجة والروبوتات
+    title: الأنظمة المدمجة، إنترنت الأشياء والميكاترونيكس
+    icon: ⚡
+    accent: amber
+    summary: 'تكامل فريد بين الميكانيكا، الإلكترونيات والبرمجة: لينكس المدمج، برمجة
+      المتحكمات الدقيقة C/C++ (ESP32/ESP-IDF)، بروتوكولات إنترنت الأشياء والنمذجة
+      بـ SolidWorks.'
+    tags:
+    - لينكس المدمج
+    - ESP32 C/C++
+    - مشروع المزرعة الذكية (23 مستشعر)
+    - روبوت متحرك مستقل
+    - SolidWorks والطباعة ثلاثية الأبعاد
+    fileName: Achraf_Hasnaoui_CV_Embedded_IoT.pdf
+    fileUrl: cv/Achraf_Hasnaoui_CV_Embedded_IoT.pdf
+    targetRole: مهندس أنظمة مدمجة / مهندس إنترنت الأشياء / روبوتات
+about:
+  badge: نبذة عني
+  title: مهندس شغوف بالأنظمة المعقدة وصناعة الأثر الإيجابي
+  sub: من التصميم الميكانيكي والإلكتروني حتى النشر السحابي وحلول الذكاء الاصطناعي.
+  paragraphs:
+  - أدرس حالياً بـ **السنة الثالثة من المرحلة الهندسية في اختصاص الهندسة الإعلامية
+    بالمدرسة الوطنية العليا للمهندسين بتونس (ENSIT)**، بعد إحرازي للقبول من المعهد
+    التحضيري للدراسات الهندسية بالمنستير (IPEIM) بـ **ملاحظة حسن**، حيث تلقيت تكويناً
+    علمياً متيناً يجمع بين الرياضيات الدقيقة والمعارف الحاسوبية المتقدمة.
+  - 'مكّنتني تجاربي الميدانية في الشركات من خوض التحديات الواقعية للإنتاج: تطوير نظام
+    CRM للشحن الدولي في **Airstruct Consulting** (Spring Boot)، وتطوير وحدة تتبع بيانات
+    الصيانة الوقائية في شركة **Bako Motors** التونسية للسيارات الكهربائية، حيث أسهمت
+    برمجياتي في **خفض التأخيرات بنسبة 47%** وإطالة **عمر القطع بنسبة 37%**.'
+  - وإلى جانب دراستي، أنشط كعضو فاعل في الفريق التقني لنادي **Securinets ENSIT** الرائد
+    في مجال الأمن السيبراني، حيث أحرزت **المرتبة الأولى الوطنية في مسابقة Cat The
+    Flag**، وأشرفت على تنظيم ورشات عمل في التحقيق الجنائي الرقمي والتشفير وتصميم منصات
+    الاختبار العتادية.
+  techBadgesTitle: 'التقنيات التي أعمل بها بشكل يومي:'
+  tech:
+  - Java / Spring Boot / JPA
+  - Python (PyTorch, FastAPI, Flask)
+  - Docker & GitHub Actions CI/CD
+  - AWS Cloud (IAM, S3, EC2)
+  - C / C++ & Linux Embarqué
+  - ESP32 (ESP-IDF, Arduino, FreeRTOS)
+  - PostgreSQL, MySQL, MongoDB
+  - React, Flutter & Ionic
+  - Wireshark, Burp, Nmap, Ghidra
+  - MLflow, ONNX, QLoRA, RAG
+  facts:
+    title: بيانات سريعة
+    sub: معلومات أساسية
+    items:
+    - k: الاسم الكامل
+      v: أشرف حسناوي
+    - k: المستوى الأكاديمي
+      v: طالب مهندس (سنة 3) · ENSIT تونس
+    - k: المنطقة والتنقل
+      v: قابس / تونس · استعداد كامل للتنقل إلى فرنسا
+    - k: الهدف الحالي
+      v: تربص ختم الدروس (PFE) لمدة 6 أشهر
+    - k: الركائز الأساسية
+      v: برمجيات، سحابة، أمن سيبراني، ذكاء اصطناعي، إنترنت الأشياء
+    - k: اللغات
+      v: العربية (الأم) · الفرنسية (طلاقة تامة) · الإنجليزية (متقدم)
+skills:
+  badge: المهارات والكفاءات
+  title: خبرات مثبتة في بيئات الإنتاج والمختبرات
+  sub: 'مزيج متوازن بين تطوير البرمجيات، البنية التحتية، الأمان، والتكامل العتادي:'
+  groups:
+  - emoji: 💻
+    title: Génie Logiciel & Backend
+    items:
+    - name: Java / Spring Boot / JPA
+      level: 88
+    - name: Python (FastAPI, Flask, Django)
+      level: 88
+    - name: Conception POO, Design Patterns & API REST
+      level: 85
+    - name: Frontend Web (React, HTML5, CSS3 Moderne)
+      level: 80
+    - name: Mobile (Flutter, Ionic)
+      level: 75
+    - name: C / C++ (POO, Algorithmique)
+      level: 80
+  - emoji: ☁️
+    title: Cloud, DevOps & Systèmes
+    items:
+    - name: GitHub Actions & Pipelines CI/CD
+      level: 85
+    - name: Docker (Images, Compose, Conteneurisation)
+      level: 82
+    - name: Linux & Unix (Administration, Bash Scripting)
+      level: 88
+    - name: AWS Cloud (Concepts fondamentaux, IAM, Services)
+      level: 75
+    - name: Réseaux & Protocoles (TCP/IP, OSI, Wireshark)
+      level: 85
+    - name: Automatisation & Workflows (n8n, Scripts Python)
+      level: 82
+  - emoji: 🛡️
+    title: Cybersécurité & DevSecOps
+    items:
+    - name: Sécurité Offensive, Pentest Labs & CTF
+      level: 85
+    - name: Outils de Sécurité (Nmap, Metasploit, Burp, Ghidra)
+      level: 80
+    - name: Modèles de Contrôle d'Accès (RBAC, MAC, DAC, Chinese Wall)
+      level: 88
+    - name: Forensics & Analyse d'incidents / Trafic
+      level: 78
+    - name: Sécurité Sans Fil & IoT (Labs ESP32 Wi-Fi/BLE/HID)
+      level: 82
+  - emoji: 🧠
+    title: Intelligence Artificielle & MLOps
+    items:
+    - name: PyTorch & Scikit-Learn (Classification, Deep Learning)
+      level: 80
+    - name: Audio & Signal DSP (Librosa, MFCC, Spectrogrammes)
+      level: 82
+    - name: Generative AI & LLM (Fine-Tuning QLoRA, PEFT)
+      level: 78
+    - name: RAG, Embeddings & Vector Search (Chroma, Qdrant)
+      level: 80
+    - name: MLOps (MLflow Tracking, Model Registry, Export ONNX)
+      level: 78
+    - name: Systèmes Multi-Agents (LangGraph, FastAPI microservices)
+      level: 76
+  - emoji: ⚡
+    title: Systèmes Embarqués, IoT & Mécatronique
+    items:
+    - name: ESP32 / ESP-IDF & Arduino (Firmware, FreeRTOS)
+      level: 88
+    - name: Linux Embarqué & Microcontrôleurs
+      level: 80
+    - name: Protocoles IoT (MQTT, HTTP REST, BLE, Wi-Fi)
+      level: 85
+    - name: Électronique pratique, Capteurs, Actionneurs & PWM
+      level: 88
+    - name: CAO SolidWorks, Prototypage 3D & Usinage
+      level: 85
+  - emoji: 🗄️
+    title: Bases de Données & Données
+    items:
+    - name: PostgreSQL & MySQL / MariaDB (SQL, Indexation)
+      level: 85
+    - name: MongoDB (NoSQL Documentaire)
+      level: 80
+    - name: Firebase Realtime DB & Firestore
+      level: 78
+  extra:
+  - title: Méthodologies & Pratiques d'Ingénierie
+    items:
+    - Algorithmique avancée & Structures de données
+    - Programmation compétitive (LeetCode, Codeforces)
+    - Analyse de complexité temporelle et spatiale
+    - Conception orientée objet & Modélisation UML
+    - Revue de code, GitFlow et intégration continue
+    - Sécurité dès la conception (Security by Design)
+    - Prototypage rapide du cahier des charges au produit fonctionnel
+  - title: Qualités Personnelles & Soft Skills
+    items:
+    - Rigueur technique & Sens du détail
+    - Forte curiosité scientifique
+    - Autonomie et capacité d'auto-formation rapide
+    - Esprit d'équipe & Communication claire
+    - Résolution structurée de problèmes complexes
+    - Sens du produit et pragmatisme économique
+experience:
+  badge: Expériences Professionnelles
+  title: Missions en entreprise & réalisations à impact
+  sub: 'Des projets concrets menés en conditions industrielles avec des résultats
+    quantifiables :'
+  items:
+  - date: 06/2026 — 08/2026
+    role: Stagiaire Développeur Logiciel / Full Stack
+    org: Airstruct Consulting
+    location: Tunisie
+    context: Société spécialisée dans le transport international aérien et maritime
+      de marchandises (import-export).
+    bullets:
+    - Conception et réalisation d'une application web Full Stack avec Spring Boot
+      / JPA côté backend et interfaces modernes de gestion.
+    - 'Développement d''un CRM dédié à l''activité commerciale : suivi des collaborateurs,
+      gestion des rendez-vous clients, rédaction des comptes rendus et suivi des voyages
+      d''affaires programmés.'
+    - Création de tableaux de bord interactifs et calcul automatisé d'indicateurs
+      KPI de pilotage pour mesurer les performances individuelles et globales.
+    - 'Participation active à l''intégralité du cycle de livraison : analyse fonctionnelle,
+      conception de l''architecture, implémentation, tests et recette utilisateur.'
+    tags:
+    - Java
+    - Spring Boot
+    - JPA / Hibernate
+    - CRM
+    - Tableaux de Bord KPI
+    - REST API
+    - Full Stack
+  - date: 06/2025 — 07/2025
+    role: Stagiaire Ingénieur Développement Logiciel
+    org: Bako Motors (Constructeur Automobile Électrique)
+    location: Tunisie
+    context: Constructeur automobile innovant de véhicules utilitaires et solaires
+      100% électriques pour la livraison du dernier kilomètre.
+    bullets:
+    - Développement du module de traçabilité des résultats d'essais et des cycles
+      de maintenance au sein de la plateforme connectée de suivi des véhicules.
+    - '**Résultat mesuré** : Réduction de **47%** des dépassements d''échéances de
+      maintenance préventive grâce à un système intelligent de suivi et d''alertes
+      anticipées.'
+    - '**Résultat mesuré** : Allongement effectif de **37%** de la durée de vie moyenne
+      des pièces sous surveillance par rapport au fonctionnement sans suivi télémétrique.'
+    - Intégration d'outils de traçabilité des anomalies pour faciliter les interventions
+      des équipes de maintenance en atelier.
+    - Travail collaboratif au sein d'une équipe pluridisciplinaire d'ingénieurs (mécanique,
+      électronique embarquée, logiciel).
+    tags:
+    - Génie Logiciel
+    - Traçabilité Flotte
+    - Maintenance Préventive
+    - -47% Délais
+    - +37% Durée Composants
+    - Automobile
+  - date: 01/2022 — 06/2024
+    role: Développeur Indépendant (Freelance)
+    org: Fiverr & Freelancer.com
+    location: Télétravail International
+    context: Prestations techniques pour des clients indépendants et petites entreprises
+      à l'international.
+    bullets:
+    - Développement de solutions web sur-mesure (sites e-commerce, vitrines d'entreprises,
+      plateformes d'e-learning) selon des spécifications précises.
+    - Conception et déploiement de mini-outils Python dédiés au chiffrement sécurisé,
+      au hachage et à la compression performante de données.
+    - 'Pilotage autonome des projets : recueil des besoins, estimation des charges,
+      développement itératif et support technique post-livraison.'
+    tags:
+    - Python
+    - Chiffrement & Compression
+    - Web & E-commerce
+    - Freelance
+    - Autonomie
+projects:
+  badge: Réalisations d'Ingénierie
+  title: Projets phares & cas d'études techniques
+  sub: 'Une sélection de projets représentatifs de mon niveau d''exigence technique
+    et de ma pluridisciplinarité :'
+  filterAll: كافة المشاريع
+  categories:
+  - id: all
+    label: الكل
+  - id: software
+    label: هندسة البرمجيات
+  - id: cloud
+    label: السحابة و DevOps
+  - id: cyber
+    label: الأمن السيبراني
+  - id: ai
+    label: الذكاء الاصطناعي
+  - id: embedded
+    label: الأنظمة المدمجة
+  featured:
+  - title: CardioAgent-Ops — Plateforme Microservices IA Médicale
+    category: ai
+    categoryLabel: IA & MLOps
+    date: 2026 — En cours
+    badge: Microservices & MLOps
+    summary: 'Plateforme microservices pour l''analyse acoustique cardiaque : pipeline
+      de données Librosa (MFCC, Spectrogrammes, ZCR), benchmark de modèles ML/DL,
+      Fine-Tuning LLM (QLoRA, Qwen/Llama), RAG vectoriel (Qdrant), orchestration Multi-Agents
+      (LangGraph), tracking MLflow, export ONNX et déploiement CI/CD automatisé.'
+    bullets:
+    - Preprocessing avancé de signaux audio cardiaques (spectrogrammes, coefficients
+      MFCC)
+    - 'Benchmark rigoureux : Decision Tree, SVM, CNN, Transfer Learning et Transformer-CNN'
+    - Fine-Tuning de LLM (QLoRA/PEFT) pour la génération de synthèses médicales et
+      agents intelligents multi-rôles
+    - Pipeline MLOps moderne avec MLflow (tracking + Model Registry), export ONNX
+      et validation automatisée (Pytest, GitHub Actions, Docker)
+    tags:
+    - Python
+    - PyTorch
+    - Librosa
+    - FastAPI
+    - MLflow
+    - ONNX
+    - QLoRA
+    - RAG
+    - Docker
+    - CI/CD
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Smart Farm — Système Agricole Intelligent Autonome
+    category: embedded
+    categoryLabel: IoT & Embarqué
+    date: '2023'
+    badge: Projet Réel Client en Exploitation
+    summary: 'Conception mécanique, électronique et logicielle d''une solution complète
+      d''automatisation agricole pour une exploitation réelle : régulation d''arrosage,
+      fermeture automatisée du poulailler, contrôle de l''étable, gestion des pompes
+      de puits et nourrissage automatisé du bétail.'
+    bullets:
+    - Architecture matérielle robuste intégrant 23 capteurs environnementaux et plus
+      de 30 actionneurs industriels
+    - Centrale hybride Raspberry Pi + microcontrôleurs ESP32 communiquant via Wi-Fi
+      et bus industriels
+    - Conception mécanique des actionneurs sous CAO, câblage complet et fabrication
+      des coffrets étanches
+    - Application mobile intuitive de télémétrie et télécommande en temps réel pour
+      l'exploitant
+    tags:
+    - ESP32
+    - Raspberry Pi
+    - 23 Capteurs & 30 Actionneurs
+    - C/C++
+    - Wi-Fi
+    - Application Mobile
+    - Prototypage Matériel
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Bako Motors — Traçabilité & Maintenance Préventive
+    category: software
+    categoryLabel: Génie Logiciel
+    date: '2025'
+    badge: Impact Industriel Mesuré (-47%)
+    summary: Module logiciel de gestion des campagnes d'essais et des cycles de révision
+      préventive pour véhicules utilitaires électriques solaires, diminuant drastiquement
+      les arrêts imprévus.
+    bullets:
+    - Réduction documentée de 47% des dépassements d'échéances de maintenance
+    - Prolongation mesurée de 37% de la durée de vie des composants critiques sous
+      télémétrie
+    - Conception de formulaires dynamiques de recueil d'anomalies et suivi des réparations
+      en atelier
+    tags:
+    - Génie Logiciel
+    - Télémétrie Flotte
+    - Maintenance Préventive
+    - Optimisation -47%
+    - Qualité & Tests
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Plateforme CTF & Conception d'Épreuves Securinets
+    category: cyber
+    categoryLabel: Cybersécurité
+    date: '2024'
+    badge: Compétitions Nationales Securinets
+    summary: Développement et maintenance d'une plateforme sécurisée dédiée à l'organisation
+      de compétitions Capture The Flag (CTF) et à l'entraînement technique des membres
+      du club Securinets ENSIT.
+    bullets:
+    - Conception et déploiement d'épreuves de sécurité offensive (forensics numérique,
+      cryptographie, reverse engineering)
+    - Gestion en direct des flags, vérification sécurisée des soumissions et tableau
+      des scores en temps réel
+    - Organisation d'ateliers d'entraînement et sensibilisation à la sécurité des
+      systèmes d'information
+    tags:
+    - Cybersécurité
+    - CTF
+    - Securinets ENSIT
+    - Forensics
+    - Cryptographie
+    - Python
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Laboratoires de Recherche en Sécurité Sans Fil ESP32
+    category: cyber
+    categoryLabel: Cybersécurité & IoT
+    date: 2025 — En développement
+    badge: Recherche & Audit Sécurité Matérielle
+    summary: Suite d'outils matériels sur microcontrôleurs ESP32 pour l'analyse et
+      l'évaluation de vulnérabilités en environnement de laboratoire contrôlé (Wi-Fi,
+      Bluetooth BLE et vecteurs d'attaque HID).
+    bullets:
+    - 'ESP32 Wireless Lab : Analyse des mécanismes d''authentification Wi-Fi, simulation
+      de points d''accès malveillants (Evil Twin) et audit des services exposés'
+    - 'ESP32 HID Testing Tool : Prototypage d''un périphérique d''injection HID programmable
+      pour l''étude des risques liés aux périphériques d''entrée'
+    - 'ESP32 Bluetooth Lab : Analyse des trames publicitaires BLE et tests de robustesse
+      des objets connectés'
+    tags:
+    - ESP32
+    - Sécurité Sans Fil
+    - Evil Twin
+    - HID Injection
+    - Bluetooth BLE
+    - C/C++
+    - Audit Sécurité
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Étude & Implémentation des Modèles de Contrôle d'Accès
+    category: cyber
+    categoryLabel: Cybersécurité & Logiciel
+    date: '2024'
+    badge: IAM & Politiques de Sécurité
+    summary: 'Application logicielle comparant et implémentant de façon rigoureuse
+      les modèles formels de contrôle d''accès : RBAC (Rôles), MAC (Obligatoire),
+      DAC (Discrétionnaire), SBAC (Sessions) et Chinese Wall (Conflits d''intérêts).'
+    bullets:
+    - Modélisation fine des permissions, des rôles et des niveaux de sensibilité de
+      l'information
+    - Moteur d'évaluation de politiques d'autorisation dynamique et traçabilité des
+      refus d'accès
+    - Benchmark des mécanismes de sécurité pour les architectures logicielles d'entreprise
+    tags:
+    - IAM
+    - RBAC
+    - MAC
+    - DAC
+    - SBAC
+    - Chinese Wall
+    - Sécurité Applicative
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Application Mobile de Télésurveillance Médicale Connectée
+    category: ai
+    categoryLabel: IA & IoT
+    date: '2025'
+    badge: Santé Connectée & Détection Temps Réel
+    summary: 'Application Android et serveur d''analyse reliant patients et médecins
+      pour la télésurveillance cardiovasculaire : acquisition de données physiologiques
+      par capteurs IoT, analyse IA en temps réel, détection précoce d''anomalies et
+      système d''alertes médicales.'
+    bullets:
+    - Collecte de capteurs médicaux (fréquence cardiaque, température, signaux bio-acoustiques)
+    - Moteur d'inférence IA temps réel côté serveur pour classifier les anomalies
+      physiologiques
+    - Interface Flutter claire avec alertes d'urgence et synchronisation temps réel
+      Firebase
+    tags:
+    - Flutter
+    - Python
+    - Firebase
+    - IoT
+    - Intelligence Artificielle
+    - Santé
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Clé Intelligente d'Authentification Matérielle ESP32
+    category: embedded
+    categoryLabel: Embarqué & Sécurité
+    date: '2025'
+    badge: Coffre-Fort Cryptographique Portable
+    summary: Dispositif matériel autonome sur ESP32 conçu pour stocker de manière
+      sécurisée des identifiants, clés de session et codes OTP, simplifiant l'authentification
+      multi-terminaux en limitant les risques d'exfiltration.
+    bullets:
+    - Chiffrement matériel des secrets stockés dans la mémoire flash sécurisée
+    - Communication sécurisée avec les postes de travail via USB/BLE
+    - Conception d'un boîtier sur-mesure compact imprimé en 3D
+    tags:
+    - ESP32
+    - Cryptographie
+    - Authentification OTP
+    - IoT Security
+    - Impression 3D
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Système de Simulation & Gestion Aéroportuaire
+    category: software
+    categoryLabel: Génie Logiciel
+    date: '2024'
+    badge: Modélisation Objet Complexe C++
+    summary: 'Modélisation orientée objet intégrale et moteur de simulation d''un
+      aéroport international en C++ : flux des pistes d''atterrissage/décollage, files
+      d''attente passagers, billetterie, affectation des pilotes et gestion des ressources
+      critiques.'
+    bullets:
+    - Architecture orientée objet rigoureuse avec persistance sur base orientée objet
+    - Simulation d'événements discrets (retards météo, encombrement des pistes, pannes)
+    - Optimisation des structures de données pour des simulations fluides
+    tags:
+    - C++
+    - POO
+    - Modélisation Système
+    - Simulation
+    - Base de Données Orientée Objet
+    repo: https://github.com/AchrafHasnaoui31
+  - title: Application Mobile Marketplace Freelance
+    category: software
+    categoryLabel: Génie Logiciel & Mobile
+    date: '2025'
+    badge: Architecture Full Stack Mobile
+    summary: 'Application mobile complète mettant en relation prestataires freelances
+      et donneurs d''ordres : frontend moderne Ionic, API backend Flask et base de
+      données non relationnelle MongoDB.'
+    bullets:
+    - Système d'annonces de missions, profils vérifiés et propositions tarifaires
+    - API REST modulaire sous Flask avec authentification sécurisée par tokens JWT
+    - Stockage NoSQL flexible sous MongoDB
+    tags:
+    - Ionic
+    - Flask
+    - Python
+    - MongoDB
+    - REST API
+    - Mobile
+    repo: https://github.com/AchrafHasnaoui31
+education:
+  badge: Parcours Académique
+  title: Formation d'ingénieur d'excellence & sélectivité
+  sub: 'Une progression méthodique au sein des meilleures filières d''ingénieurs tunisiennes
+    :'
+  items:
+  - date: 2024 — 2027 (En cours · 3e Année)
+    title: Diplôme National d'Ingénieur en Génie Informatique
+    org: ENSIT — École Nationale Supérieure d'Ingénieurs de Tunis
+    desc: Formation de haut niveau axée sur le génie logiciel avancé, la sécurité
+      des systèmes d'information, les réseaux, le Cloud, l'intelligence artificielle
+      et l'IoT. Membre actif de l'équipe technique Securinets ENSIT.
+    honors: Actuellement en 3e année (dernière année d'études) · Préparation active
+      du stage PFE
+  - date: 2022 — 2024
+    title: Cycle Préparatoire aux Études d'Ingénieurs (Filière Technologique)
+    org: IPEIM — Institut Préparatoire aux Études d'Ingénieurs de Monastir
+    desc: Deux années de formation scientifique intensive en mathématiques, physique,
+      sciences de l'ingénieur, mécanique et informatique. Réussite au Concours National
+      d'Entrée aux Écoles d'Ingénieurs.
+    honors: Diplômé avec Mention Bien · Rang de sélection concours national
+  - date: 2021 — 2022
+    title: Baccalauréat Technologique
+    org: Lycée Dkhilet Toujane, Gabès
+    desc: Formation secondaire d'excellence en technologies appliquées, électronique,
+      mécanique et mathématiques.
+    honors: Diplômé avec Mention Bien
+  certs:
+    title: Certifications Professionnelles
+    items:
+    - 'Cisco CCNA 1 : Introduction to Networks (2025)'
+    - 'Cisco CCNA 2 : Switching, Routing, and Wireless Essentials'
+    - 'DataCamp : AI Fundamentals & Machine Learning Foundations'
+    - 'Dassault Systèmes : SolidWorks CAD Certification'
+  languages:
+    title: Compétences Linguistiques
+    items:
+    - name: Arabe
+      level: Langue maternelle
+      flag: 🇹🇳
+    - name: Français
+      level: Bilingue / Avancé (langue d'enseignement de l'ingénierie)
+      flag: 🇫🇷
+    - name: Anglais
+      level: Avancé / Technique (documentation, code, CTF, conférences)
+      flag: 🇬🇧
+    - name: Allemand
+      level: Notions de base (Niveau A1 en apprentissage actif)
+      flag: 🇩🇪
+activities:
+  badge: Engagements & Activités
+  title: Au-delà du cursus académique
+  sub: 'L''esprit de compétition, le partage technique et l''engagement personnel
+    forgent ma discipline :'
+  groups:
+  - emoji: 🛡️
+    title: Securinets ENSIT — Club de Cybersécurité
+    role: Membre actif de l'équipe technique depuis 2024
+    color: pink
+    intro: Securinets ENSIT est le club de cybersécurité de référence de l'école.
+      J'y apporte ma contribution technique sur les volets offensifs et défensifs.
+    items:
+    - Co-organisation et conception d'épreuves techniques pour la compétition nationale
+      de CTF **Darknets**
+    - Animation d'ateliers pratiques de forensics numérique et d'introduction à la
+      cryptographie
+    - Pratique continue et rigoureuse sur plateformes de sécurité (Hack The Box, PicoCTF)
+    tags:
+    - CTF
+    - Forensics
+    - Cryptographie
+    - Sensibilisation Cybersécurité
+  - emoji: 🏆
+    title: Compétitions CTF & Algorithmique
+    role: Compétiteur passionné
+    color: yellow
+    items:
+    - '**1ère place** au concours national **Cat The Flag** (organisé à l''ENIT)'
+    - 'Participation active aux compétitions majeures : **Darknets** (Securinets),
+      **The Darkest Hour** (INSAT)'
+    - 'Concours de programmation compétitive : **Recursia**, **ENSTABYTE 3.0**, **Geeks
+      Hack 4.0 & 5.0**, **IEEEXtreme**'
+    - Entraînement régulier aux structures de données et algorithmes sur LeetCode
+      et Codeforces
+    tags:
+    - 1ère Place Cat The Flag
+    - CTF
+    - Algorithmes
+    - Problem Solving
+  - emoji: ✍️
+    title: Rédaction & Partage Technique
+    role: Auteur du blog technique personnel
+    color: teal
+    intro: Je partage mes retours d'expériences, tutoriels et réflexions sur l'intelligence
+      artificielle, la sécurité des systèmes, l'IoT et les architectures matérielles
+      modernes.
+    link:
+      label: Visiter mon blog technique ↗
+      href: https://achrafhasnaoui31.github.io/blog/
+    tags:
+    - Tech Writing
+    - Open Source
+    - Veille Technologique
+  - emoji: 🥋
+    title: Dépassement de Soi & Sports d'Endurance
+    role: Arts martiaux, VTT d'endurance & Survie
+    color: mint
+    intro: Le sport d'endurance développe la ténacité, la lucidité face au stress
+      et la persévérance nécessaires aux grands défis d'ingénierie.
+    items:
+    - 'Pratique régulière des arts martiaux : Taekwondo, Kickboxing, Wing Chun et
+      Boxe anglaise'
+    - VTT cross-country sur longues distances et escalade en milieu naturel
+    - 'Techniques de survie en milieu hostile et bivouac : encadrement et formation
+      d''autres passionnés'
+    tags:
+    - Discipline
+    - Endurance
+    - Gestion du Stress
+    - Leadership
+  - emoji: ❤️
+    title: Engagement Solidaire & Citoyen
+    role: Ancien membre actif du Croissant-Rouge
+    color: coral
+    intro: Sensibilité aux causes humaines et participation active aux campagnes d'aide
+      sociale et de soutien d'urgence auprès des populations défavorisées.
+    tags:
+    - Bénévolat
+    - Solidarité
+    - Esprit d'Entraide
+contact:
+  badge: Opportunité de Recrutement
+  eyebrow: تبحثون عن مهندس متخرج لتربص ختم الدروس لعام 2027؟
+  title: فلنبنِ معاً **النجاحات التقنية** القادمة لفريقكم ✦
+  text: أبحث بجدية عن **تربص لختم الدروس (PFE) لمدة 6 أشهر بداية من فيفري / مارس 2027
+    بفرنسا** في هندسة البرمجيات، السحابة/DevOps، الأمن السيبراني، الذكاء الاصطناعي،
+    أو الأنظمة المدمجة. نوفر اتفاقية تربص معتمدة من ENSIT مع استعداد تام للتنقل. يسعدني
+    التواصل معكم لمناقشة تطلعاتكم ومشاريعكم!
+  email:
+    label: مراسلة عبر البريد الإلكتروني ✉
+    href: mailto:achrafhas2003@gmail.com
+    copyText: achrafhas2003@gmail.com
+  phone:
+    label: +216 23 318 506
+    href: tel:+21623318506
+  github:
+    label: GitHub (AchrafHasnaoui31) ↗
+    href: https://github.com/AchrafHasnaoui31
+  linkedin:
+    label: LinkedIn Profile ↗
+    href: https://linkedin.com/in/achraf-hasnaoui-679866250
+  blog:
+    label: Blog Technique ↗
+    href: https://achrafhasnaoui31.github.io/blog/
+  cv:
+    label: طلب سيرة ذاتية مفصلة
+    href: mailto:achrafhas2003@gmail.com?subject=Opportunit%C3%A9%20de%20Stage%20PFE%202027%20-%20Achraf%20Hasnaoui
+footer:
+  text: © 2026 أشرف حسناوي — طالب مهندس إعلامية بالمدرسة الوطنية العليا للمهندسين
+    بتونس
+  status: 🟢 في بحث نشط عن تربص PFE (6 أشهر) · فيفري/مارس 2027 · فرنسا
