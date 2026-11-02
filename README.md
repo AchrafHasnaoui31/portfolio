@@ -68,9 +68,11 @@ The current repository contains:
 |---|---:|---|
 | Hugo site generation | ✅ Implemented | Static pages generated from templates, data, and Markdown |
 | Home page | ✅ Implemented | Profile, hero, skills, experience, projects, education, activities, and contact sections |
+| Recruiter snapshot | ✅ Implemented | Target roles, availability, and evidence-based strengths are visible near the top of the homepage |
 | Project collection | ✅ Implemented | Eight project pages under `content/projects/` |
 | Centralized profile data | ✅ Implemented | `data/portfolio.yaml` drives most homepage content |
 | Responsive styling | ✅ Implemented | Custom CSS with responsive layout rules |
+| SEO and accessibility basics | ✅ Implemented | Open Graph metadata, Person structured data, keyboard skip link, and semantic main content |
 | Interactive behavior | ✅ Implemented | Navigation and lightweight frontend behavior in `static/js/main.js` |
 | GitHub Pages deployment | ✅ Implemented | GitHub Actions workflow publishes the generated site |
 | Draft preview | ✅ Supported | `hugo server -D` includes draft content locally |
@@ -113,6 +115,7 @@ The site itself demonstrates:
 - **High deployment overhead:** the site is generated as static files and hosted on GitHub Pages.
 - **Slow content iteration:** profile and project content can be changed without modifying layouts.
 - **Weak traceability:** all content changes are reviewable through Git history and pull requests.
+- **Slow recruiter evaluation:** a concise recruiter snapshot now exposes target roles, availability, and core strengths before the detailed sections.
 
 ## Site architecture
 
@@ -168,6 +171,7 @@ portfolio.yaml + project Markdown
 - Education, certifications, and languages.
 - Activities, competitions, writing, volunteering, and hobbies.
 - Contact links and footer text.
+- Recruiter snapshot cards and CV-request contact action.
 
 This structure allows a content update such as changing the internship status, adding a skill, or updating contact links without editing the HTML templates.
 

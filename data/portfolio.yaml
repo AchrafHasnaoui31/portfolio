@@ -8,6 +8,8 @@ meta:
   title: "Achraf Hasnaoui — Software Engineering Student"
   description: "Portfolio of Achraf Hasnaoui — 3rd-year software engineering student at ENSIT, full-stack / backend developer, looking for a final-year (PFE) internship in France."
   themeColor: "#FBF7EF"
+  author: "Achraf Hasnaoui"
+  keywords: "Achraf Hasnaoui, software engineer, full-stack developer, backend developer, Java, Spring Boot, Python, React, Flutter, IoT, AI, cybersecurity, PFE internship"
 
 logo:
   badge: "AH"
@@ -18,21 +20,24 @@ navLinks:
     label: "about"
     href: "#about"
   - num: "02."
+    label: "recruiter snapshot"
+    href: "#recruiter-snapshot"
+  - num: "03."
     label: "skills"
     href: "#skills"
-  - num: "03."
+  - num: "04."
     label: "experience"
     href: "#experience"
-  - num: "04."
+  - num: "05."
     label: "projects"
     href: "#projects"
-  - num: "05."
+  - num: "06."
     label: "education"
     href: "#education"
-  - num: "06."
+  - num: "07."
     label: "activities"
     href: "#activities"
-  - num: "07."
+  - num: "08."
     label: "contact"
     href: "#contact"
 
@@ -78,6 +83,28 @@ marquee:
   - "IoT"
   - "Cybersecurity"
   - "Git & GitHub"
+
+recruiterSnapshot:
+  sub: "A quick, evidence-based overview for recruiters and engineering managers"
+  cards:
+    - title: "Target roles"
+      icon: "🎯"
+      items:
+        - "Software engineering intern"
+        - "Backend / full-stack intern"
+        - "Java / Spring or Python roles"
+    - title: "What I bring"
+      icon: "🧩"
+      items:
+        - "End-to-end delivery: requirements to validation"
+        - "Backend APIs, data modelling and dashboards"
+        - "Curiosity across AI, IoT and cybersecurity"
+    - title: "Availability"
+      icon: "📅"
+      items:
+        - "Final-year internship (PFE)"
+        - "France or international teams"
+        - "Open to technical conversations"
 
 about:
   photo: ""
@@ -347,6 +374,9 @@ contact:
   blog:
     label: "Blog ↗"
     href: "https://achrafhasnaoui31.github.io/blog/"
+  cv:
+    label: "Request my CV"
+    href: "mailto:achrafhas2003@gmail.com?subject=CV%20request%20-%20Achraf%20Hasnaoui"
 
 footer:
   text: "© 2026 Achraf Hasnaoui — designed & built with 🧡 and too much coffee ☕"

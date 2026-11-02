@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {{ $d := .Site.Data.portfolio }}
   <meta name="description" content="{{ $d.meta.description }}" />
+  <meta name="author" content="{{ $d.meta.author }}" />
+  <meta name="keywords" content="{{ $d.meta.keywords }}" />
   <meta name="theme-color" content="{{ $d.meta.themeColor }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ $d.meta.title }}" />
+  <meta property="og:description" content="{{ $d.meta.description }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ $d.meta.title }}" />
+  <meta name="twitter:description" content="{{ $d.meta.description }}" />
   <link rel="icon" type="image/svg+xml" href="{{ "favicon.png" | relURL }}" />
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon.png" | relURL }}" />
   <title>{{ $d.meta.title }}</title>
@@ -19,13 +28,14 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to content</a>
   {{/* helper: turn **bold** into <strong>bold</strong> for inline text fields */}}
   {{ $bold := "\\*\\*(.*?)\\*\\*" }}
 
   <!-- ===== NAVBAR ===== -->
   {{ partial "navbar.html" (dict "d" $d "prefix" "") }}
 
-  <main>
+  <main id="main-content">
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
       <div class="container hero-grid">
@@ -77,6 +87,24 @@
         </div>
       </div>
     </div>
+
+    <!-- ===== RECRUITER SNAPSHOT ===== -->
+    <section class="section section--teal" id="recruiter-snapshot">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="section-num" aria-hidden="true">02</span> recruiter snapshot</h2>
+        <p class="section-sub reveal">{{ $d.recruiterSnapshot.sub }}</p>
+        <div class="recruiter-grid">
+          {{ range $d.recruiterSnapshot.cards }}
+          <article class="recruiter-card card reveal">
+            <h3><span aria-hidden="true">{{ .icon }}</span> {{ .title }}</h3>
+            <ul class="timeline-bullets">
+              {{ range .items }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
 
     <!-- ===== ABOUT ===== -->
     <section class="section section--paper" id="about">
@@ -316,6 +344,7 @@
             <a href="{{ $d.contact.github.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.github.label }}</a>
             <a href="{{ $d.contact.linkedin.href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ $d.contact.linkedin.label }}</a>
             {{ with $d.contact.blog }}<a href="{{ .href }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">{{ .label }}</a>{{ end }}
+            {{ with $d.contact.cv }}<a href="{{ .href }}" class="btn btn-outline-light">{{ .label }}</a>{{ end }}
           </div>
         </div>
       </div>
@@ -326,6 +355,9 @@
   {{ partial "footer.html" $d }}
 
   <script id="hero-roles" type="application/json">{{ $d.hero.roles | jsonify | safeJS }}</script>
+  <script type="application/ld+json">
+    {{ dict "@context" "https://schema.org" "@type" "Person" "name" $d.meta.author "url" .Permalink "jobTitle" "Software Engineering Student" "description" $d.meta.description "email" $d.contact.email.href "sameAs" (slice $d.contact.github.href $d.contact.linkedin.href $d.contact.blog.href) | jsonify | safeJS }}
+  </script>
   <script src="{{ "js/main.js" | relURL }}"></script>
 </body>
 </html>
