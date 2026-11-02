@@ -259,3 +259,27 @@ onReady(function () {
 
   sections.forEach(function (section) { spy.observe(section); });
 });
+
+/* ---------- 10. Language Switcher Safe Navigation (file:// & subpath fallback) ---------- */
+onReady(function () {
+  var langLinks = document.querySelectorAll('.lang-switcher .lang-btn');
+  if (!langLinks.length) return;
+
+  if (window.location.protocol === 'file:') {
+    langLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var targetLang = this.getAttribute('data-lang');
+        var currentPath = window.location.pathname;
+        var inSubdir = /\/(en|ar)\//.test(currentPath);
+        var baseDir = inSubdir ? currentPath.replace(/\/(en|ar)\/.*$/, '') : currentPath.replace(/\/[^\/]*$/, '');
+
+        if (targetLang === 'fr') {
+          window.location.href = baseDir + '/index.html';
+        } else {
+          window.location.href = baseDir + '/' + targetLang + '/index.html';
+        }
+      });
+    });
+  }
+});

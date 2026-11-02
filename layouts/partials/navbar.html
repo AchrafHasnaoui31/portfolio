@@ -6,7 +6,7 @@
 <header class="navbar" id="navbar">
   <div class="nav-container">
     <!-- Brand Logo -->
-    <a href="{{ $prefix }}#hero" class="logo" aria-label="Achraf Hasnaoui">
+    <a href="{{ .Site.Home.RelPermalink }}" class="logo" aria-label="Achraf Hasnaoui">
       <span class="logo-mark" aria-hidden="true">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2L2 22H7L12 12L17 22H22L12 2Z" fill="url(#logo-grad)"/>
@@ -38,22 +38,17 @@
 
     <!-- Right Controls -->
     <div class="nav-actions">
-      <!-- Multilingual Switcher -->
+      <!-- Multilingual Switcher using hugo.Sites -->
       <nav class="lang-switcher" aria-label="Language selection">
         {{ $currLang := $lang }}
-        {{ range .Site.Languages }}
-          {{ $lCode := .Lang }}
-          {{ $targetUrl := "" }}
-          {{ if eq $lCode "fr" }}
-            {{ $targetUrl = (site.BaseURL | relURL) }}
-          {{ else }}
-            {{ $targetUrl = (printf "%s%s/" (site.BaseURL | relURL) $lCode) }}
-          {{ end }}
+        {{ range hugo.Sites }}
+          {{ $lCode := .Language.Lang }}
           <a
-            href="{{ $targetUrl }}"
+            href="{{ .Home.RelPermalink }}"
             class="lang-btn {{ if eq $currLang $lCode }}active{{ end }}"
-            title="{{ .LanguageName }}"
-            hreflang="{{ .LanguageCode }}"
+            title="{{ .Language.Label }}"
+            hreflang="{{ .Language.Locale }}"
+            data-lang="{{ $lCode }}"
           >
             {{ if eq $lCode "fr" }}FR{{ else if eq $lCode "en" }}EN{{ else if eq $lCode "ar" }}عربي{{ end }}
           </a>
