@@ -79,6 +79,7 @@ hero:
     cvHub: تحميل السير الذاتية (PDF)
     projects: استكشاف المشاريع
     contact: تواصل معي
+  subtitle: أبرمج. أهندس. أحمي.
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -851,3 +852,71 @@ footer:
   text: © 2026 أشرف حسناوي — طالب مهندس إعلامية بالمدرسة الوطنية العليا للمهندسين
     بتونس
   status: 🟢 في بحث نشط عن تربص PFE (6 أشهر) · فيفري/مارس 2027 · فرنسا
+process:
+  badge: 05 منهجية العمل
+  title: منهجيتي في التصميم والتطوير الهندسي
+  sub: 'مسار هندسي منظم وموثوق لتحويل المتطلبات المعقدة إلى أنظمة إنتاجية آمنة وعالية
+    الأداء:'
+  steps:
+  - num: '01'
+    title: التحليل والاستكشاف
+    icon: 🔍
+    desc: فهم عميق للاحتياجات وحالات الاستخدام، دراسة القيود العتادية ونمذجة التهديدات
+      الأمنية المحتملة.
+  - num: '02'
+    title: التخطيط والمعمارية
+    icon: 📐
+    desc: هندسة معمارية متكاملة للأنظمة، انتقاء التقنيات الأنسب، ونمذجة قواعد البيانات
+      وواجهات REST.
+  - num: '03'
+    title: التطوير والبرمجة
+    icon: </>
+    desc: برمجة دقيقة وفق معايير الكود النظيف والتصميم الكائني، سواء في الأنظمة المدمجة
+      أو الخدمات السحابية.
+  - num: '04'
+    title: الاختبار والأمان
+    icon: 🛡️
+    desc: اختبارات وحدية وتكاملية آلية، تدقيق أمني واختبارات اختراق لقياس مدى صلابة
+      النظام.
+  - num: '05'
+    title: النشر والمراقبة
+    icon: 🚀
+    desc: أتمتة خطوط النشر المستمر CI/CD عبر GitHub Actions، استخدام الحاويات ومراقبة
+      الأداء الميداني.
+techCluster:
+- name: Java
+  symbol: ☕
+  color: '#f89820'
+- name: Spring
+  symbol: 🍃
+  color: '#6db33f'
+- name: Python
+  symbol: 🐍
+  color: '#38bdf8'
+- name: PyTorch
+  symbol: 🔥
+  color: '#ee4c2c'
+- name: Docker
+  symbol: 🐳
+  color: '#2496ed'
+- name: AWS
+  symbol: ☁️
+  color: '#ff9900'
+- name: Linux
+  symbol: 🐧
+  color: '#fcc624'
+- name: C / C++
+  symbol: ⚡
+  color: '#00599c'
+- name: ESP32
+  symbol: 📡
+  color: '#e7352f'
+- name: React
+  symbol: ⚛️
+  color: '#61dafb'
+- name: PostgreSQL
+  symbol: 🐘
+  color: '#336791'
+- name: Git
+  symbol: 🐙
+  color: '#f05032'

@@ -77,6 +77,7 @@ hero:
     cvHub: Télécharger mes CV (PDF)
     projects: Voir mes Réalisations
     contact: Me Contacter
+  subtitle: I CODE. I ENGINEER. I SECURE.
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -854,3 +855,71 @@ contact:
 footer:
   text: © 2026 Achraf Hasnaoui — Élève-Ingénieur en Génie Informatique @ ENSIT
   status: 🟢 En recherche active de stage PFE (6 mois) · Février/Mars 2027 · France
+process:
+  badge: 05 PROCESSUS
+  title: Mon Processus d'Ingénierie & de Conception
+  sub: 'Une démarche méthodique éprouvée pour transformer un cahier des charges complexe
+    en un système robuste et sécurisé :'
+  steps:
+  - num: '01'
+    title: ANALYSE & CADRAGE
+    icon: 🔍
+    desc: Compréhension approfondie du problème, modélisation des besoins utilisateurs,
+      contraintes matérielles et analyse de la surface d'attaque.
+  - num: '02'
+    title: ARCHITECTURE & DESIGN
+    icon: 📐
+    desc: Conception modulaire (UML/Schémas), choix des technologies adaptées (Spring/Python/ESP32),
+      modélisation des données et API contracts.
+  - num: '03'
+    title: DÉVELOPPEMENT & CODE
+    icon: </>
+    desc: Implémentation rigoureuse selon les principes Clean Code, programmation
+      orientée objet, conception de firmware bas-niveau ou microservices.
+  - num: '04'
+    title: TESTS & SÉCURITÉ
+    icon: 🛡️
+    desc: Tests unitaires et d'intégration, vérification de robustesse, audits de
+      sécurité, analyse de vulnérabilités et validation des KPI.
+  - num: '05'
+    title: DÉPLOIEMENT & SUIVI
+    icon: 🚀
+    desc: Automatisation des pipelines CI/CD sous GitHub Actions, conteneurisation
+      Docker, mise en production Cloud et télémétrie continue.
+techCluster:
+- name: Java
+  symbol: ☕
+  color: '#f89820'
+- name: Spring
+  symbol: 🍃
+  color: '#6db33f'
+- name: Python
+  symbol: 🐍
+  color: '#38bdf8'
+- name: PyTorch
+  symbol: 🔥
+  color: '#ee4c2c'
+- name: Docker
+  symbol: 🐳
+  color: '#2496ed'
+- name: AWS
+  symbol: ☁️
+  color: '#ff9900'
+- name: Linux
+  symbol: 🐧
+  color: '#fcc624'
+- name: C / C++
+  symbol: ⚡
+  color: '#00599c'
+- name: ESP32
+  symbol: 📡
+  color: '#e7352f'
+- name: React
+  symbol: ⚛️
+  color: '#61dafb'
+- name: PostgreSQL
+  symbol: 🐘
+  color: '#336791'
+- name: Git
+  symbol: 🐙
+  color: '#f05032'

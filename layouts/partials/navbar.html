@@ -5,30 +5,44 @@
 
 <header class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="{{ $prefix }}#hero" class="logo" aria-label="Achraf Hasnaoui - Home">
-      <span class="logo-badge" aria-hidden="true">{{ $d.logo.badge }}</span>
-      <span class="logo-text">achraf<span class="logo-dot">.</span>dev</span>
+    <!-- Brand Logo -->
+    <a href="{{ $prefix }}#hero" class="logo" aria-label="Achraf Hasnaoui">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 22H7L12 12L17 22H22L12 2Z" fill="url(#logo-grad)"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#a855f7"/>
+              <stop offset="1" stop-color="#00f0ff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <div class="logo-text-block">
+        <span class="logo-name">ACHRAF HASNAOUI</span>
+        <span class="logo-sub">{{ if eq $lang "ar" }}طالب مهندس إعلامية{{ else if eq $lang "fr" }}ÉLÈVE-INGÉNIEUR ENSIT{{ else }}COMPUTER ENGINEER{{ end }}</span>
+      </div>
     </a>
 
-    <!-- Navigation links -->
+    <!-- Center Navigation Links -->
     <ul class="nav-links" id="navLinks">
-      {{ range $d.navLinks }}
-      <li>
-        <a href="{{ $prefix }}{{ .href }}" class="nav-link">
-          <span class="nav-num">{{ .num }}</span>{{ .label }}
-        </a>
-      </li>
-      {{ end }}
+      <li><a href="{{ $prefix }}#hero" class="nav-link">{{ if eq $lang "ar" }}الرئيسية{{ else if eq $lang "fr" }}Accueil{{ else }}Home{{ end }}</a></li>
+      <li><a href="{{ $prefix }}#about" class="nav-link">{{ if eq $lang "ar" }}عني{{ else if eq $lang "fr" }}Profil{{ else }}About{{ end }}</a></li>
+      <li><a href="{{ $prefix }}#tracks" class="nav-link">{{ if eq $lang "ar" }}الاختصاصات{{ else if eq $lang "fr" }}Spécialités{{ else }}Tracks{{ end }}</a></li>
+      <li><a href="{{ $prefix }}#cv-hub" class="nav-link">{{ if eq $lang "ar" }}السير الذاتية{{ else if eq $lang "fr" }}CVs (PDF){{ else }}Resumes{{ end }}</a></li>
+      <li><a href="{{ $prefix }}#skills" class="nav-link">{{ if eq $lang "ar" }}المهارات{{ else if eq $lang "fr" }}Compétences{{ else }}Skills{{ end }}</a></li>
+      <li><a href="{{ $prefix }}#projects" class="nav-link">{{ if eq $lang "ar" }}المشاريع{{ else if eq $lang "fr" }}Projets{{ else }}Projects{{ end }}</a></li>
+      <li><a href="{{ $prefix }}#process" class="nav-link">{{ if eq $lang "ar" }}المنهجية{{ else if eq $lang "fr" }}Méthodologie{{ else }}Process{{ end }}</a></li>
+      <li><a href="{{ $prefix }}#contact" class="nav-link">{{ if eq $lang "ar" }}تواصل{{ else if eq $lang "fr" }}Contact{{ else }}Contact{{ end }}</a></li>
     </ul>
 
-    <!-- Controls: Language Switcher & Quick CV CTA -->
+    <!-- Right Controls -->
     <div class="nav-actions">
       <!-- Multilingual Switcher -->
       <nav class="lang-switcher" aria-label="Language selection">
         {{ $currLang := $lang }}
         {{ range .Site.Languages }}
           {{ $lCode := .Lang }}
-          {{ $lName := .Params.lang | default .Lang }}
           {{ $targetUrl := "" }}
           {{ if eq $lCode "fr" }}
             {{ $targetUrl = (site.BaseURL | relURL) }}
@@ -40,20 +54,18 @@
             class="lang-btn {{ if eq $currLang $lCode }}active{{ end }}"
             title="{{ .LanguageName }}"
             hreflang="{{ .LanguageCode }}"
-            data-lang="{{ $lCode }}"
           >
             {{ if eq $lCode "fr" }}FR{{ else if eq $lCode "en" }}EN{{ else if eq $lCode "ar" }}عربي{{ end }}
           </a>
         {{ end }}
       </nav>
 
-      <!-- Quick CV CTA button in navbar -->
-      <a href="{{ $prefix }}#cv-hub" class="btn btn-nav-cv">
-        <span class="btn-nav-icon" aria-hidden="true">📄</span>
-        <span>CVs (PDF)</span>
+      <!-- Glowing CTA: LET'S TALK -->
+      <a href="{{ $prefix }}#contact" class="btn btn-nav-cta">
+        <span>{{ if eq $lang "ar" }}تواصل معي ↗{{ else if eq $lang "fr" }}Discutons ↗{{ else }}Let's Talk ↗{{ end }}</span>
       </a>
 
-      <!-- Mobile hamburger toggle -->
+      <!-- Mobile Hamburger -->
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>

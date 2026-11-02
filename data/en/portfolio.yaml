@@ -79,6 +79,7 @@ hero:
     cvHub: Download Resumes (PDF)
     projects: Explore Projects
     contact: Get in Touch
+  subtitle: I CODE. I ENGINEER. I SECURE.
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -853,3 +854,71 @@ contact:
 footer:
   text: © 2026 Achraf Hasnaoui — Computer Engineering Student @ ENSIT
   status: 🟢 Actively seeking a 6-month PFE internship · Feb/Mar 2027 · France
+process:
+  badge: 05 PROCESS
+  title: My Engineering & Development Process
+  sub: 'A disciplined, end-to-end engineering methodology to take complex requirements
+    to rock-solid production systems:'
+  steps:
+  - num: '01'
+    title: DISCOVER & SCOPE
+    icon: 🔍
+    desc: Deep dive into domain requirements, user stories, hardware constraints,
+      and attack surface threat modeling.
+  - num: '02'
+    title: ARCHITECTURE & PLAN
+    icon: 📐
+    desc: System architecture design, technology stack selection (Spring/Python/ESP32),
+      schema modeling, and API contracts.
+  - num: '03'
+    title: DEVELOP & BUILD
+    icon: </>
+    desc: Rigorous implementation following Clean Code standards, OOP patterns, low-level
+      firmware or cloud microservices.
+  - num: '04'
+    title: TEST & SECURE
+    icon: 🛡️
+    desc: Unit and integration tests, security audits, vulnerability scanning, and
+      performance benchmarking.
+  - num: '05'
+    title: DEPLOY & OBSERVE
+    icon: 🚀
+    desc: Automated GitHub Actions CI/CD workflows, Docker containerization, cloud
+      deployment, and telemetry monitoring.
+techCluster:
+- name: Java
+  symbol: ☕
+  color: '#f89820'
+- name: Spring
+  symbol: 🍃
+  color: '#6db33f'
+- name: Python
+  symbol: 🐍
+  color: '#38bdf8'
+- name: PyTorch
+  symbol: 🔥
+  color: '#ee4c2c'
+- name: Docker
+  symbol: 🐳
+  color: '#2496ed'
+- name: AWS
+  symbol: ☁️
+  color: '#ff9900'
+- name: Linux
+  symbol: 🐧
+  color: '#fcc624'
+- name: C / C++
+  symbol: ⚡
+  color: '#00599c'
+- name: ESP32
+  symbol: 📡
+  color: '#e7352f'
+- name: React
+  symbol: ⚛️
+  color: '#61dafb'
+- name: PostgreSQL
+  symbol: 🐘
+  color: '#336791'
+- name: Git
+  symbol: 🐙
+  color: '#f05032'
