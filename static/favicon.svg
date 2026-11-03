@@ -1,4 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="2.5" y="2.5" width="59" height="59" rx="15" fill="#FFD400" stroke="#17130D" stroke-width="5"/>
-  <text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="900" text-anchor="middle" fill="#17130D">YN</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Dark Cyber Obsidian Background -->
+    <linearGradient id="ah-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090f26" />
+      <stop offset="100%" stop-color="#03050d" />
+    </linearGradient>
+
+    <!-- Glowing Neon Rim Gradient -->
+    <linearGradient id="ah-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#9d4edd" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Glyph Gradient (Cyan to Violet to Magenta) -->
+    <linearGradient id="ah-glyph" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="45%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="ah-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Cyber Squircle Base -->
+  <rect x="2.5" y="2.5" width="59" height="59" rx="15" fill="url(#ah-bg)" stroke="url(#ah-rim)" stroke-width="2.2" />
+
+  <!-- Inner Subtle Accent Ring -->
+  <rect x="5.5" y="5.5" width="53" height="53" rx="12" fill="none" stroke="#00f0ff" stroke-width="0.6" opacity="0.25" />
+
+  <!-- Monogram Glyph Group (AH) -->
+  <g fill="url(#ah-glyph)" filter="url(#ah-glow)">
+    <!-- Letter A (Faceted, Sharp Apex, High Tech) -->
+    <path fill-rule="evenodd" d="M 20 15 L 31 49 L 24.5 49 L 22.5 41 L 17.5 41 L 15.5 49 L 9 49 Z M 20 23.5 L 22 34 L 18 34 Z" />
+
+    <!-- Letter H (Sturdy, Architectural, Industrial) -->
+    <path d="M 35 15 L 41 15 L 41 29 L 49 29 L 49 15 L 55 15 L 55 49 L 49 49 L 49 35 L 41 35 L 41 49 L 35 49 Z" />
+  </g>
+
+  <!-- Futuristic Robotic Dot Accent (Cyan at Apex of A) -->
+  <circle cx="20" cy="11.5" r="1.6" fill="#00f0ff" />
+
+  <!-- Secondary Accent Dot (Magenta at Bottom Right of H) -->
+  <circle cx="52" cy="52.5" r="1.4" fill="#ec4899" />
 </svg>
