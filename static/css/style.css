@@ -1648,6 +1648,130 @@ strong { color: #fff; font-weight: 700; }
 }
 
 /* =============================================================================
+   POLYVALENT ROBOTICS ARCHITECTURE (Full-Stack Hardware-to-Code Matrix)
+   ============================================================================= */
+.polyvalent-arch-block {
+  margin: 3.5rem 0;
+  padding: 2.75rem 2.25rem;
+  background: rgba(10, 15, 30, 0.65);
+  border: 1px solid var(--line-cyber);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+}
+.polyvalent-arch-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-green), var(--neon-amber));
+}
+.polyvalent-head {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 2.5rem;
+}
+.polyvalent-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.polyvalent-sub {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.polyvalent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.arch-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-cyber);
+  border-radius: var(--radius-lg);
+  padding: 1.65rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+  position: relative;
+}
+.arch-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--card-accent, var(--neon-cyan));
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.12);
+}
+.arch-card--cyan { --card-accent: var(--neon-cyan); }
+.arch-card--amber { --card-accent: var(--neon-amber); }
+.arch-card--violet { --card-accent: var(--neon-purple); }
+.arch-card--emerald { --card-accent: var(--neon-green); }
+
+.arch-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+.arch-card-icon {
+  font-size: 1.65rem;
+}
+.arch-card-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--card-accent);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-accent);
+}
+.arch-card-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--card-accent);
+  margin-bottom: 0.45rem;
+  display: inline-block;
+}
+.arch-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+.arch-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+.arch-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.arch-skills-list li {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =============================================================================
    RESPONSIVE (MEDIA QUERIES)
    ============================================================================= */
 @media (max-width: 992px) {
@@ -1662,6 +1786,9 @@ strong { color: #fff; font-weight: 700; }
     justify-content: center;
   }
   .stats-counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .polyvalent-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .skills-showcase-grid, .about-details-grid, .contact-cyber-grid {
@@ -1720,6 +1847,12 @@ strong { color: #fff; font-weight: 700; }
   }
   .stats-counter-grid {
     grid-template-columns: 1fr;
+  }
+  .polyvalent-grid {
+    grid-template-columns: 1fr;
+  }
+  .polyvalent-arch-block {
+    padding: 1.75rem 1.25rem;
   }
   .honeycomb-grid {
     grid-template-columns: repeat(2, 1fr);

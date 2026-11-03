@@ -25,8 +25,12 @@
     <!-- 4 Large Glowing Counters (matching website development.jpeg) -->
     <div class="stats-counter-grid reveal">
       <div class="stat-counter-card">
+        <span class="stat-counter-num">100%</span>
+        <span class="stat-counter-label">{{ if eq $lang "ar" }}تكامل شامل من الميكانيكا إلى الكود{{ else if eq $lang "fr" }}Polyvalence Mécanique, Élec & Code{{ else }}Full-Stack Hardware-to-Code{{ end }}</span>
+      </div>
+      <div class="stat-counter-card">
         <span class="stat-counter-num">ENSIT 3A</span>
-        <span class="stat-counter-label">{{ if eq $lang "ar" }}طالب مهندس إعلامية (تقنيات حديثة){{ else if eq $lang "fr" }}Génie Informatique & Nouvelles Tech{{ else }}Computer Science & Emerging Tech{{ end }}</span>
+        <span class="stat-counter-label">{{ if eq $lang "ar" }}هندسة إعلامية + تحضيري تقني بامتياز{{ else if eq $lang "fr" }}Génie Info (ENSIT) + Prépa PT (Bien){{ else }}Computer Eng. (ENSIT) + Prep PT (Honors){{ end }}</span>
       </div>
       <div class="stat-counter-card">
         <span class="stat-counter-num">-47%</span>
@@ -36,11 +40,35 @@
         <span class="stat-counter-num">01st</span>
         <span class="stat-counter-label">{{ if eq $lang "ar" }}المرتبة الأولى Cat The Flag CTF{{ else if eq $lang "fr" }}1ère Place Cat The Flag CTF (Sécurité){{ else }}1st Place Cat The Flag CTF (Security){{ end }}</span>
       </div>
-      <div class="stat-counter-card">
-        <span class="stat-counter-num">05</span>
-        <span class="stat-counter-label">{{ if eq $lang "ar" }}سير ذاتية متخصصة جاهزة (PDF){{ else if eq $lang "fr" }}CVs Spécialisés PFE Prêts (PDF){{ else }}Specialized PFE Resumes (PDF){{ end }}</span>
+    </div>
+
+    {{ with $d.about.architecture }}
+    <!-- Polyvalent Robotics Architecture Block (From Raw Matter & CNC to Optimal Code) -->
+    <div class="polyvalent-arch-block reveal">
+      <div class="polyvalent-head">
+        <h3 class="polyvalent-title">{{ .title }}</h3>
+        <p class="polyvalent-sub">{{ .sub }}</p>
+      </div>
+      <div class="polyvalent-grid">
+        {{ range .layers }}
+        <div class="arch-card arch-card--{{ .accent }}">
+          <div class="arch-card-top">
+            <span class="arch-card-icon" aria-hidden="true">{{ .icon }}</span>
+            <span class="arch-card-num">{{ .num }}</span>
+          </div>
+          <span class="arch-card-badge">{{ .badge }}</span>
+          <h4 class="arch-card-title">{{ .title }}</h4>
+          <p class="arch-card-desc">{{ .desc }}</p>
+          <ul class="arch-skills-list">
+            {{ range .skills }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
       </div>
     </div>
+    {{ end }}
 
     <!-- About Additional Narrative & Tech Badges -->
     <div class="about-details-grid reveal">

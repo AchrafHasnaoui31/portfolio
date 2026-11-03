@@ -1,10 +1,11 @@
 meta:
-  title: Achraf Hasnaoui · Computer Science Engineering Student (ENSIT) | Emerging
-    Tech & Cybersecurity · PFE 2027
-  description: Portfolio of Achraf Hasnaoui — 3rd-year Computer Science Engineering
-    student at ENSIT, specializing in Emerging Technologies (Cloud, DevOps, AI, IoT)
-    and Cybersecurity. Actively seeking a 6-month Final-Year Internship (PFE) starting
-    Feb/March 2027 (Tunisia, France, Worldwide).
+  title: 'Achraf Hasnaoui · Computer Science Engineering Student (ENSIT) | Polyvalent
+    Profile: Robotics, Mechanics & Code · PFE 2027'
+  description: 'Portfolio of Achraf Hasnaoui — 3rd-year Computer Science Engineering
+    student at ENSIT with a rare polyvalent profile: solid mechanics foundation and
+    CNC machining (Prep PT with Honors), power electronics, real-time firmware, and
+    optimal high-performance code for robotics and intelligent automation. Seeking
+    a 6-month PFE internship.'
   themeColor: '#070a12'
   author: Achraf Hasnaoui
   keywords: Achraf Hasnaoui, computer engineering, ENSIT, emerging technologies, cybersecurity,
@@ -42,35 +43,39 @@ navLinks:
   label: contact
   href: '#contact'
 hero:
-  statusPill: 🟢 Seeking 6-Month PFE Internship · Feb/Mar 2027 · Computer Science,
-    Emerging Tech & Cybersecurity · Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍
+  statusPill: 🟢 Seeking 6-Month PFE Internship · Feb/Mar 2027 · Robotics, Intelligent
+    Automation, Software & Cloud · Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍
   greeting: Hi there, I am
   name: Achraf Hasnaoui
   roles:
   - Computer Science Engineering Student (ENSIT - Final Year).
-  - Emerging Technologies & Cybersecurity Specialist.
-  - Backend & Distributed Systems Architect (Java, Spring Boot, Python).
-  - Offensive & Defensive Security Practitioner (Securinets Technical Team & CTF Winner).
-  - Cloud, DevOps & CI/CD Automation Engineer (Docker, AWS, Linux).
-  - AI, MLOps & Intelligent Connected Systems (IoT/Edge Computing).
-  tagline: A final-year **Computer Science Engineering** student at **ENSIT**, I specialize
-    in **Emerging Technologies and Information Systems Security**. Backed by rigorous
-    academic honors (**Graduated with Honors / Mention Bien in the Preparatory Engineering
-    Cycle at IPEIM**), I design and secure high-performance software architectures—from
-    distributed backends (Spring Boot, Python) to automated Cloud/DevOps infrastructures,
-    applied AI, and smart IoT devices. My multidisciplinary electronics foundation
-    gives me an intimate understanding of physical hardware and low-level security.
-    In industry, I optimized vehicle telemetry at **Bako Motors**, cutting **preventive
-    maintenance delays by 47%**, and won **1st place in the national Cat The Flag
-    cybersecurity competition**. **Actively seeking a 6-month final-year internship
+  - 'Polyvalent Profile: Robotics, Intelligent Automation & Smart Systems.'
+  - 'Dual Culture: Solid Mechanics & CNC Machining (Prep PT) + Software Engineering
+    (ENSIT).'
+  - Low-Level Deterministic C/C++, FreeRTOS & Embedded Linux Developer.
+  - Backend & Microservices Architect (Java/Spring Boot, Python, Cloud).
+  - Cybersecurity Practitioner & National Cat The Flag CTF Champion.
+  tagline: A final-year **Computer Science Engineering** student at **ENSIT**, I cultivate
+    a **rare polyvalent profile uniting precision mechanics, power electronics, and
+    cutting-edge software engineering for robotics and intelligent automation**. After
+    a **Technical Baccalaureate** and two years in the intensive **Physics & Technology
+    Preparatory Engineering Cycle (IPEIM - Graduated with Honors)** where I mastered
+    physical manufacturing (CNC and manual precision machining, milling, turning,
+    3D CAD with SolidWorks, kinematics, and materials science), I made a deliberate
+    strategic pivot into computer science to master autonomous systems architecture
+    end-to-end. From machined metal parts and motor control to optimal deterministic
+    real-time C/C++ code, scalable Cloud backends, and cybersecurity, I engineer resilient
+    and high-performance machines. **Actively seeking a 6-month final-year internship
     (PFE) starting Feb/Mar 2027 across Tunisia 🇹🇳, France 🇫🇷, and Worldwide 🌍.**
   photo: images/achraf.jpg
   cardName: Achraf Hasnaoui
-  cardRole: Computer Science Engineering Student (Final Year · Emerging Tech & Security)
+  cardRole: Computer Science Engineering Student (Final Year · Robotics & Polyvalent
+    Systems)
   cardInfo:
   - 📍 Tunis / Gabès, Tunisia · Full mobility (Tunisia 🇹🇳, France 🇫🇷, Worldwide 🌍)
-  - 🎓 ENSIT (3rd Year Computer Eng.) · IPEIM (Prep Engineering Cycle with Honors)
-  - '🛡️ Major: Emerging Technologies, Cybersecurity, Cloud & Backend'
+  - 🎓 ENSIT (3rd Year Computer Eng.) + IPEIM (Prep PT with Honors)
+  - '⚙️ Polyvalent Profile: Mechanics & CNC, Electronics, C/C++ Firmware, Cloud &
+    Cyber'
   - 🚀 Seeking 6-Month Final-Year Internship (PFE) starting Feb / March 2027
   stats:
   - num: ENSIT 3Y
@@ -85,7 +90,8 @@ hero:
     cvHub: Download Resumes (PDF)
     projects: Explore Projects
     contact: Get in Touch
-  subtitle: COMPUTER SCIENCE · EMERGING TECHNOLOGIES · CYBERSECURITY · CLOUD & AI
+  subtitle: COMPUTER SCIENCE ENGINEERING STUDENT · POLYVALENT ROBOTICS & AUTOMATION
+    PROFILE · FROM PHYSICAL CNC FOUNDATIONS TO OPTIMAL CODE
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -213,49 +219,51 @@ cvHub:
     fileUrl: cv/Achraf_Hasnaoui_CV_AI_GenAI_MLOps.pdf
     targetRole: AI Engineer / Machine Learning / MLOps / Data Scientist
   - id: embedded
-    badge: IoT & Embedded Systems
-    title: Embedded Systems, IoT & Hardware Security
+    badge: Robotics & Automation
+    title: Robotics, Embedded Systems & Intelligent Automation
     icon: ⚡
     accent: amber
-    summary: Real-time C/C++ firmware development (FreeRTOS, ESP-IDF, Embedded Linux),
-      connected communication protocols, microcontroller security, and edge-to-cloud
-      integration.
+    summary: From mechatronics fabrication (SolidWorks 3D CAD, CNC machining) to deterministic
+      real-time C/C++ code (FreeRTOS, Embedded Linux), field buses (CAN, SPI, I2C),
+      and autonomous machines.
     tags:
-    - Embedded Linux
-    - ESP32 C/C++ (ESP-IDF)
-    - FreeRTOS & Real-Time
-    - Hardware Security
-    - MQTT / HTTP / BLE
-    - Smart Farm (23 sensors)
+    - CNC Machining & SolidWorks
+    - High-Performance C / C++
+    - FreeRTOS & Hard Real-Time
+    - Embedded Linux & ROS
+    - CAN / SPI / I2C Buses
+    - Motor Control & ESP32
     fileName: Achraf_Hasnaoui_CV_Embedded_IoT.pdf
     fileUrl: cv/Achraf_Hasnaoui_CV_Embedded_IoT.pdf
-    targetRole: Embedded Systems Engineer / IoT & Edge Engineer
+    targetRole: Robotics Engineer / Embedded Systems & Automation Engineer
 about:
-  badge: 01 PROFILE & ENGINEERING VISION
-  title: 'Cutting-Edge Computer Engineering: Building, Modernizing, and Securing Tomorrow''s
-    Technologies'
-  sub: Computer Science Engineering Student at ENSIT · Specializing in Emerging Tech
-    & Cybersecurity
+  badge: 01 MY PROFILE & ARCHITECTURE
+  title: 'Polyvalent Computer Science Engineer: From Matter & CNC Fabrication to Optimal
+    Code for Robotics'
+  sub: 'Why a rock-solid foundation in precision mechanics and electronics is the
+    ultimate secret weapon for a top-tier software engineer:'
   paragraphs:
-  - Currently in my **final year of Computer Science Engineering at ENSIT** (Tunis),
-    having graduated with **Honors (Mention Bien)** from the selective preparatory
-    engineering cycle at **IPEIM**, I deliberately chose computer science to engineer
-    software at the leading edge of digital transformation. My training brings strong
-    algorithmic rigor and deep mastery in **Emerging Technologies (Cloud Computing,
-    microservices, generative AI) and Systems Security**.
-  - 'My engineering journey is deeply anchored in production challenges and competitive
-    security arenas: as an active member of **Securinets ENSIT** (Tunisia''s premier
-    cybersecurity team), I won **1st place in the national Cat The Flag contest**,
-    honing hands-on skills in vulnerability assessment, cryptography, and network
-    defense. In the industry, I built an end-to-end logistics CRM at **Airstruct Consulting**
-    (Spring Boot) and engineered predictive vehicle telemetry at electric vehicle
-    automaker **Bako Motors**, which **slashed overdue maintenance by 47%**.'
-  - 'What defines my distinctive competitive edge as a computer engineer is my **hands-on
-    hardware-to-cloud culture**: grounded in a technical baccalaureate and preparatory
-    engineering studies in electronics and applied physics, I never view computing
-    as an abstract black box. This understanding of the physical layer gives me a
-    decisive advantage in **hardware security, low-level firmware, IoT systems, Edge
-    Computing, and IT/OT convergence**.'
+  - 'Currently in my **final year of Computer Science Engineering at ENSIT** (Tunis),
+    having graduated with **Honors (Mention Bien)** from the elite **Physics and Technology
+    (PT) preparatory engineering cycle at IPEIM**, my journey has been distinctively
+    hands-on. My roots lie deep in physical and electrical engineering: tensor calculus,
+    rigid-body mechanics, robot kinematics, materials science (FEA/RDM), power electronics,
+    and rigorous fabrication in workshops using **manual & CNC precision machine tools
+    (turning, milling)** alongside **3D CAD modeling with SolidWorks**.'
+  - 'While my excellence in mechanics and electronics could have steered me into traditional
+    mechanical engineering, **I made a calculated, visionary decision: pivoting to
+    Computer Science at ENSIT**. My mission was unmistakable: mastering the complete
+    technological chain of **modern robotics, autonomous machines, and intelligent
+    automation**. The world''s best robots cannot be built by mechanical engineers
+    who cannot write deterministic, secure algorithms—nor by abstract software developers
+    oblivious to friction, motor torque, inertia, and physical silicon constraints.'
+  - 'At ENSIT, I elevated my software craftsmanship to the highest standards: **optimal
+    and high-performance C/C++ code, hard real-time operating systems (FreeRTOS, Embedded
+    Linux), distributed microservices (Spring Boot, Python), Cloud/DevOps pipelines,
+    and offensive/defensive cybersecurity (1st place at the national Cat The Flag
+    contest)**. At **Bako Motors**, my predictive fleet telemetry modules **cut overdue
+    maintenance by 47%** on electric vehicles. Today, I command the entire architecture:
+    from raw metal on a CNC machine to optimal, hardened code running in the Cloud.'
   techBadgesTitle: 'Technologies I work with most:'
   tech:
   - Java / Spring Boot / JPA
@@ -275,15 +283,71 @@ about:
     - k: Name
       v: Achraf Hasnaoui
     - k: Profile
-      v: Computer Science Engineering Student (ENSIT 3A)
-    - k: Specialty
-      v: Emerging Technologies & Cybersecurity
-    - k: Key Pillars
-      v: Distributed Backend, Cloud/DevOps, Cyber, AI & IoT
+      v: Computer Science Engineer Student (ENSIT 3A)
+    - k: Dual Culture
+      v: Mechanics/CNC & Electronics (Prep PT) + Software
+    - k: Focus
+      v: Robotics, Intelligent Automation & Smart Systems
     - k: PFE Goal
       v: 6-Month Final-Year Internship starting Feb/Mar 2027
     - k: Mobility
       v: Tunisia 🇹🇳 · France 🇫🇷 · Worldwide 🌍
+  architecture:
+    title: 'Polyvalent Systems Architecture: From Matter to Optimal Code'
+    sub: 'A full-spectrum mastery across the 4 foundational layers needed to engineer
+      high-performance robots and automated machines:'
+    layers:
+    - num: '01'
+      badge: MECHANICS & FABRICATION
+      title: Physical Foundation, CAD & CNC Machining
+      icon: ⚙️
+      accent: cyan
+      desc: 3D CAD with SolidWorks, mechanism kinematics and dynamics, manual and
+        CNC precision machining (turning, milling), materials science and geometric
+        dimensioning.
+      skills:
+      - CNC & Manual Machining
+      - SolidWorks 3D CAD
+      - Robot Kinematics
+      - Materials Science & GD&T
+    - num: '02'
+      badge: ELECTRONICS & ACTUATION
+      title: Power Electronics & Sensor Instrumentation
+      icon: ⚡
+      accent: amber
+      desc: Industrial electrotechnics, closed-loop motor control (H-bridges, PID,
+        PWM drivers), analog/digital sensor conditioning, and industrial CAN/SPI/I2C
+        buses.
+      skills:
+      - Power Electronics
+      - Motor Drive Control (PID/PWM)
+      - CAN / SPI / I2C Buses
+      - ESP32 Testbeds & Sensors
+    - num: '03'
+      badge: FIRMWARE & PERFORMANCE
+      title: Deterministic Real-Time & Low-Level Code
+      icon: 💻
+      accent: violet
+      desc: High-performance C/C++ firmware, hard real-time FreeRTOS, Embedded Linux,
+        deterministic memory management, and ultra-responsive low-latency control
+        loops.
+      skills:
+      - Optimized C / C++
+      - FreeRTOS & Hard Real-Time
+      - Embedded Linux
+      - Memory & DSP Optimization
+    - num: '04'
+      badge: SOFTWARE & CLOUD
+      title: Distributed Architectures, Cloud & Cybersecurity
+      icon: 🛡️
+      accent: emerald
+      desc: Spring Boot microservices, industrial fleet telemetry (Bako Motors -47%
+        delays), secure communication protocols (CTF Winner), and applied AI.
+      skills:
+      - Java / Spring Boot
+      - Vehicle Telemetry & Cloud
+      - Cybersecurity & CTF Winner
+      - Applied AI & MLOps
 skills:
   badge: Compétences Techniques
   title: Savoir-faire éprouvé en production et en laboratoires

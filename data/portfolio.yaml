@@ -1,10 +1,10 @@
 meta:
-  title: Achraf Hasnaoui · Élève-Ingénieur en Génie Informatique (ENSIT) | Nouvelles
-    Technologies & Sécurité · PFE 2027
-  description: Portfolio d'Achraf Hasnaoui — Élève-ingénieur en 3e année Génie Informatique
-    à l'ENSIT, spécialisé en Nouvelles Technologies (Cloud, DevOps, IA, IoT) et Cybersécurité.
-    En recherche active de Stage PFE de 6 mois dès Février/Mars 2027 (Tunisie, France,
-    International).
+  title: Achraf Hasnaoui · Élève-Ingénieur en Génie Informatique (ENSIT) | Profil
+    Polyvalent Robotique, Mécanique & Code · PFE 2027
+  description: 'Portfolio d''Achraf Hasnaoui — Élève-ingénieur en Génie Informatique
+    à l''ENSIT (3A) au profil polyvalent unique : socle mécanique et usinage CNC (Prépa
+    PT - Mention Bien), électronique de puissance, firmware bas-niveau et code optimal
+    pour la robotique et l''automatisation. Recherche active de Stage PFE (6 mois).'
   themeColor: '#070a12'
   author: Achraf Hasnaoui
   keywords: Achraf Hasnaoui, élève ingénieur, génie informatique, ENSIT, nouvelles
@@ -42,37 +42,38 @@ navLinks:
   label: contact
   href: '#contact'
 hero:
-  statusPill: 🟢 Recherche Stage PFE (6 mois) · Dès Fév/Mars 2027 · Génie Informatique,
-    Nouvelles Tech & Cybersécurité · Tunisie 🇹🇳 · France 🇫🇷 · International 🌍
+  statusPill: 🟢 Recherche Stage PFE (6 mois) · Dès Fév/Mars 2027 · Robotique, Automatisation,
+    Génie Informatique & Cloud · Tunisie 🇹🇳 · France 🇫🇷 · International 🌍
   greeting: Bonjour, je suis
   name: Achraf Hasnaoui
   roles:
   - Élève-Ingénieur en Génie Informatique (ENSIT - Dernière Année).
-  - Spécialiste en Nouvelles Technologies & Cybersécurité.
-  - Architecte Backend & Microservices (Java, Spring Boot, Python).
-  - Praticien Sécurité Offensive & Défensive (Membre Securinets ENSIT & Vainqueur
-    CTF).
-  - Ingénieur Cloud, DevOps & Automatisation CI/CD (Docker, AWS, Linux).
-  - Concepteur IA, MLOps & Systèmes Intelligents Connectés (IoT/Edge).
-  tagline: Élève-ingénieur en **3e année de Génie Informatique à l'ENSIT**, je suis
-    spécialisé dans les **Nouvelles Technologies et la Sécurité des Systèmes d'Information**.
-    Issu d'un cursus d'excellence (**Mention Bien au concours préparatoire de l'IPEIM**),
-    je conçois et sécurise des architectures logicielles performantes, du backend
-    distribué (Spring Boot, Python) aux infrastructures Cloud/DevOps automatisées,
-    jusqu'à l'IA appliquée et l'IoT. Mon bagage pluridisciplinaire en électronique
-    me confère une maîtrise intime du matériel et de la sécurité bas-niveau. En entreprise,
-    j'ai optimisé les modules de télémétrie chez **Bako Motors** en réduisant de **47%
-    les retards de maintenance**, et j'ai remporté la **1ère place au concours national
-    Cat The Flag**. **En recherche active d'un stage de fin d'études (PFE) de 6 mois
-    dès Février/Mars 2027 en Tunisie 🇹🇳, en France 🇫🇷 ou à l'International 🌍.**
+  - 'Profil Polyvalent : Robotique, Automatisation & Systèmes Intelligents.'
+  - 'Double Culture : Socle Mécanique & Usinage CNC (Prépa PT) + Génie Logiciel (ENSIT).'
+  - Développeur C/C++ Bas-Niveau, FreeRTOS & Linux Embarqué Haute Performance.
+  - Architecte Backend & Microservices (Java/Spring Boot, Python, Cloud).
+  - Praticien en Cybersécurité & Vainqueur du Concours National Cat The Flag.
+  tagline: Élève-ingénieur en **3e année de Génie Informatique à l'ENSIT**, je cultive
+    un **profil polyvalent d'excellence combinant socle mécanique, électronique de
+    puissance et génie logiciel de pointe pour la robotique et l'automatisation**.
+    Après un **Bac Technique** et deux années de **Classes Préparatoires en Physique-Technologie
+    (IPEIM - Mention Bien)** où j'ai acquis une maîtrise concrète de la fabrication
+    mécanique (usinage CNC et conventionnel, tournage, fraisage, CAO 3D SolidWorks,
+    cinématique et résistance des matériaux), j'ai fait le choix stratégique de l'informatique
+    pour maîtriser la conception d'un système autonome de bout en bout. De l'usinage
+    de pièces et du contrôle moteur jusqu'au code C/C++ temps réel optimisé, aux architectures
+    Cloud et à la cybersécurité, je crée des systèmes intelligents résilients et performants.
+    **En recherche active d'un stage PFE de 6 mois dès Février/Mars 2027 en Tunisie
+    🇹🇳, en France 🇫🇷 ou à l'International 🌍.**
   photo: images/achraf.jpg
   cardName: Achraf Hasnaoui
-  cardRole: Élève-Ingénieur en Génie Informatique (3A · Nouvelles Tech & Sécurité)
+  cardRole: Élève-Ingénieur en Génie Informatique (3A · Robotique & Systèmes Polyvalents)
   cardInfo:
   - 📍 Tunis / Gabès, Tunisie · Mobilité totale (Tunisie 🇹🇳, France 🇫🇷, International
     🌍)
-  - 🎓 ENSIT (3e Année Génie Informatique) · IPEIM (Prépa Scientifique - Mention Bien)
-  - '🛡️ Spécialité : Nouvelles Technologies, Cybersécurité, Cloud & Backend'
+  - 🎓 ENSIT (3e Année Génie Informatique) + IPEIM (Prépa PT - Mention Bien)
+  - '⚙️ Profil Polyvalent : Mécanique & CNC, Électronique, Firmware C/C++, Cloud &
+    Cyber'
   - 🚀 Recherche Stage PFE 6 mois conventionné dès Février / Mars 2027
   stats:
   - num: ENSIT 3A
@@ -87,8 +88,8 @@ hero:
     cvHub: Télécharger mes CV (PDF)
     projects: Voir mes Réalisations
     contact: Me Contacter
-  subtitle: GÉNIE INFORMATIQUE · NOUVELLES TECHNOLOGIES · CYBERSÉCURITÉ · CLOUD &
-    IA
+  subtitle: ÉLÈVE-INGÉNIEUR GÉNIE INFORMATIQUE · PROFIL POLYVALENT ROBOTIQUE & AUTOMATISATION
+    · DU SOCLE MÉCANIQUE AU CODE OPTIMAL
 marquee:
 - Java & Spring Boot
 - Python & PyTorch
@@ -219,52 +220,54 @@ cvHub:
     fileUrl: cv/Achraf_Hasnaoui_CV_AI_GenAI_MLOps.pdf
     targetRole: Ingénieur IA / Machine Learning / MLOps / Data Scientist
   - id: embedded
-    badge: IoT & Systèmes Embarqués
-    title: Systèmes Embarqués, IoT & Sécurité Matérielle
+    badge: Robotique & Automatisation
+    title: Robotique, Systèmes Embarqués & Automatisation
     icon: ⚡
     accent: amber
-    summary: Développement de firmwares C/C++ temps réel (FreeRTOS, ESP-IDF, Linux
-      embarqué), protocoles de communication connectés, sécurité des microcontrôleurs
-      et intégration edge-to-cloud.
+    summary: Du socle mécatronique (CAO SolidWorks, usinage CNC) jusqu'au développement
+      de code C/C++ temps réel optimisé (FreeRTOS, Linux embarqué), bus de terrain
+      (CAN, SPI, I2C) et machines autonomes.
     tags:
-    - Linux Embarqué
-    - ESP32 C/C++ (ESP-IDF)
+    - Usinage CNC & CAO SolidWorks
+    - C / C++ Haute Performance
     - FreeRTOS & Temps Réel
-    - Sécurité Matérielle (Hardware)
-    - MQTT / HTTP / BLE
-    - Smart Farm (23 capteurs)
+    - Linux Embarqué & ROS
+    - Bus CAN / SPI / I2C
+    - Commande Moteurs & ESP32
     fileName: Achraf_Hasnaoui_CV_Embedded_IoT.pdf
     fileUrl: cv/Achraf_Hasnaoui_CV_Embedded_IoT.pdf
-    targetRole: Ingénieur Systèmes Embarqués / Ingénieur IoT & Edge
+    targetRole: Ingénieur Robotique / Ingénieur Systèmes Embarqués & Automatisation
 about:
-  badge: 01 PROFIL & VISION INGÉNIEUR
-  title: 'L''ingénierie informatique de pointe : concevoir, moderniser et sécuriser
-    les technologies de demain'
-  sub: Élève-ingénieur en Génie Informatique à l'ENSIT · Spécialité Nouvelles Technologies
-    & Cybersécurité
+  badge: 01 MON PROFIL & MON ARCHITECTURE
+  title: 'Ingénieur Informatique au Profil Polyvalent : De la Matière & la Fabrication
+    CNC au Code Optimal pour la Robotique'
+  sub: 'Pourquoi un solide socle en mécanique et électronique constitue l''arme absolue
+    d''un ingénieur logiciel de pointe :'
   paragraphs:
-  - Actuellement en **dernière année du cycle ingénieur en Génie Informatique à l'ENSIT**
-    (Tunis), après avoir réussi le cycle préparatoire scientifique à l'**IPEIM avec
-    Mention Bien**, j'ai fait le choix passionné de l'informatique pour être au cœur
-    de la création logicielle et des ruptures technologiques. Ma formation m'apporte
-    une solide rigueur algorithmique et une expertise approfondie dans les **Nouvelles
-    Technologies (Cloud Computing, microservices, IA générative) et la Sécurité des
-    Systèmes d'Information**.
-  - 'Mon parcours s''ancre résolument dans la pratique et le monde réel : en tant
-    que membre actif de l''équipe technique de **Securinets ENSIT** (le club de cybersécurité
-    référence en Tunisie), j''ai remporté la **1ère place au concours national Cat
-    The Flag**, approfondissant l''audit applicatif, la cryptographie et la défense
-    réseau. En milieu industriel, j''ai développé chez **Airstruct Consulting** un
-    CRM logistique complet (Spring Boot), et conçu chez le constructeur de véhicules
-    électriques **Bako Motors** un module de télémétrie prédictive qui a **réduit
-    de 47% les retards de maintenance**.'
-  - 'Ce qui forge ma valeur distinctive en tant qu''ingénieur informaticien, c''est
-    mon **atout hardware-to-cloud et ma culture hands-on** : fort d''un Bac Technique
-    et d''une prépa technologique d''excellence en électronique et physique appliquée,
-    je ne perçois jamais l''informatique comme une boîte noire abstraite. Cette compréhension
-    de la couche physique et des microcontrôleurs m''offre un avantage déterminant
-    pour maîtriser la **sécurité matérielle, les firmwares bas-niveau, l''IoT, l''Edge
-    Computing et la convergence IT/OT**.'
+  - 'Actuellement en **dernière année du cycle ingénieur en Génie Informatique à l''ENSIT**
+    (Tunis), après avoir brillamment réussi le concours d''entrée aux grandes écoles
+    au sein de la filière **Physique et Technologie (PT) à l''IPEIM avec Mention Bien**,
+    je possède une trajectoire singulière. Mon parcours a débuté par une immersion
+    totale dans la mécanique et l''électricité : calcul tensoriel, mécanique du solide,
+    cinématique des robots, résistance des matériaux (RDM), électronique de puissance,
+    et pratique intensive de l''**usinage en atelier (tournage, fraisage conventionnel
+    et CNC)** ainsi que de la **modélisation CAO 3D sous SolidWorks**.'
+  - 'Alors que mon excellence en mécanique et électrique pouvait me conduire naturellement
+    vers le génie mécanique traditionnel, **j''ai pris une décision délibérée et stratégique
+    : bifurquer vers le Génie Informatique à l''ENSIT**. Mon ambition était claire
+    : couvrir l''intégralité du spectre de la **robotique moderne, des machines autonomes
+    et de l''automatisation intelligente**. Les robots les plus performants au monde
+    ne peuvent être conçus ni par des mécaniciens incapables de coder des algorithmes
+    déterministes et sécurisés, ni par des développeurs abstraits ignorant la friction,
+    le couple moteur, l''inertie et les contraintes physiques du silicium.'
+  - 'À l''ENSIT, j''ai donc poussé le développement logiciel à son plus haut niveau
+    d''exigence : **code C/C++ optimal et performant, systèmes d''exploitation temps
+    réel (FreeRTOS, Linux Embarqué), architectures distribuées microservices (Spring
+    Boot, Python), pipelines Cloud/DevOps et cybersécurité offensive/défensive (1ère
+    place au concours Cat The Flag)**. Chez **Bako Motors**, mes modules de télémétrie
+    prédictive ont permis de **réduire de 47% les retards de maintenance** de véhicules
+    électriques. Aujourd''hui, je maîtrise toute l''architecture : du métal brut usiné
+    sur machine-outil jusqu''au code optimal et sécurisé déployé dans le Cloud.'
   techBadgesTitle: 'Technologies fréquemment utilisées :'
   tech:
   - Java / Spring Boot / JPA
@@ -284,15 +287,71 @@ about:
     - k: Nom
       v: Achraf Hasnaoui
     - k: Profil
-      v: Élève-Ingénieur en Génie Informatique (ENSIT 3A)
-    - k: Spécialité
-      v: Nouvelles Technologies & Cybersécurité
-    - k: Pôles Clés
-      v: Backend Distribué, Cloud/DevOps, Cyber, IA & IoT
+      v: Élève-Ingénieur Génie Informatique (ENSIT 3A)
+    - k: Double Culture
+      v: Mécanique/CNC & Électronique (Prépa PT) + Software
+    - k: Vocation
+      v: Robotique, Automatisation & Systèmes Intelligents
     - k: Objectif PFE
       v: Stage de 6 mois conventionné dès Fév/Mars 2027
     - k: Mobilité
       v: Tunisie 🇹🇳 · France 🇫🇷 · International 🌍
+  architecture:
+    title: 'L''Architecture Polyvalente : De la Matière au Code Optimal'
+    sub: 'Une maîtrise complète des 4 couches indispensables pour concevoir des robots
+      et des systèmes automatisés haute performance :'
+    layers:
+    - num: '01'
+      badge: MÉCANIQUE & FABRICATION
+      title: Socle Physique, CAO & Usinage CNC
+      icon: ⚙️
+      accent: cyan
+      desc: Conception 3D sous SolidWorks, cinématique et dynamique des mécanismes,
+        usinage conventionnel et CNC (tournage, fraisage), résistance des matériaux
+        (RDM).
+      skills:
+      - Usinage CNC & Conventionnel
+      - CAO 3D SolidWorks
+      - Cinématique Robotique
+      - RDM & Tolérancement
+    - num: '02'
+      badge: ÉLECTRONIQUE & ACTIONNEURS
+      title: Électronique de Puissance & Instrumentation
+      icon: ⚡
+      accent: amber
+      desc: Électrotechnique industrielle, contrôle des moteurs (ponts en H, asservissement
+        PID, PWM), acquisition capteurs analogiques/numériques, bus industriels CAN/SPI/I2C.
+      skills:
+      - Électronique de Puissance
+      - Commande Moteurs (PID/PWM)
+      - Bus CAN / SPI / I2C
+      - Bancs ESP32 & Capteurs
+    - num: '03'
+      badge: FIRMWARE & PERFORMANCE
+      title: Code Bas-Niveau Déterministe & Temps Réel
+      icon: 💻
+      accent: violet
+      desc: Développement en C/C++ haute performance, systèmes temps réel FreeRTOS,
+        Linux Embarqué, gestion déterministe de la mémoire et boucles de régulation
+        ultra-rapides.
+      skills:
+      - C / C++ Haute Performance
+      - FreeRTOS & Temps Réel
+      - Linux Embarqué
+      - Gestion Mémoire & DSP
+    - num: '04'
+      badge: SOFTWARE & CLOUD
+      title: Architectures Distribuées, Cloud & Cybersécurité
+      icon: 🛡️
+      accent: emerald
+      desc: Microservices Spring Boot, télémétrie véhicule industriel (Bako Motors
+        -47% retards), sécurité des protocoles de communication (CTF Winner) et IA
+        appliquée.
+      skills:
+      - Java / Spring Boot
+      - Télémétrie Véhicule & Cloud
+      - Cybersécurité & CTF Winner
+      - IA & MLOps
 skills:
   badge: Compétences Techniques
   title: Savoir-faire éprouvé en production et en laboratoires
